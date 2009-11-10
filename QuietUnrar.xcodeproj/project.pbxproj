@@ -1,0 +1,610 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		256AC3DA0F4B6AC300CF3369 /* QuietUnrarAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 256AC3D90F4B6AC300CF3369 /* QuietUnrarAppDelegate.m */; };
+		8D11072D0486CEB800E47090 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
+		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
+		D4A49691105435BE00BE38AE /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165CFE840E0CC02AAC07 /* InfoPlist.strings */; };
+		D4A49692105435C100BE38AE /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1DDD58140DA1D0A300B32029 /* MainMenu.xib */; };
+		D4A96E2110545E9A0091ECB4 /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4A96E2010545E9A0091ECB4 /* Carbon.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D4A4964C10541CFF00BE38AE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 29B97313FDCFA39411CA2CEA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D4A4962A105419AA00BE38AE;
+			remoteInfo = libunrar;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		D4A4965210541D2600BE38AE /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 7;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		089C165DFE840E0CC02AAC07 /* English */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
+		13E42FB307B3F0F600E4EEF1 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = /System/Library/Frameworks/CoreData.framework; sourceTree = "<absolute>"; };
+		1DDD58150DA1D0A300B32029 /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		256AC3D80F4B6AC300CF3369 /* QuietUnrarAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuietUnrarAppDelegate.h; sourceTree = "<group>"; };
+		256AC3D90F4B6AC300CF3369 /* QuietUnrarAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuietUnrarAppDelegate.m; sourceTree = "<group>"; };
+		256AC3F00F4B6AF500CF3369 /* QuietUnrar_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuietUnrar_Prefix.pch; sourceTree = "<group>"; };
+		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		29B97324FDCFA39411CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
+		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
+		8D1107310486CEB800E47090 /* QuietUnrar-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "QuietUnrar-Info.plist"; sourceTree = "<group>"; };
+		8D1107320486CEB800E47090 /* QuietUnrar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QuietUnrar.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D4A495741054177300BE38AE /* arccmt.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = arccmt.cpp; path = libunrar/arccmt.cpp; sourceTree = "<group>"; };
+		D4A495751054177300BE38AE /* archive.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = archive.cpp; path = libunrar/archive.cpp; sourceTree = "<group>"; };
+		D4A495761054177300BE38AE /* archive.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = archive.hpp; path = libunrar/archive.hpp; sourceTree = "<group>"; };
+		D4A495771054177300BE38AE /* arcread.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = arcread.cpp; path = libunrar/arcread.cpp; sourceTree = "<group>"; };
+		D4A495781054177300BE38AE /* array.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = array.hpp; path = libunrar/array.hpp; sourceTree = "<group>"; };
+		D4A495791054177300BE38AE /* beosea.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = beosea.cpp; path = libunrar/beosea.cpp; sourceTree = "<group>"; };
+		D4A4957A1054177300BE38AE /* cmddata.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = cmddata.cpp; path = libunrar/cmddata.cpp; sourceTree = "<group>"; };
+		D4A4957B1054177300BE38AE /* cmddata.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = cmddata.hpp; path = libunrar/cmddata.hpp; sourceTree = "<group>"; };
+		D4A4957C1054177300BE38AE /* coder.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = coder.cpp; path = libunrar/coder.cpp; sourceTree = "<group>"; };
+		D4A4957D1054177300BE38AE /* coder.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = coder.hpp; path = libunrar/coder.hpp; sourceTree = "<group>"; };
+		D4A4957E1054177300BE38AE /* compress.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = compress.hpp; path = libunrar/compress.hpp; sourceTree = "<group>"; };
+		D4A4957F1054177300BE38AE /* consio.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = consio.cpp; path = libunrar/consio.cpp; sourceTree = "<group>"; };
+		D4A495801054177300BE38AE /* consio.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = consio.hpp; path = libunrar/consio.hpp; sourceTree = "<group>"; };
+		D4A495811054177300BE38AE /* crc.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = crc.cpp; path = libunrar/crc.cpp; sourceTree = "<group>"; };
+		D4A495821054177300BE38AE /* crc.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = crc.hpp; path = libunrar/crc.hpp; sourceTree = "<group>"; };
+		D4A495831054177300BE38AE /* crypt.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = crypt.cpp; path = libunrar/crypt.cpp; sourceTree = "<group>"; };
+		D4A495841054177300BE38AE /* crypt.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = crypt.hpp; path = libunrar/crypt.hpp; sourceTree = "<group>"; };
+		D4A495851054177300BE38AE /* dll.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = dll.cpp; path = libunrar/dll.cpp; sourceTree = "<group>"; };
+		D4A495861054177300BE38AE /* dll.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = dll.hpp; path = libunrar/dll.hpp; sourceTree = "<group>"; };
+		D4A495871054177300BE38AE /* encname.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = encname.cpp; path = libunrar/encname.cpp; sourceTree = "<group>"; };
+		D4A495881054177300BE38AE /* encname.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = encname.hpp; path = libunrar/encname.hpp; sourceTree = "<group>"; };
+		D4A495891054177300BE38AE /* errhnd.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = errhnd.cpp; path = libunrar/errhnd.cpp; sourceTree = "<group>"; };
+		D4A4958A1054177300BE38AE /* errhnd.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = errhnd.hpp; path = libunrar/errhnd.hpp; sourceTree = "<group>"; };
+		D4A4958B1054177300BE38AE /* extinfo.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = extinfo.cpp; path = libunrar/extinfo.cpp; sourceTree = "<group>"; };
+		D4A4958C1054177300BE38AE /* extinfo.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = extinfo.hpp; path = libunrar/extinfo.hpp; sourceTree = "<group>"; };
+		D4A4958D1054177300BE38AE /* extract.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = extract.cpp; path = libunrar/extract.cpp; sourceTree = "<group>"; };
+		D4A4958E1054177300BE38AE /* extract.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = extract.hpp; path = libunrar/extract.hpp; sourceTree = "<group>"; };
+		D4A4958F1054177300BE38AE /* filcreat.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = filcreat.cpp; path = libunrar/filcreat.cpp; sourceTree = "<group>"; };
+		D4A495901054177300BE38AE /* filcreat.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = filcreat.hpp; path = libunrar/filcreat.hpp; sourceTree = "<group>"; };
+		D4A495911054177300BE38AE /* file.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = file.cpp; path = libunrar/file.cpp; sourceTree = "<group>"; };
+		D4A495921054177300BE38AE /* file.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = file.hpp; path = libunrar/file.hpp; sourceTree = "<group>"; };
+		D4A495931054177300BE38AE /* filefn.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = filefn.cpp; path = libunrar/filefn.cpp; sourceTree = "<group>"; };
+		D4A495941054177300BE38AE /* filefn.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = filefn.hpp; path = libunrar/filefn.hpp; sourceTree = "<group>"; };
+		D4A495951054177300BE38AE /* filestr.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = filestr.cpp; path = libunrar/filestr.cpp; sourceTree = "<group>"; };
+		D4A495961054177300BE38AE /* filestr.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = filestr.hpp; path = libunrar/filestr.hpp; sourceTree = "<group>"; };
+		D4A495971054177300BE38AE /* find.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = find.cpp; path = libunrar/find.cpp; sourceTree = "<group>"; };
+		D4A495981054177300BE38AE /* find.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = find.hpp; path = libunrar/find.hpp; sourceTree = "<group>"; };
+		D4A495991054177300BE38AE /* getbits.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = getbits.cpp; path = libunrar/getbits.cpp; sourceTree = "<group>"; };
+		D4A4959A1054177300BE38AE /* getbits.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = getbits.hpp; path = libunrar/getbits.hpp; sourceTree = "<group>"; };
+		D4A4959B1054177300BE38AE /* global.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = global.cpp; path = libunrar/global.cpp; sourceTree = "<group>"; };
+		D4A4959C1054177300BE38AE /* global.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = global.hpp; path = libunrar/global.hpp; sourceTree = "<group>"; };
+		D4A4959D1054177300BE38AE /* headers.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = headers.hpp; path = libunrar/headers.hpp; sourceTree = "<group>"; };
+		D4A4959E1054177300BE38AE /* isnt.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = isnt.cpp; path = libunrar/isnt.cpp; sourceTree = "<group>"; };
+		D4A4959F1054177300BE38AE /* isnt.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = isnt.hpp; path = libunrar/isnt.hpp; sourceTree = "<group>"; };
+		D4A495A01054177300BE38AE /* list.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = list.cpp; path = libunrar/list.cpp; sourceTree = "<group>"; };
+		D4A495A11054177300BE38AE /* list.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = list.hpp; path = libunrar/list.hpp; sourceTree = "<group>"; };
+		D4A495A21054177300BE38AE /* loclang.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = loclang.hpp; path = libunrar/loclang.hpp; sourceTree = "<group>"; };
+		D4A495A31054177300BE38AE /* log.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = log.cpp; path = libunrar/log.cpp; sourceTree = "<group>"; };
+		D4A495A41054177300BE38AE /* log.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = log.hpp; path = libunrar/log.hpp; sourceTree = "<group>"; };
+		D4A495A51054177300BE38AE /* makefile.unix */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = makefile.unix; path = libunrar/makefile.unix; sourceTree = "<group>"; };
+		D4A495A61054177300BE38AE /* match.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = match.cpp; path = libunrar/match.cpp; sourceTree = "<group>"; };
+		D4A495A71054177300BE38AE /* match.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = match.hpp; path = libunrar/match.hpp; sourceTree = "<group>"; };
+		D4A495A81054177300BE38AE /* model.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = model.cpp; path = libunrar/model.cpp; sourceTree = "<group>"; };
+		D4A495A91054177300BE38AE /* model.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = model.hpp; path = libunrar/model.hpp; sourceTree = "<group>"; };
+		D4A495AA1054177300BE38AE /* options.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = options.cpp; path = libunrar/options.cpp; sourceTree = "<group>"; };
+		D4A495AB1054177300BE38AE /* options.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = options.hpp; path = libunrar/options.hpp; sourceTree = "<group>"; };
+		D4A495AC1054177300BE38AE /* os.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = os.hpp; path = libunrar/os.hpp; sourceTree = "<group>"; };
+		D4A495AD1054177300BE38AE /* os2ea.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = os2ea.cpp; path = libunrar/os2ea.cpp; sourceTree = "<group>"; };
+		D4A495AE1054177300BE38AE /* pathfn.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = pathfn.cpp; path = libunrar/pathfn.cpp; sourceTree = "<group>"; };
+		D4A495AF1054177300BE38AE /* pathfn.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = pathfn.hpp; path = libunrar/pathfn.hpp; sourceTree = "<group>"; };
+		D4A495B01054177300BE38AE /* rar.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = rar.cpp; path = libunrar/rar.cpp; sourceTree = "<group>"; };
+		D4A495B11054177300BE38AE /* rar.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = rar.hpp; path = libunrar/rar.hpp; sourceTree = "<group>"; };
+		D4A495B21054177300BE38AE /* rardefs.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = rardefs.hpp; path = libunrar/rardefs.hpp; sourceTree = "<group>"; };
+		D4A495B31054177300BE38AE /* rarlang.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = rarlang.hpp; path = libunrar/rarlang.hpp; sourceTree = "<group>"; };
+		D4A495B41054177300BE38AE /* raros.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = raros.hpp; path = libunrar/raros.hpp; sourceTree = "<group>"; };
+		D4A495B51054177300BE38AE /* rartypes.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = rartypes.hpp; path = libunrar/rartypes.hpp; sourceTree = "<group>"; };
+		D4A495B61054177300BE38AE /* rarvm.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = rarvm.cpp; path = libunrar/rarvm.cpp; sourceTree = "<group>"; };
+		D4A495B71054177300BE38AE /* rarvm.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = rarvm.hpp; path = libunrar/rarvm.hpp; sourceTree = "<group>"; };
+		D4A495B81054177300BE38AE /* rarvmtbl.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = rarvmtbl.cpp; path = libunrar/rarvmtbl.cpp; sourceTree = "<group>"; };
+		D4A495B91054177300BE38AE /* rawread.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = rawread.cpp; path = libunrar/rawread.cpp; sourceTree = "<group>"; };
+		D4A495BA1054177300BE38AE /* rawread.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = rawread.hpp; path = libunrar/rawread.hpp; sourceTree = "<group>"; };
+		D4A495BB1054177300BE38AE /* rdwrfn.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = rdwrfn.cpp; path = libunrar/rdwrfn.cpp; sourceTree = "<group>"; };
+		D4A495BC1054177300BE38AE /* rdwrfn.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = rdwrfn.hpp; path = libunrar/rdwrfn.hpp; sourceTree = "<group>"; };
+		D4A495BD1054177300BE38AE /* recvol.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = recvol.cpp; path = libunrar/recvol.cpp; sourceTree = "<group>"; };
+		D4A495BE1054177300BE38AE /* recvol.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = recvol.hpp; path = libunrar/recvol.hpp; sourceTree = "<group>"; };
+		D4A495BF1054177300BE38AE /* resource.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = resource.cpp; path = libunrar/resource.cpp; sourceTree = "<group>"; };
+		D4A495C01054177300BE38AE /* resource.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = resource.hpp; path = libunrar/resource.hpp; sourceTree = "<group>"; };
+		D4A495C11054177300BE38AE /* rijndael.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = rijndael.cpp; path = libunrar/rijndael.cpp; sourceTree = "<group>"; };
+		D4A495C21054177300BE38AE /* rijndael.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = rijndael.hpp; path = libunrar/rijndael.hpp; sourceTree = "<group>"; };
+		D4A495C31054177300BE38AE /* rs.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = rs.cpp; path = libunrar/rs.cpp; sourceTree = "<group>"; };
+		D4A495C41054177300BE38AE /* rs.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = rs.hpp; path = libunrar/rs.hpp; sourceTree = "<group>"; };
+		D4A495C51054177300BE38AE /* savepos.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = savepos.cpp; path = libunrar/savepos.cpp; sourceTree = "<group>"; };
+		D4A495C61054177300BE38AE /* savepos.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = savepos.hpp; path = libunrar/savepos.hpp; sourceTree = "<group>"; };
+		D4A495C71054177300BE38AE /* scantree.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = scantree.cpp; path = libunrar/scantree.cpp; sourceTree = "<group>"; };
+		D4A495C81054177300BE38AE /* scantree.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = scantree.hpp; path = libunrar/scantree.hpp; sourceTree = "<group>"; };
+		D4A495C91054177300BE38AE /* sha1.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = sha1.cpp; path = libunrar/sha1.cpp; sourceTree = "<group>"; };
+		D4A495CA1054177300BE38AE /* sha1.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = sha1.hpp; path = libunrar/sha1.hpp; sourceTree = "<group>"; };
+		D4A495CB1054177300BE38AE /* smallfn.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = smallfn.cpp; path = libunrar/smallfn.cpp; sourceTree = "<group>"; };
+		D4A495CC1054177300BE38AE /* smallfn.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = smallfn.hpp; path = libunrar/smallfn.hpp; sourceTree = "<group>"; };
+		D4A495CD1054177300BE38AE /* strfn.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = strfn.cpp; path = libunrar/strfn.cpp; sourceTree = "<group>"; };
+		D4A495CE1054177300BE38AE /* strfn.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = strfn.hpp; path = libunrar/strfn.hpp; sourceTree = "<group>"; };
+		D4A495CF1054177300BE38AE /* strlist.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = strlist.cpp; path = libunrar/strlist.cpp; sourceTree = "<group>"; };
+		D4A495D01054177300BE38AE /* strlist.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = strlist.hpp; path = libunrar/strlist.hpp; sourceTree = "<group>"; };
+		D4A495D11054177300BE38AE /* suballoc.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = suballoc.cpp; path = libunrar/suballoc.cpp; sourceTree = "<group>"; };
+		D4A495D21054177300BE38AE /* suballoc.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = suballoc.hpp; path = libunrar/suballoc.hpp; sourceTree = "<group>"; };
+		D4A495D31054177300BE38AE /* system.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = system.cpp; path = libunrar/system.cpp; sourceTree = "<group>"; };
+		D4A495D41054177300BE38AE /* system.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = system.hpp; path = libunrar/system.hpp; sourceTree = "<group>"; };
+		D4A495D51054177300BE38AE /* timefn.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = timefn.cpp; path = libunrar/timefn.cpp; sourceTree = "<group>"; };
+		D4A495D61054177300BE38AE /* timefn.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = timefn.hpp; path = libunrar/timefn.hpp; sourceTree = "<group>"; };
+		D4A495D71054177300BE38AE /* ulinks.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ulinks.cpp; path = libunrar/ulinks.cpp; sourceTree = "<group>"; };
+		D4A495D81054177300BE38AE /* ulinks.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = ulinks.hpp; path = libunrar/ulinks.hpp; sourceTree = "<group>"; };
+		D4A495D91054177300BE38AE /* unicode.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = unicode.cpp; path = libunrar/unicode.cpp; sourceTree = "<group>"; };
+		D4A495DA1054177300BE38AE /* unicode.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = unicode.hpp; path = libunrar/unicode.hpp; sourceTree = "<group>"; };
+		D4A495DB1054177300BE38AE /* unios2.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = unios2.cpp; path = libunrar/unios2.cpp; sourceTree = "<group>"; };
+		D4A495DC1054177300BE38AE /* unpack.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = unpack.cpp; path = libunrar/unpack.cpp; sourceTree = "<group>"; };
+		D4A495DD1054177300BE38AE /* unpack.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = unpack.hpp; path = libunrar/unpack.hpp; sourceTree = "<group>"; };
+		D4A495DE1054177300BE38AE /* unpack15.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = unpack15.cpp; path = libunrar/unpack15.cpp; sourceTree = "<group>"; };
+		D4A495DF1054177300BE38AE /* unpack20.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = unpack20.cpp; path = libunrar/unpack20.cpp; sourceTree = "<group>"; };
+		D4A495E01054177300BE38AE /* uowners.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = uowners.cpp; path = libunrar/uowners.cpp; sourceTree = "<group>"; };
+		D4A495E11054177300BE38AE /* version.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = version.hpp; path = libunrar/version.hpp; sourceTree = "<group>"; };
+		D4A495E21054177300BE38AE /* volume.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = volume.cpp; path = libunrar/volume.cpp; sourceTree = "<group>"; };
+		D4A495E31054177300BE38AE /* volume.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = volume.hpp; path = libunrar/volume.hpp; sourceTree = "<group>"; };
+		D4A495E41054177300BE38AE /* win32acl.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = win32acl.cpp; path = libunrar/win32acl.cpp; sourceTree = "<group>"; };
+		D4A495E51054177300BE38AE /* win32stm.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = win32stm.cpp; path = libunrar/win32stm.cpp; sourceTree = "<group>"; };
+		D4A96E2010545E9A0091ECB4 /* Carbon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carbon.framework; path = System/Library/Frameworks/Carbon.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8D11072E0486CEB800E47090 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */,
+				D4A96E2110545E9A0091ECB4 /* Carbon.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		080E96DDFE201D6D7F000001 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				256AC3D80F4B6AC300CF3369 /* QuietUnrarAppDelegate.h */,
+				256AC3D90F4B6AC300CF3369 /* QuietUnrarAppDelegate.m */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */,
+			);
+			name = "Linked Frameworks";
+			sourceTree = "<group>";
+		};
+		1058C7A2FEA54F0111CA2CBB /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				29B97324FDCFA39411CA2CEA /* AppKit.framework */,
+				13E42FB307B3F0F600E4EEF1 /* CoreData.framework */,
+				29B97325FDCFA39411CA2CEA /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		19C28FACFE9D520D11CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8D1107320486CEB800E47090 /* QuietUnrar.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		29B97314FDCFA39411CA2CEA /* QuietUnrar */ = {
+			isa = PBXGroup;
+			children = (
+				080E96DDFE201D6D7F000001 /* Classes */,
+				29B97315FDCFA39411CA2CEA /* Other Sources */,
+				29B97317FDCFA39411CA2CEA /* Resources */,
+				29B97323FDCFA39411CA2CEA /* Frameworks */,
+				19C28FACFE9D520D11CA2CBB /* Products */,
+				D4A96E2010545E9A0091ECB4 /* Carbon.framework */,
+			);
+			name = QuietUnrar;
+			sourceTree = "<group>";
+		};
+		29B97315FDCFA39411CA2CEA /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				D4A494191054167B00BE38AE /* libunrar */,
+				256AC3F00F4B6AF500CF3369 /* QuietUnrar_Prefix.pch */,
+				29B97316FDCFA39411CA2CEA /* main.m */,
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+		29B97317FDCFA39411CA2CEA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				8D1107310486CEB800E47090 /* QuietUnrar-Info.plist */,
+				089C165CFE840E0CC02AAC07 /* InfoPlist.strings */,
+				1DDD58140DA1D0A300B32029 /* MainMenu.xib */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */,
+				1058C7A2FEA54F0111CA2CBB /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D4A494191054167B00BE38AE /* libunrar */ = {
+			isa = PBXGroup;
+			children = (
+				D4A495741054177300BE38AE /* arccmt.cpp */,
+				D4A495751054177300BE38AE /* archive.cpp */,
+				D4A495761054177300BE38AE /* archive.hpp */,
+				D4A495771054177300BE38AE /* arcread.cpp */,
+				D4A495781054177300BE38AE /* array.hpp */,
+				D4A495791054177300BE38AE /* beosea.cpp */,
+				D4A4957A1054177300BE38AE /* cmddata.cpp */,
+				D4A4957B1054177300BE38AE /* cmddata.hpp */,
+				D4A4957C1054177300BE38AE /* coder.cpp */,
+				D4A4957D1054177300BE38AE /* coder.hpp */,
+				D4A4957E1054177300BE38AE /* compress.hpp */,
+				D4A4957F1054177300BE38AE /* consio.cpp */,
+				D4A495801054177300BE38AE /* consio.hpp */,
+				D4A495811054177300BE38AE /* crc.cpp */,
+				D4A495821054177300BE38AE /* crc.hpp */,
+				D4A495831054177300BE38AE /* crypt.cpp */,
+				D4A495841054177300BE38AE /* crypt.hpp */,
+				D4A495851054177300BE38AE /* dll.cpp */,
+				D4A495861054177300BE38AE /* dll.hpp */,
+				D4A495871054177300BE38AE /* encname.cpp */,
+				D4A495881054177300BE38AE /* encname.hpp */,
+				D4A495891054177300BE38AE /* errhnd.cpp */,
+				D4A4958A1054177300BE38AE /* errhnd.hpp */,
+				D4A4958B1054177300BE38AE /* extinfo.cpp */,
+				D4A4958C1054177300BE38AE /* extinfo.hpp */,
+				D4A4958D1054177300BE38AE /* extract.cpp */,
+				D4A4958E1054177300BE38AE /* extract.hpp */,
+				D4A4958F1054177300BE38AE /* filcreat.cpp */,
+				D4A495901054177300BE38AE /* filcreat.hpp */,
+				D4A495911054177300BE38AE /* file.cpp */,
+				D4A495921054177300BE38AE /* file.hpp */,
+				D4A495931054177300BE38AE /* filefn.cpp */,
+				D4A495941054177300BE38AE /* filefn.hpp */,
+				D4A495951054177300BE38AE /* filestr.cpp */,
+				D4A495961054177300BE38AE /* filestr.hpp */,
+				D4A495971054177300BE38AE /* find.cpp */,
+				D4A495981054177300BE38AE /* find.hpp */,
+				D4A495991054177300BE38AE /* getbits.cpp */,
+				D4A4959A1054177300BE38AE /* getbits.hpp */,
+				D4A4959B1054177300BE38AE /* global.cpp */,
+				D4A4959C1054177300BE38AE /* global.hpp */,
+				D4A4959D1054177300BE38AE /* headers.hpp */,
+				D4A4959E1054177300BE38AE /* isnt.cpp */,
+				D4A4959F1054177300BE38AE /* isnt.hpp */,
+				D4A495A01054177300BE38AE /* list.cpp */,
+				D4A495A11054177300BE38AE /* list.hpp */,
+				D4A495A21054177300BE38AE /* loclang.hpp */,
+				D4A495A31054177300BE38AE /* log.cpp */,
+				D4A495A41054177300BE38AE /* log.hpp */,
+				D4A495A51054177300BE38AE /* makefile.unix */,
+				D4A495A61054177300BE38AE /* match.cpp */,
+				D4A495A71054177300BE38AE /* match.hpp */,
+				D4A495A81054177300BE38AE /* model.cpp */,
+				D4A495A91054177300BE38AE /* model.hpp */,
+				D4A495AA1054177300BE38AE /* options.cpp */,
+				D4A495AB1054177300BE38AE /* options.hpp */,
+				D4A495AC1054177300BE38AE /* os.hpp */,
+				D4A495AD1054177300BE38AE /* os2ea.cpp */,
+				D4A495AE1054177300BE38AE /* pathfn.cpp */,
+				D4A495AF1054177300BE38AE /* pathfn.hpp */,
+				D4A495B01054177300BE38AE /* rar.cpp */,
+				D4A495B11054177300BE38AE /* rar.hpp */,
+				D4A495B21054177300BE38AE /* rardefs.hpp */,
+				D4A495B31054177300BE38AE /* rarlang.hpp */,
+				D4A495B41054177300BE38AE /* raros.hpp */,
+				D4A495B51054177300BE38AE /* rartypes.hpp */,
+				D4A495B61054177300BE38AE /* rarvm.cpp */,
+				D4A495B71054177300BE38AE /* rarvm.hpp */,
+				D4A495B81054177300BE38AE /* rarvmtbl.cpp */,
+				D4A495B91054177300BE38AE /* rawread.cpp */,
+				D4A495BA1054177300BE38AE /* rawread.hpp */,
+				D4A495BB1054177300BE38AE /* rdwrfn.cpp */,
+				D4A495BC1054177300BE38AE /* rdwrfn.hpp */,
+				D4A495BD1054177300BE38AE /* recvol.cpp */,
+				D4A495BE1054177300BE38AE /* recvol.hpp */,
+				D4A495BF1054177300BE38AE /* resource.cpp */,
+				D4A495C01054177300BE38AE /* resource.hpp */,
+				D4A495C11054177300BE38AE /* rijndael.cpp */,
+				D4A495C21054177300BE38AE /* rijndael.hpp */,
+				D4A495C31054177300BE38AE /* rs.cpp */,
+				D4A495C41054177300BE38AE /* rs.hpp */,
+				D4A495C51054177300BE38AE /* savepos.cpp */,
+				D4A495C61054177300BE38AE /* savepos.hpp */,
+				D4A495C71054177300BE38AE /* scantree.cpp */,
+				D4A495C81054177300BE38AE /* scantree.hpp */,
+				D4A495C91054177300BE38AE /* sha1.cpp */,
+				D4A495CA1054177300BE38AE /* sha1.hpp */,
+				D4A495CB1054177300BE38AE /* smallfn.cpp */,
+				D4A495CC1054177300BE38AE /* smallfn.hpp */,
+				D4A495CD1054177300BE38AE /* strfn.cpp */,
+				D4A495CE1054177300BE38AE /* strfn.hpp */,
+				D4A495CF1054177300BE38AE /* strlist.cpp */,
+				D4A495D01054177300BE38AE /* strlist.hpp */,
+				D4A495D11054177300BE38AE /* suballoc.cpp */,
+				D4A495D21054177300BE38AE /* suballoc.hpp */,
+				D4A495D31054177300BE38AE /* system.cpp */,
+				D4A495D41054177300BE38AE /* system.hpp */,
+				D4A495D51054177300BE38AE /* timefn.cpp */,
+				D4A495D61054177300BE38AE /* timefn.hpp */,
+				D4A495D71054177300BE38AE /* ulinks.cpp */,
+				D4A495D81054177300BE38AE /* ulinks.hpp */,
+				D4A495D91054177300BE38AE /* unicode.cpp */,
+				D4A495DA1054177300BE38AE /* unicode.hpp */,
+				D4A495DB1054177300BE38AE /* unios2.cpp */,
+				D4A495DC1054177300BE38AE /* unpack.cpp */,
+				D4A495DD1054177300BE38AE /* unpack.hpp */,
+				D4A495DE1054177300BE38AE /* unpack15.cpp */,
+				D4A495DF1054177300BE38AE /* unpack20.cpp */,
+				D4A495E01054177300BE38AE /* uowners.cpp */,
+				D4A495E11054177300BE38AE /* version.hpp */,
+				D4A495E21054177300BE38AE /* volume.cpp */,
+				D4A495E31054177300BE38AE /* volume.hpp */,
+				D4A495E41054177300BE38AE /* win32acl.cpp */,
+				D4A495E51054177300BE38AE /* win32stm.cpp */,
+			);
+			name = libunrar;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXLegacyTarget section */
+		D4A4962A105419AA00BE38AE /* libunrar */ = {
+			isa = PBXLegacyTarget;
+			buildArgumentsString = "-f makefile.unix lib $(ACTION)";
+			buildConfigurationList = D4A4962D105419C800BE38AE /* Build configuration list for PBXLegacyTarget "libunrar" */;
+			buildPhases = (
+			);
+			buildToolPath = /usr/bin/make;
+			buildWorkingDirectory = ./libunrar/;
+			dependencies = (
+			);
+			name = libunrar;
+			passBuildSettingsInEnvironment = 1;
+			productName = libunrar;
+		};
+/* End PBXLegacyTarget section */
+
+/* Begin PBXNativeTarget section */
+		8D1107260486CEB800E47090 /* QuietUnrar */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C01FCF4A08A954540054247B /* Build configuration list for PBXNativeTarget "QuietUnrar" */;
+			buildPhases = (
+				8D11072C0486CEB800E47090 /* Sources */,
+				8D11072E0486CEB800E47090 /* Frameworks */,
+				D4A4965210541D2600BE38AE /* CopyFiles */,
+				D4A49697105435C700BE38AE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D4A4964D10541CFF00BE38AE /* PBXTargetDependency */,
+			);
+			name = QuietUnrar;
+			productInstallPath = "$(HOME)/Applications";
+			productName = QuietUnrar;
+			productReference = 8D1107320486CEB800E47090 /* QuietUnrar.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		29B97313FDCFA39411CA2CEA /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "QuietUnrar" */;
+			compatibilityVersion = "Xcode 3.2";
+			hasScannedForEncodings = 1;
+			mainGroup = 29B97314FDCFA39411CA2CEA /* QuietUnrar */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8D1107260486CEB800E47090 /* QuietUnrar */,
+				D4A4962A105419AA00BE38AE /* libunrar */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D4A49697105435C700BE38AE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D4A49692105435C100BE38AE /* MainMenu.xib in Resources */,
+				D4A49691105435BE00BE38AE /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8D11072C0486CEB800E47090 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D11072D0486CEB800E47090 /* main.m in Sources */,
+				256AC3DA0F4B6AC300CF3369 /* QuietUnrarAppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D4A4964D10541CFF00BE38AE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D4A4962A105419AA00BE38AE /* libunrar */;
+			targetProxy = D4A4964C10541CFF00BE38AE /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		089C165CFE840E0CC02AAC07 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				089C165DFE840E0CC02AAC07 /* English */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		1DDD58140DA1D0A300B32029 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1DDD58150DA1D0A300B32029 /* English */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C01FCF4B08A954540054247B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = QuietUnrar_Prefix.pch;
+				GCC_PREPROCESSOR_DEFINITIONS = _UNIX;
+				INFOPLIST_FILE = "QuietUnrar-Info.plist";
+				INSTALL_PATH = "$(HOME)/Applications";
+				PRODUCT_NAME = QuietUnrar;
+			};
+			name = Debug;
+		};
+		C01FCF4C08A954540054247B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = QuietUnrar_Prefix.pch;
+				GCC_PREPROCESSOR_DEFINITIONS = _UNIX;
+				INFOPLIST_FILE = "QuietUnrar-Info.plist";
+				INSTALL_PATH = "$(HOME)/Applications";
+				PRODUCT_NAME = QuietUnrar;
+			};
+			name = Release;
+		};
+		C01FCF4F08A954540054247B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_GC = required;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PREBINDING = NO;
+				SDKROOT = macosx10.6;
+				VALID_ARCHS = "i386 x86_64";
+			};
+			name = Debug;
+		};
+		C01FCF5008A954540054247B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_GC = required;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				PREBINDING = NO;
+				SDKROOT = macosx10.6;
+				VALID_ARCHS = "i386 x86_64";
+			};
+			name = Release;
+		};
+		D4A4962B105419AA00BE38AE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				PRODUCT_NAME = libunrar;
+			};
+			name = Debug;
+		};
+		D4A4962C105419AA00BE38AE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				PRODUCT_NAME = libunrar;
+				ZERO_LINK = NO;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C01FCF4A08A954540054247B /* Build configuration list for PBXNativeTarget "QuietUnrar" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C01FCF4B08A954540054247B /* Debug */,
+				C01FCF4C08A954540054247B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C01FCF4E08A954540054247B /* Build configuration list for PBXProject "QuietUnrar" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C01FCF4F08A954540054247B /* Debug */,
+				C01FCF5008A954540054247B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D4A4962D105419C800BE38AE /* Build configuration list for PBXLegacyTarget "libunrar" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D4A4962B105419AA00BE38AE /* Debug */,
+				D4A4962C105419AA00BE38AE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 29B97313FDCFA39411CA2CEA /* Project object */;
+}
