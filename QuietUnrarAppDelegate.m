@@ -18,7 +18,9 @@
 	// Insert code here to initialize your application 
 	KeyMap map;
 	GetKeys(map);
-	NSLog(@"Shift or Right Shift: %d", KEYMAP_GET(map, kVKC_Shift) || KEYMAP_GET(map, kVKC_rShift));	
+	NSLog(@"Shift or Right Shift: %d", KEYMAP_GET(map, kVKC_Shift) || KEYMAP_GET(map, kVKC_rShift));
+	
+	NSLog(@"Dll Version %d\n", RARGetDllVersion());
 }
 
 - (BOOL)application:(id)sender openFileWithoutUI:(NSString *)filename {

@@ -10,6 +10,8 @@
 		256AC3DA0F4B6AC300CF3369 /* QuietUnrarAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 256AC3D90F4B6AC300CF3369 /* QuietUnrarAppDelegate.m */; };
 		8D11072D0486CEB800E47090 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
 		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
+		D488B9B310AF206000B3451C /* libunrar.so in Frameworks */ = {isa = PBXBuildFile; fileRef = D488B9B210AF206000B3451C /* libunrar.so */; };
+		D488BA8110AF216100B3451C /* libunrar.so in Resources */ = {isa = PBXBuildFile; fileRef = D488B9B210AF206000B3451C /* libunrar.so */; };
 		D4A49691105435BE00BE38AE /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165CFE840E0CC02AAC07 /* InfoPlist.strings */; };
 		D4A49692105435C100BE38AE /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1DDD58140DA1D0A300B32029 /* MainMenu.xib */; };
 		D4A96E2110545E9A0091ECB4 /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4A96E2010545E9A0091ECB4 /* Carbon.framework */; };
@@ -50,6 +52,7 @@
 		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
 		8D1107310486CEB800E47090 /* QuietUnrar-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "QuietUnrar-Info.plist"; sourceTree = "<group>"; };
 		8D1107320486CEB800E47090 /* QuietUnrar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QuietUnrar.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D488B9B210AF206000B3451C /* libunrar.so */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libunrar.so; path = libunrar/libunrar.so; sourceTree = "<group>"; };
 		D4A495741054177300BE38AE /* arccmt.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = arccmt.cpp; path = libunrar/arccmt.cpp; sourceTree = "<group>"; };
 		D4A495751054177300BE38AE /* archive.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = archive.cpp; path = libunrar/archive.cpp; sourceTree = "<group>"; };
 		D4A495761054177300BE38AE /* archive.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = archive.hpp; path = libunrar/archive.hpp; sourceTree = "<group>"; };
@@ -174,6 +177,7 @@
 			files = (
 				8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */,
 				D4A96E2110545E9A0091ECB4 /* Carbon.framework in Frameworks */,
+				D488B9B310AF206000B3451C /* libunrar.so in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -192,6 +196,8 @@
 		1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D488B9B210AF206000B3451C /* libunrar.so */,
+				D4A96E2010545E9A0091ECB4 /* Carbon.framework */,
 				1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */,
 			);
 			name = "Linked Frameworks";
@@ -223,7 +229,6 @@
 				29B97317FDCFA39411CA2CEA /* Resources */,
 				29B97323FDCFA39411CA2CEA /* Frameworks */,
 				19C28FACFE9D520D11CA2CBB /* Products */,
-				D4A96E2010545E9A0091ECB4 /* Carbon.framework */,
 			);
 			name = QuietUnrar;
 			sourceTree = "<group>";
@@ -441,6 +446,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D488BA8110AF216100B3451C /* libunrar.so in Resources */,
 				D4A49692105435C100BE38AE /* MainMenu.xib in Resources */,
 				D4A49691105435BE00BE38AE /* InfoPlist.strings in Resources */,
 			);
@@ -502,6 +508,10 @@
 				GCC_PREPROCESSOR_DEFINITIONS = _UNIX;
 				INFOPLIST_FILE = "QuietUnrar-Info.plist";
 				INSTALL_PATH = "$(HOME)/Applications";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/libunrar\"",
+				);
 				PRODUCT_NAME = QuietUnrar;
 			};
 			name = Debug;
@@ -517,6 +527,10 @@
 				GCC_PREPROCESSOR_DEFINITIONS = _UNIX;
 				INFOPLIST_FILE = "QuietUnrar-Info.plist";
 				INSTALL_PATH = "$(HOME)/Applications";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/libunrar\"",
+				);
 				PRODUCT_NAME = QuietUnrar;
 			};
 			name = Release;
