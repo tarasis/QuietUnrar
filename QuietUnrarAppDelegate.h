@@ -21,10 +21,14 @@ enum
 
 #define KEYMAP_GET(m, index) ((((uint8_t*)(m))[(index) >> 3] & (1L << ((index) & 7))) ? 1 : 0)
 
+#define BUF_LEN 64000
+
 @interface QuietUnrarAppDelegate : NSObject <NSApplicationDelegate> {
     NSWindow *window;
 }
 
 @property (assign) IBOutlet NSWindow *window;
+
+- (BOOL) extractRarWith:(NSString *) filename;
 
 @end

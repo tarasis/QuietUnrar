@@ -10,19 +10,19 @@
 		256AC3DA0F4B6AC300CF3369 /* QuietUnrarAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 256AC3D90F4B6AC300CF3369 /* QuietUnrarAppDelegate.m */; };
 		8D11072D0486CEB800E47090 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
 		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
-		D488B9B310AF206000B3451C /* libunrar.so in Frameworks */ = {isa = PBXBuildFile; fileRef = D488B9B210AF206000B3451C /* libunrar.so */; };
-		D488BA8110AF216100B3451C /* libunrar.so in Resources */ = {isa = PBXBuildFile; fileRef = D488B9B210AF206000B3451C /* libunrar.so */; };
+		D488BC6810AF437B00B3451C /* libunrar.so in Frameworks */ = {isa = PBXBuildFile; fileRef = D488BC6710AF437B00B3451C /* libunrar.so */; };
+		D488BCC110AF49C700B3451C /* libunrar.so in CopyFiles */ = {isa = PBXBuildFile; fileRef = D488BC6710AF437B00B3451C /* libunrar.so */; };
 		D4A49691105435BE00BE38AE /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165CFE840E0CC02AAC07 /* InfoPlist.strings */; };
 		D4A49692105435C100BE38AE /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1DDD58140DA1D0A300B32029 /* MainMenu.xib */; };
 		D4A96E2110545E9A0091ECB4 /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4A96E2010545E9A0091ECB4 /* Carbon.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		D4A4964C10541CFF00BE38AE /* PBXContainerItemProxy */ = {
+		D488BC6310AF435500B3451C /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 29B97313FDCFA39411CA2CEA /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = D4A4962A105419AA00BE38AE;
+			remoteGlobalIDString = D4A4962A105419AA00BE38AE /* libunrar */;
 			remoteInfo = libunrar;
 		};
 /* End PBXContainerItemProxy section */
@@ -32,8 +32,9 @@
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
-			dstSubfolderSpec = 7;
+			dstSubfolderSpec = 10;
 			files = (
+				D488BCC110AF49C700B3451C /* libunrar.so in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -52,7 +53,7 @@
 		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
 		8D1107310486CEB800E47090 /* QuietUnrar-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "QuietUnrar-Info.plist"; sourceTree = "<group>"; };
 		8D1107320486CEB800E47090 /* QuietUnrar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QuietUnrar.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		D488B9B210AF206000B3451C /* libunrar.so */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libunrar.so; path = libunrar/libunrar.so; sourceTree = "<group>"; };
+		D488BC6710AF437B00B3451C /* libunrar.so */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libunrar.so; path = libunrar/libunrar.so; sourceTree = "<group>"; };
 		D4A495741054177300BE38AE /* arccmt.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = arccmt.cpp; path = libunrar/arccmt.cpp; sourceTree = "<group>"; };
 		D4A495751054177300BE38AE /* archive.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = archive.cpp; path = libunrar/archive.cpp; sourceTree = "<group>"; };
 		D4A495761054177300BE38AE /* archive.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = archive.hpp; path = libunrar/archive.hpp; sourceTree = "<group>"; };
@@ -175,9 +176,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D488BC6810AF437B00B3451C /* libunrar.so in Frameworks */,
 				8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */,
 				D4A96E2110545E9A0091ECB4 /* Carbon.framework in Frameworks */,
-				D488B9B310AF206000B3451C /* libunrar.so in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -196,7 +197,6 @@
 		1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				D488B9B210AF206000B3451C /* libunrar.so */,
 				D4A96E2010545E9A0091ECB4 /* Carbon.framework */,
 				1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */,
 			);
@@ -256,6 +256,7 @@
 		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D488BC6710AF437B00B3451C /* libunrar.so */,
 				1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */,
 				1058C7A2FEA54F0111CA2CBB /* Other Frameworks */,
 			);
@@ -411,11 +412,12 @@
 				8D11072E0486CEB800E47090 /* Frameworks */,
 				D4A4965210541D2600BE38AE /* CopyFiles */,
 				D4A49697105435C700BE38AE /* Resources */,
+				D488BC8210AF470700B3451C /* ShellScript */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				D4A4964D10541CFF00BE38AE /* PBXTargetDependency */,
+				D488BC6410AF435500B3451C /* PBXTargetDependency */,
 			);
 			name = QuietUnrar;
 			productInstallPath = "$(HOME)/Applications";
@@ -446,13 +448,28 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D488BA8110AF216100B3451C /* libunrar.so in Resources */,
 				D4A49692105435C100BE38AE /* MainMenu.xib in Resources */,
 				D4A49691105435BE00BE38AE /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		D488BC8210AF470700B3451C /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 12;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "#export NEWLIBPATH=\"@loader_path/../Frameworks\"\n#export PROJECT_PATH=\"/Users/rob/Programming/Projects - Mine/QuietUnrar\"\n#\n#mkdir \"$TARGET_BUILD_DIR/$PRODUCT_NAME.app/Contents/Frameworks\"\n#cp -f \"$PROJECT_PATH/libunrar/libunrar.so\" \"$TARGET_BUILD_DIR/$PRODUCT_NAME.app/Contents/Frameworks/libunrar.so\"\n\ninstall_name_tool -change libunrar.so @loader_path/../Frameworks/libunrar.so \"$TARGET_BUILD_DIR/$PRODUCT_NAME.app/Contents/MacOS/$PRODUCT_NAME\"";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		8D11072C0486CEB800E47090 /* Sources */ = {
@@ -467,10 +484,10 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		D4A4964D10541CFF00BE38AE /* PBXTargetDependency */ = {
+		D488BC6410AF435500B3451C /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = D4A4962A105419AA00BE38AE /* libunrar */;
-			targetProxy = D4A4964C10541CFF00BE38AE /* PBXContainerItemProxy */;
+			targetProxy = D488BC6310AF435500B3451C /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -508,7 +525,9 @@
 				GCC_PREPROCESSOR_DEFINITIONS = _UNIX;
 				INFOPLIST_FILE = "QuietUnrar-Info.plist";
 				INSTALL_PATH = "$(HOME)/Applications";
+				LD_DYLIB_INSTALL_NAME = "";
 				LIBRARY_SEARCH_PATHS = (
+					"@executable_path/../Frameworks",
 					"$(inherited)",
 					"\"$(SRCROOT)/libunrar\"",
 				);
@@ -527,7 +546,9 @@
 				GCC_PREPROCESSOR_DEFINITIONS = _UNIX;
 				INFOPLIST_FILE = "QuietUnrar-Info.plist";
 				INSTALL_PATH = "$(HOME)/Applications";
+				LD_DYLIB_INSTALL_NAME = "";
 				LIBRARY_SEARCH_PATHS = (
+					"@executable_path/../Frameworks",
 					"$(inherited)",
 					"\"$(SRCROOT)/libunrar\"",
 				);

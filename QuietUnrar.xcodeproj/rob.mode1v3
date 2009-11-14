@@ -216,7 +216,7 @@
 						<key>_historyCapacity</key>
 						<integer>0</integer>
 						<key>bookmark</key>
-						<string>D488BA8F10AF23CF00B3451C</string>
+						<string>D488BD6610AF625400B3451C</string>
 						<key>history</key>
 						<array>
 							<string>D4C9D7EB10A9B7A20005973D</string>
@@ -312,12 +312,12 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>1</integer>
-									<integer>0</integer>
+									<integer>7</integer>
+									<integer>6</integer>
 								</array>
 							</array>
 							<key>PBXSmartGroupTreeModuleOutlineStateVisibleRectKey</key>
-							<string>{{0, 0}, {186, 658}}</string>
+							<string>{{0, 0}, {186, 664}}</string>
 						</dict>
 						<key>PBXTopSmartGroupGIDs</key>
 						<array/>
@@ -329,14 +329,14 @@
 					<key>GeometryConfiguration</key>
 					<dict>
 						<key>Frame</key>
-						<string>{{0, 0}, {203, 676}}</string>
+						<string>{{0, 0}, {203, 682}}</string>
 						<key>GroupTreeTableConfiguration</key>
 						<array>
 							<string>MainColumn</string>
 							<real>186</real>
 						</array>
 						<key>RubberWindowFrame</key>
-						<string>89 61 1190 717 0 0 1280 778 </string>
+						<string>53 55 1227 723 0 0 1280 778 </string>
 					</dict>
 					<key>Module</key>
 					<string>PBXSmartGroupTreeModule</string>
@@ -366,17 +366,20 @@
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>D488BA8E10AF23CF00B3451C</string>
+										<string>D488BD6510AF625400B3451C</string>
 										<key>history</key>
 										<array>
 											<string>D4A4963610541A1C00BE38AE</string>
 											<string>D4A4965D105433E000BE38AE</string>
 											<string>D4A496731054350F00BE38AE</string>
 											<string>D4A96E4C1054628D0091ECB4</string>
-											<string>D4A96E4D1054628D0091ECB4</string>
 											<string>D4A96E4E1054628D0091ECB4</string>
-											<string>D4A96E4F1054628D0091ECB4</string>
-											<string>D4C9D7E810A9B7A20005973D</string>
+											<string>D488BC5810AF432D00B3451C</string>
+											<string>D488BCD010AF4A1700B3451C</string>
+											<string>D488BCD110AF4A1700B3451C</string>
+											<string>D488BD0610AF568000B3451C</string>
+											<string>D488BD3010AF598C00B3451C</string>
+											<string>D488BD3110AF598C00B3451C</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -388,14 +391,14 @@
 							<key>GeometryConfiguration</key>
 							<dict>
 								<key>Frame</key>
-								<string>{{0, 0}, {982, 514}}</string>
+								<string>{{0, 0}, {1019, 520}}</string>
 								<key>RubberWindowFrame</key>
-								<string>89 61 1190 717 0 0 1280 778 </string>
+								<string>53 55 1227 723 0 0 1280 778 </string>
 							</dict>
 							<key>Module</key>
 							<string>PBXNavigatorGroup</string>
 							<key>Proportion</key>
-							<string>514pt</string>
+							<string>520pt</string>
 						</dict>
 						<dict>
 							<key>ContentConfiguration</key>
@@ -408,9 +411,9 @@
 							<key>GeometryConfiguration</key>
 							<dict>
 								<key>Frame</key>
-								<string>{{0, 519}, {982, 157}}</string>
+								<string>{{0, 525}, {1019, 157}}</string>
 								<key>RubberWindowFrame</key>
-								<string>89 61 1190 717 0 0 1280 778 </string>
+								<string>53 55 1227 723 0 0 1280 778 </string>
 							</dict>
 							<key>Module</key>
 							<string>XCDetailModule</string>
@@ -419,7 +422,7 @@
 						</dict>
 					</array>
 					<key>Proportion</key>
-					<string>982pt</string>
+					<string>1019pt</string>
 				</dict>
 			</array>
 			<key>Name</key>
@@ -576,14 +579,14 @@
 	<array>
 		<string>D488B03D10AF1C2900B3451C</string>
 		<string>D488B03E10AF1C2900B3451C</string>
-		<string>1C78EAAD065D492600B07095</string>
 		<string>1CD10A99069EF8BA00B06720</string>
 		<string>D4A49630105419F700BE38AE</string>
+		<string>1C78EAAD065D492600B07095</string>
 		<string>D40FFE1D105828A50070BCAF</string>
 		<string>/Users/rob/Programming/Projects - Mine/QuietUnrar/QuietUnrar.xcodeproj</string>
 	</array>
 	<key>WindowString</key>
-	<string>89 61 1190 717 0 0 1280 778 </string>
+	<string>53 55 1227 723 0 0 1280 778 </string>
 	<key>WindowToolsV3</key>
 	<array>
 		<dict>
@@ -604,7 +607,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CD0528F0623707200166675</string>
 								<key>PBXProjectModuleLabel</key>
-								<string></string>
+								<string>QuietUnrarAppDelegate.m</string>
 								<key>StatusBarVisibility</key>
 								<true/>
 							</dict>
@@ -621,6 +624,8 @@
 							<string>267pt</string>
 						</dict>
 						<dict>
+							<key>BecomeActive</key>
+							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
@@ -962,7 +967,7 @@
 			<key>WindowToolGUID</key>
 			<string>1C78EAAD065D492600B07095</string>
 			<key>WindowToolIsVisible</key>
-			<false/>
+			<true/>
 		</dict>
 		<dict>
 			<key>Identifier</key>
