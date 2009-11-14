@@ -216,7 +216,7 @@
 						<key>_historyCapacity</key>
 						<integer>0</integer>
 						<key>bookmark</key>
-						<string>D488BD6610AF625400B3451C</string>
+						<string>D488BD7F10AF725D00B3451C</string>
 						<key>history</key>
 						<array>
 							<string>D4C9D7EB10A9B7A20005973D</string>
@@ -366,7 +366,7 @@
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>D488BD6510AF625400B3451C</string>
+										<string>D488BD7E10AF725D00B3451C</string>
 										<key>history</key>
 										<array>
 											<string>D4A4963610541A1C00BE38AE</string>
@@ -378,8 +378,8 @@
 											<string>D488BCD010AF4A1700B3451C</string>
 											<string>D488BCD110AF4A1700B3451C</string>
 											<string>D488BD0610AF568000B3451C</string>
-											<string>D488BD3010AF598C00B3451C</string>
-											<string>D488BD3110AF598C00B3451C</string>
+											<string>D488BD6D10AF6ED200B3451C</string>
+											<string>D488BD6E10AF6ED200B3451C</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -577,6 +577,7 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
+		<string>D488BD7710AF722600B3451C</string>
 		<string>D488B03D10AF1C2900B3451C</string>
 		<string>D488B03E10AF1C2900B3451C</string>
 		<string>1CD10A99069EF8BA00B06720</string>
@@ -1409,33 +1410,40 @@
 			<integer>0</integer>
 		</dict>
 		<dict>
+			<key>FirstTimeWindowDisplayed</key>
+			<false/>
 			<key>Identifier</key>
 			<string>windowTool.refactoring</string>
 			<key>IncludeInToolsMenu</key>
 			<integer>0</integer>
+			<key>IsVertical</key>
+			<true/>
 			<key>Layout</key>
 			<array>
 				<dict>
 					<key>Dock</key>
 					<array>
 						<dict>
-							<key>BecomeActive</key>
-							<integer>1</integer>
+							<key>ContentConfiguration</key>
+							<dict>
+								<key>PBXProjectModuleGUID</key>
+								<string>D488BD7610AF722600B3451C</string>
+							</dict>
 							<key>GeometryConfiguration</key>
 							<dict>
 								<key>Frame</key>
-								<string>{0, 0}, {500, 335}</string>
+								<string>{{0, 0}, {500, 315}}</string>
 								<key>RubberWindowFrame</key>
-								<string>{0, 0}, {500, 335}</string>
+								<string>74 399 500 356 0 0 1280 778 </string>
 							</dict>
 							<key>Module</key>
 							<string>XCRefactoringModule</string>
 							<key>Proportion</key>
-							<string>100%</string>
+							<string>315pt</string>
 						</dict>
 					</array>
 					<key>Proportion</key>
-					<string>100%</string>
+					<string>315pt</string>
 				</dict>
 			</array>
 			<key>Name</key>
@@ -1444,8 +1452,20 @@
 			<array>
 				<string>XCRefactoringModule</string>
 			</array>
+			<key>StatusbarIsVisible</key>
+			<true/>
+			<key>TableOfContents</key>
+			<array>
+				<string>D488BD7710AF722600B3451C</string>
+				<string>D488BD7810AF722600B3451C</string>
+				<string>D488BD7610AF722600B3451C</string>
+			</array>
 			<key>WindowString</key>
-			<string>200 200 500 356 0 0 1920 1200 </string>
+			<string>74 399 500 356 0 0 1280 778 </string>
+			<key>WindowToolGUID</key>
+			<string>D488BD7710AF722600B3451C</string>
+			<key>WindowToolIsVisible</key>
+			<false/>
 		</dict>
 	</array>
 </dict>

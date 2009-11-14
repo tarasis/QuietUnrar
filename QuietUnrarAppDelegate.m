@@ -10,6 +10,19 @@
 #import "QuietUnrarAppDelegate.h"
 #import "libunrar/dll.hpp"
 
+int changeVolume(char * volumeName, int mode);
+int callbackFunction(UINT message, LPARAM userData, LPARAM parameterOne, LPARAM parameterTwo);
+
+int changeVolume(char * volumeName, int mode) {
+	NSLog(@"Volume Name: %s and mode %d", volumeName, mode);
+	
+}
+
+int callbackFunction(UINT message, LPARAM userData, LPARAM parameterOne, LPARAM parameterTwo) {
+	NSLog(@"Callback Function, args: %d, %D, %D, %D", message, userData, parameterOne, parameterTwo);
+}
+
+
 @implementation QuietUnrarAppDelegate
 
 @synthesize window;
@@ -54,26 +67,26 @@
 	//is the <folderContainingTheArchive>/<archiveNameWithPathExtension>
 	NSString * defaultFolderToExtractTo = [filename stringByDeletingPathExtension];
 	
-	char * cstringFilename = (char *)[filename cStringUsingEncoding:NSISOLatin1StringEncoding];
+	char * filenameCString = (char *)[filename cStringUsingEncoding:NSISOLatin1StringEncoding];
 	
 	// Open the Archive for extraction, we set the open result to 3 so we can see it has changed
-	struct RAROpenArchiveData arcData = { cstringFilename, RAR_OM_EXTRACT, 3, &commentBuffer[0], BUF_LEN, 0, 0};
-	
+	struct RAROpenArchiveData arcData = { filenameCString, RAR_OM_EXTRACT, 3, &commentBuffer[0], BUF_LEN, 0, 0};	
 	HANDLE archive = RAROpenArchive(&arcData);
-	NSLog(@"Opening Archive %s with result %d", cstringFilename, arcData.OpenResult);
+	NSLog(@"Opening Archive %s with result %d", filenameCString, arcData.OpenResult);
 	
 	// set call backs for if password needed or need to change volume
+	RARSetChangeVolProc(archive, &changeVolume);
+	RARSetCallback(archive, &callbackFunction, 0);
 	
-	// 
-	struct RARHeaderData headerData;
-	
+	//
+	struct RARHeaderData headerData;	
 	while (RARReadHeader(archive, &headerData) != ERAR_END_ARCHIVE) {
 		NSLog(@"Attempting to extract %s to %@", headerData.FileName, defaultFolderToExtractTo);
 		
-		int process_result = RARProcessFile(archive, RAR_EXTRACT, (char *) [defaultFolderToExtractTo cStringUsingEncoding:NSISOLatin1StringEncoding], NULL);
+		int processResult = RARProcessFile(archive, RAR_EXTRACT, (char *) [defaultFolderToExtractTo cStringUsingEncoding:NSISOLatin1StringEncoding], NULL);
 		
-		if (process_result != 0) {
-			NSLog(@"Process Result was %d", process_result);
+		if (processResult != 0) {
+			NSLog(@"Process Result was %d", processResult);
 			extractionSuccessful = NO;
 			
 			// DISPLAY ERROR DIALOG, ALERT THE USER
@@ -84,7 +97,9 @@
 
 	}
 	
-	int close_result = RARCloseArchive(archive);
+	int closeResult = RARCloseArchive(archive);
+	NSLog(@"Closing Archive %s with result %d", filenameCString, closeResult);
+
 	
 	return extractionSuccessful;
 }

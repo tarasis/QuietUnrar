@@ -10,15 +10,15 @@
 	256AC3D80F4B6AC300CF3369 /* QuietUnrarAppDelegate.h */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {958, 488}}";
-			sepNavSelRange = "{634, 47}";
+			sepNavSelRange = "{680, 0}";
 			sepNavVisRange = "{0, 687}";
 		};
 	};
 	256AC3D90F4B6AC300CF3369 /* QuietUnrarAppDelegate.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1104, 1209}}";
-			sepNavSelRange = "{2762, 0}";
-			sepNavVisRange = "{0, 992}";
+			sepNavIntBoundsRect = "{{0, 0}, {1097, 1404}}";
+			sepNavSelRange = "{2409, 0}";
+			sepNavVisRange = "{144, 1137}";
 			sepNavWindowFrame = "{{85, 21}, {877, 731}}";
 		};
 	};
@@ -229,6 +229,17 @@
 			D488BD6410AF608900B3451C /* PBXTextBookmark */ = D488BD6410AF608900B3451C /* PBXTextBookmark */;
 			D488BD6510AF625400B3451C /* PBXTextBookmark */ = D488BD6510AF625400B3451C /* PBXTextBookmark */;
 			D488BD6610AF625400B3451C /* PBXTextBookmark */ = D488BD6610AF625400B3451C /* PBXTextBookmark */;
+			D488BD6910AF6EC600B3451C /* XCBuildMessageTextBookmark */ = D488BD6910AF6EC600B3451C /* XCBuildMessageTextBookmark */;
+			D488BD6A10AF6EC600B3451C /* PBXTextBookmark */ = D488BD6A10AF6EC600B3451C /* PBXTextBookmark */;
+			D488BD6D10AF6ED200B3451C /* PBXTextBookmark */ = D488BD6D10AF6ED200B3451C /* PBXTextBookmark */;
+			D488BD6E10AF6ED200B3451C /* XCBuildMessageTextBookmark */ = D488BD6E10AF6ED200B3451C /* XCBuildMessageTextBookmark */;
+			D488BD6F10AF6ED200B3451C /* PBXTextBookmark */ = D488BD6F10AF6ED200B3451C /* PBXTextBookmark */;
+			D488BD7010AF6ED200B3451C /* PBXTextBookmark */ = D488BD7010AF6ED200B3451C /* PBXTextBookmark */;
+			D488BD7310AF6F6A00B3451C /* PBXTextBookmark */ = D488BD7310AF6F6A00B3451C /* PBXTextBookmark */;
+			D488BD7410AF6F6A00B3451C /* PBXTextBookmark */ = D488BD7410AF6F6A00B3451C /* PBXTextBookmark */;
+			D488BD7510AF722600B3451C /* PBXTextBookmark */ = D488BD7510AF722600B3451C /* PBXTextBookmark */;
+			D488BD7E10AF725D00B3451C /* PBXTextBookmark */ = D488BD7E10AF725D00B3451C /* PBXTextBookmark */;
+			D488BD7F10AF725D00B3451C /* PBXTextBookmark */ = D488BD7F10AF725D00B3451C /* PBXTextBookmark */;
 			D4A4963610541A1C00BE38AE = D4A4963610541A1C00BE38AE /* PBXTextBookmark */;
 			D4A4965D105433E000BE38AE = D4A4965D105433E000BE38AE /* PBXTargetBookmark */;
 			D4A496731054350F00BE38AE = D4A496731054350F00BE38AE /* PBXTextBookmark */;
@@ -267,7 +278,7 @@
 		fRef = 256AC3D90F4B6AC300CF3369 /* QuietUnrarAppDelegate.m */;
 		name = "QuietUnrarAppDelegate.m: 29";
 		rLen = 0;
-		rLoc = 856;
+		rLoc = 1309;
 		rType = 0;
 		vrLen = 882;
 		vrLoc = 235;
@@ -313,7 +324,7 @@
 		fRef = 256AC3D90F4B6AC300CF3369 /* QuietUnrarAppDelegate.m */;
 		name = "QuietUnrarAppDelegate.m: 29";
 		rLen = 0;
-		rLoc = 856;
+		rLoc = 1309;
 		rType = 0;
 		vrLen = 847;
 		vrLoc = 275;
@@ -333,7 +344,7 @@
 		fRef = 256AC3D90F4B6AC300CF3369 /* QuietUnrarAppDelegate.m */;
 		name = "QuietUnrarAppDelegate.m: 29";
 		rLen = 0;
-		rLoc = 856;
+		rLoc = 1309;
 		rType = 0;
 		vrLen = 1122;
 		vrLoc = 0;
@@ -353,7 +364,7 @@
 		fRef = 256AC3D90F4B6AC300CF3369 /* QuietUnrarAppDelegate.m */;
 		name = "QuietUnrarAppDelegate.m: 29";
 		rLen = 0;
-		rLoc = 856;
+		rLoc = 1309;
 		rType = 0;
 		vrLen = 1122;
 		vrLoc = 0;
@@ -373,7 +384,7 @@
 		fRef = 256AC3D90F4B6AC300CF3369 /* QuietUnrarAppDelegate.m */;
 		name = "QuietUnrarAppDelegate.m: 29";
 		rLen = 0;
-		rLoc = 856;
+		rLoc = 1309;
 		rType = 0;
 		vrLen = 1122;
 		vrLoc = 0;
@@ -393,7 +404,7 @@
 		fRef = 256AC3D90F4B6AC300CF3369 /* QuietUnrarAppDelegate.m */;
 		name = "QuietUnrarAppDelegate.m: 29";
 		rLen = 0;
-		rLoc = 856;
+		rLoc = 1309;
 		rType = 0;
 		vrLen = 1122;
 		vrLoc = 0;
@@ -413,7 +424,7 @@
 		fRef = 256AC3D90F4B6AC300CF3369 /* QuietUnrarAppDelegate.m */;
 		name = "QuietUnrarAppDelegate.m: 14";
 		rLen = 0;
-		rLoc = 274;
+		rLoc = 727;
 		rType = 0;
 		vrLen = 999;
 		vrLoc = 0;
@@ -433,7 +444,7 @@
 		fRef = 256AC3D90F4B6AC300CF3369 /* QuietUnrarAppDelegate.m */;
 		name = "QuietUnrarAppDelegate.m: 14";
 		rLen = 0;
-		rLoc = 274;
+		rLoc = 727;
 		rType = 0;
 		vrLen = 999;
 		vrLoc = 0;
@@ -453,7 +464,7 @@
 		fRef = 256AC3D90F4B6AC300CF3369 /* QuietUnrarAppDelegate.m */;
 		name = "QuietUnrarAppDelegate.m: 14";
 		rLen = 0;
-		rLoc = 274;
+		rLoc = 727;
 		rType = 0;
 		vrLen = 999;
 		vrLoc = 0;
@@ -473,7 +484,7 @@
 		fRef = 256AC3D90F4B6AC300CF3369 /* QuietUnrarAppDelegate.m */;
 		name = "QuietUnrarAppDelegate.m: 23";
 		rLen = 0;
-		rLoc = 635;
+		rLoc = 1088;
 		rType = 0;
 		vrLen = 957;
 		vrLoc = 0;
@@ -493,7 +504,7 @@
 		fRef = 256AC3D90F4B6AC300CF3369 /* QuietUnrarAppDelegate.m */;
 		name = "QuietUnrarAppDelegate.m: 14";
 		rLen = 0;
-		rLoc = 274;
+		rLoc = 727;
 		rType = 0;
 		vrLen = 1040;
 		vrLoc = 0;
@@ -513,7 +524,7 @@
 		fRef = 256AC3D90F4B6AC300CF3369 /* QuietUnrarAppDelegate.m */;
 		name = "QuietUnrarAppDelegate.m: 17";
 		rLen = 0;
-		rLoc = 525;
+		rLoc = 978;
 		rType = 0;
 		vrLen = 957;
 		vrLoc = 0;
@@ -533,7 +544,7 @@
 		fRef = 256AC3D90F4B6AC300CF3369 /* QuietUnrarAppDelegate.m */;
 		name = "QuietUnrarAppDelegate.m: 20";
 		rLen = 0;
-		rLoc = 569;
+		rLoc = 1022;
 		rType = 0;
 		vrLen = 955;
 		vrLoc = 0;
@@ -1142,7 +1153,7 @@
 		fRef = 256AC3D90F4B6AC300CF3369 /* QuietUnrarAppDelegate.m */;
 		fallbackIsa = XCBuildMessageTextBookmark;
 		rLen = 0;
-		rLoc = 22;
+		rLoc = 35;
 		rType = 1;
 	};
 	D488BCCB10AF4A0900B3451C /* PBXTextBookmark */ = {
@@ -1150,7 +1161,7 @@
 		fRef = 256AC3D90F4B6AC300CF3369 /* QuietUnrarAppDelegate.m */;
 		name = "QuietUnrarAppDelegate.m: 19";
 		rLen = 0;
-		rLoc = 569;
+		rLoc = 1022;
 		rType = 0;
 		vrLen = 395;
 		vrLoc = 174;
@@ -1181,7 +1192,7 @@
 		fRef = 256AC3D90F4B6AC300CF3369 /* QuietUnrarAppDelegate.m */;
 		fallbackIsa = XCBuildMessageTextBookmark;
 		rLen = 0;
-		rLoc = 22;
+		rLoc = 35;
 		rType = 1;
 	};
 	D488BCD310AF4A1700B3451C /* PBXTextBookmark */ = {
@@ -1189,7 +1200,7 @@
 		fRef = 256AC3D90F4B6AC300CF3369 /* QuietUnrarAppDelegate.m */;
 		name = "QuietUnrarAppDelegate.m: 18";
 		rLen = 0;
-		rLoc = 569;
+		rLoc = 1022;
 		rType = 0;
 		vrLen = 456;
 		vrLoc = 274;
@@ -1234,7 +1245,7 @@
 		fRef = 256AC3D90F4B6AC300CF3369 /* QuietUnrarAppDelegate.m */;
 		fallbackIsa = XCBuildMessageTextBookmark;
 		rLen = 1;
-		rLoc = 22;
+		rLoc = 35;
 		rType = 1;
 	};
 	D488BCE410AF4A9600B3451C /* PBXTextBookmark */ = {
@@ -1242,7 +1253,7 @@
 		fRef = 256AC3D90F4B6AC300CF3369 /* QuietUnrarAppDelegate.m */;
 		name = "QuietUnrarAppDelegate.m: 18";
 		rLen = 0;
-		rLoc = 569;
+		rLoc = 1022;
 		rType = 0;
 		vrLen = 562;
 		vrLoc = 174;
@@ -1253,7 +1264,7 @@
 		fRef = 256AC3D90F4B6AC300CF3369 /* QuietUnrarAppDelegate.m */;
 		fallbackIsa = XCBuildMessageTextBookmark;
 		rLen = 1;
-		rLoc = 22;
+		rLoc = 35;
 		rType = 1;
 	};
 	D488BCE610AF4AA200B3451C /* PBXTextBookmark */ = {
@@ -1261,7 +1272,7 @@
 		fRef = 256AC3D90F4B6AC300CF3369 /* QuietUnrarAppDelegate.m */;
 		name = "QuietUnrarAppDelegate.m: 24";
 		rLen = 0;
-		rLoc = 677;
+		rLoc = 1130;
 		rType = 0;
 		vrLen = 468;
 		vrLoc = 274;
@@ -1305,7 +1316,7 @@
 		fRef = 256AC3D90F4B6AC300CF3369 /* QuietUnrarAppDelegate.m */;
 		name = "QuietUnrarAppDelegate.m: 17";
 		rLen = 0;
-		rLoc = 569;
+		rLoc = 1022;
 		rType = 0;
 		vrLen = 456;
 		vrLoc = 216;
@@ -1315,7 +1326,7 @@
 		fRef = 256AC3D90F4B6AC300CF3369 /* QuietUnrarAppDelegate.m */;
 		name = "QuietUnrarAppDelegate.m: 36";
 		rLen = 0;
-		rLoc = 993;
+		rLoc = 1446;
 		rType = 0;
 		vrLen = 1024;
 		vrLoc = 148;
@@ -1335,7 +1346,7 @@
 		fRef = 256AC3D90F4B6AC300CF3369 /* QuietUnrarAppDelegate.m */;
 		name = "QuietUnrarAppDelegate.m: 30";
 		rLen = 0;
-		rLoc = 828;
+		rLoc = 1281;
 		rType = 0;
 		vrLen = 1008;
 		vrLoc = 148;
@@ -1355,7 +1366,7 @@
 		fRef = 256AC3D90F4B6AC300CF3369 /* QuietUnrarAppDelegate.m */;
 		name = "QuietUnrarAppDelegate.m: 34";
 		rLen = 0;
-		rLoc = 829;
+		rLoc = 1282;
 		rType = 0;
 		vrLen = 1077;
 		vrLoc = 147;
@@ -1400,8 +1411,8 @@
 		isa = PBXTextBookmark;
 		fRef = 256AC3D90F4B6AC300CF3369 /* QuietUnrarAppDelegate.m */;
 		name = "QuietUnrarAppDelegate.m: 50";
-		rLen = 7;
-		rLoc = 1825;
+		rLen = 0;
+		rLoc = 2084;
 		rType = 0;
 		vrLen = 1106;
 		vrLoc = 0;
@@ -1411,7 +1422,7 @@
 		fRef = 256AC3D90F4B6AC300CF3369 /* QuietUnrarAppDelegate.m */;
 		name = "QuietUnrarAppDelegate.m: 63";
 		rLen = 0;
-		rLoc = 2321;
+		rLoc = 2084;
 		rType = 0;
 		vrLen = 1060;
 		vrLoc = 983;
@@ -1432,7 +1443,7 @@
 		fRef = 256AC3D90F4B6AC300CF3369 /* QuietUnrarAppDelegate.m */;
 		fallbackIsa = XCBuildMessageTextBookmark;
 		rLen = 1;
-		rLoc = 71;
+		rLoc = 84;
 		rType = 1;
 	};
 	D488BD0F10AF56B700B3451C /* PBXTextBookmark */ = {
@@ -1440,7 +1451,7 @@
 		fRef = 256AC3D90F4B6AC300CF3369 /* QuietUnrarAppDelegate.m */;
 		name = "QuietUnrarAppDelegate.m: 63";
 		rLen = 0;
-		rLoc = 2321;
+		rLoc = 2084;
 		rType = 0;
 		vrLen = 532;
 		vrLoc = 1490;
@@ -1460,7 +1471,7 @@
 		fRef = 256AC3D90F4B6AC300CF3369 /* QuietUnrarAppDelegate.m */;
 		name = "QuietUnrarAppDelegate.m: 65";
 		rLen = 0;
-		rLoc = 2321;
+		rLoc = 2084;
 		rType = 0;
 		vrLen = 1115;
 		vrLoc = 983;
@@ -1470,7 +1481,7 @@
 		fRef = 256AC3D90F4B6AC300CF3369 /* QuietUnrarAppDelegate.m */;
 		name = "QuietUnrarAppDelegate.m: 53";
 		rLen = 0;
-		rLoc = 1624;
+		rLoc = 2077;
 		rType = 0;
 		vrLen = 1132;
 		vrLoc = 983;
@@ -1490,7 +1501,7 @@
 		fRef = 256AC3D90F4B6AC300CF3369 /* QuietUnrarAppDelegate.m */;
 		name = "QuietUnrarAppDelegate.m: 65";
 		rLen = 0;
-		rLoc = 2321;
+		rLoc = 2084;
 		rType = 0;
 		vrLen = 1137;
 		vrLoc = 983;
@@ -1510,7 +1521,7 @@
 		fRef = 256AC3D90F4B6AC300CF3369 /* QuietUnrarAppDelegate.m */;
 		name = "QuietUnrarAppDelegate.m: 65";
 		rLen = 0;
-		rLoc = 2321;
+		rLoc = 2084;
 		rType = 0;
 		vrLen = 1151;
 		vrLoc = 983;
@@ -1530,7 +1541,7 @@
 		fRef = 256AC3D90F4B6AC300CF3369 /* QuietUnrarAppDelegate.m */;
 		name = "QuietUnrarAppDelegate.m: 58";
 		rLen = 0;
-		rLoc = 2049;
+		rLoc = 2084;
 		rType = 0;
 		vrLen = 1180;
 		vrLoc = 1062;
@@ -1550,7 +1561,7 @@
 		fRef = 256AC3D90F4B6AC300CF3369 /* QuietUnrarAppDelegate.m */;
 		name = "QuietUnrarAppDelegate.m: 84";
 		rLen = 0;
-		rLoc = 2772;
+		rLoc = 3389;
 		rType = 0;
 		vrLen = 1164;
 		vrLoc = 1267;
@@ -1570,7 +1581,7 @@
 		fRef = 256AC3D90F4B6AC300CF3369 /* QuietUnrarAppDelegate.m */;
 		name = "QuietUnrarAppDelegate.m: 70";
 		rLen = 0;
-		rLoc = 2323;
+		rLoc = 2084;
 		rType = 0;
 		vrLen = 1289;
 		vrLoc = 1267;
@@ -1590,7 +1601,7 @@
 		fRef = 256AC3D90F4B6AC300CF3369 /* QuietUnrarAppDelegate.m */;
 		name = "QuietUnrarAppDelegate.m: 53";
 		rLen = 0;
-		rLoc = 1618;
+		rLoc = 2071;
 		rType = 0;
 		vrLen = 1285;
 		vrLoc = 1267;
@@ -1610,7 +1621,7 @@
 		fRef = 256AC3D90F4B6AC300CF3369 /* QuietUnrarAppDelegate.m */;
 		name = "QuietUnrarAppDelegate.m: 75";
 		rLen = 0;
-		rLoc = 2323;
+		rLoc = 2084;
 		rType = 0;
 		vrLen = 1555;
 		vrLoc = 1154;
@@ -1630,12 +1641,120 @@
 		fRef = 256AC3D90F4B6AC300CF3369 /* QuietUnrarAppDelegate.m */;
 		name = "QuietUnrarAppDelegate.m: 89";
 		rLen = 0;
-		rLoc = 2762;
+		rLoc = 3379;
 		rType = 0;
 		vrLen = 992;
 		vrLoc = 0;
 	};
 	D488BD6610AF625400B3451C /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D40FFE22105828A50070BCAF /* NSApplication.h */;
+		name = "NSApplication.h: 321";
+		rLen = 0;
+		rLoc = 14591;
+		rType = 0;
+		vrLen = 2371;
+		vrLoc = 13084;
+	};
+	D488BD6910AF6EC600B3451C /* XCBuildMessageTextBookmark */ = {
+		isa = PBXTextBookmark;
+		comments = "Expected ';' after expression";
+		fRef = 256AC3D90F4B6AC300CF3369 /* QuietUnrarAppDelegate.m */;
+		fallbackIsa = XCBuildMessageTextBookmark;
+		rLen = 1;
+		rLoc = 21;
+		rType = 1;
+	};
+	D488BD6A10AF6EC600B3451C /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 256AC3D90F4B6AC300CF3369 /* QuietUnrarAppDelegate.m */;
+		name = "QuietUnrarAppDelegate.m: 21";
+		rLen = 0;
+		rLoc = 684;
+		rType = 0;
+		vrLen = 513;
+		vrLoc = 379;
+	};
+	D488BD6D10AF6ED200B3451C /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 256AC3D80F4B6AC300CF3369 /* QuietUnrarAppDelegate.h */;
+		name = "QuietUnrarAppDelegate.h: 32";
+		rLen = 0;
+		rLoc = 680;
+		rType = 0;
+		vrLen = 687;
+		vrLoc = 0;
+	};
+	D488BD6E10AF6ED200B3451C /* XCBuildMessageTextBookmark */ = {
+		isa = PBXTextBookmark;
+		comments = "Expected ';' after expression";
+		fRef = 256AC3D90F4B6AC300CF3369 /* QuietUnrarAppDelegate.m */;
+		fallbackIsa = XCBuildMessageTextBookmark;
+		rLen = 1;
+		rLoc = 21;
+		rType = 1;
+	};
+	D488BD6F10AF6ED200B3451C /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 256AC3D90F4B6AC300CF3369 /* QuietUnrarAppDelegate.m */;
+		name = "QuietUnrarAppDelegate.m: 21";
+		rLen = 0;
+		rLoc = 684;
+		rType = 0;
+		vrLen = 1071;
+		vrLoc = 3;
+	};
+	D488BD7010AF6ED200B3451C /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D40FFE22105828A50070BCAF /* NSApplication.h */;
+		name = "NSApplication.h: 321";
+		rLen = 0;
+		rLoc = 14591;
+		rType = 0;
+		vrLen = 2371;
+		vrLoc = 13084;
+	};
+	D488BD7310AF6F6A00B3451C /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 256AC3D90F4B6AC300CF3369 /* QuietUnrarAppDelegate.m */;
+		name = "QuietUnrarAppDelegate.m: 79";
+		rLen = 0;
+		rLoc = 2084;
+		rType = 0;
+		vrLen = 1532;
+		vrLoc = 1608;
+	};
+	D488BD7410AF6F6A00B3451C /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D40FFE22105828A50070BCAF /* NSApplication.h */;
+		name = "NSApplication.h: 321";
+		rLen = 0;
+		rLoc = 14591;
+		rType = 0;
+		vrLen = 2371;
+		vrLoc = 13084;
+	};
+	D488BD7510AF722600B3451C /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 256AC3D90F4B6AC300CF3369 /* QuietUnrarAppDelegate.m */;
+		name = "QuietUnrarAppDelegate.m: 70";
+		rLen = 7;
+		rLoc = 2077;
+		rType = 0;
+		vrLen = 456;
+		vrLoc = 312;
+	};
+	D488BD7E10AF725D00B3451C /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 256AC3D90F4B6AC300CF3369 /* QuietUnrarAppDelegate.m */;
+		name = "QuietUnrarAppDelegate.m: 74";
+		rLen = 0;
+		rLoc = 2409;
+		rType = 0;
+		vrLen = 1137;
+		vrLoc = 144;
+	};
+	D488BD7F10AF725D00B3451C /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
 		fRef = D40FFE22105828A50070BCAF /* NSApplication.h */;
 		name = "NSApplication.h: 321";
@@ -1810,7 +1929,7 @@
 		fRef = 256AC3D90F4B6AC300CF3369 /* QuietUnrarAppDelegate.m */;
 		name = "QuietUnrarAppDelegate.m: 29";
 		rLen = 0;
-		rLoc = 856;
+		rLoc = 1309;
 		rType = 0;
 		vrLen = 827;
 		vrLoc = 295;
