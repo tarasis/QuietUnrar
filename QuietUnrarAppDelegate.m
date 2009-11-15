@@ -10,11 +10,18 @@
 #import "QuietUnrarAppDelegate.h"
 #import "libunrar/dll.hpp"
 
+QuietUnrarAppDelegate * quietUnrar; 
+
 int changeVolume(char * volumeName, int mode);
 int callbackFunction(UINT message, LPARAM userData, LPARAM parameterOne, LPARAM parameterTwo);
 
 int changeVolume(char * volumeName, int mode) {
 	NSLog(@"Volume Name: %s and mode %d", volumeName, mode);
+	
+	if (mode == RAR_VOL_ASK)
+	{
+		[(QuietUnrarAppDelegate *) quietUnrar alertUserOfMissing:volumeName];
+	}
 	
 }
 
@@ -46,7 +53,11 @@ int callbackFunction(UINT message, LPARAM userData, LPARAM parameterOne, LPARAM 
 - (BOOL)application:(NSApplication *)theApplication openFile:(NSString *)filename {
 	NSLog(@"openFile: %@", filename);
 	
-	return [self extractRarWith:filename];
+	[self extractRarWith:filename];
+	
+	// Always return YES even if there is an error to avoid dialog indicating unable to
+	// handle files of type RAR if the archive is corrupt or part of it is missing
+	return YES;
 }
 
 //- (void)application:(NSApplication *)sender openFiles:(NSArray *)filenames {
@@ -59,6 +70,7 @@ int callbackFunction(UINT message, LPARAM userData, LPARAM parameterOne, LPARAM 
 //}
 
 - (BOOL) extractRarWith:(NSString *) filename {
+	quietUnrar = (void *) self;
 	char commentBuffer[BUF_LEN];
 	BOOL extractionSuccessful = YES;
 	
@@ -74,7 +86,7 @@ int callbackFunction(UINT message, LPARAM userData, LPARAM parameterOne, LPARAM 
 	NSLog(@"Opening Archive %s with result %d", filenameCString, arcData.OpenResult);
 	
 	// set call backs for if password needed or need to change volume
-	//RARSetChangeVolProc(archive, &changeVolume);
+	RARSetChangeVolProc(archive, &changeVolume);
 	//RARSetCallback(archive, &callbackFunction, 0);
 	
 	//
@@ -146,6 +158,19 @@ int callbackFunction(UINT message, LPARAM userData, LPARAM parameterOne, LPARAM 
 	[alert release];
 	
 	return result;
+}
+
+- (void) alertUserOfMissing:(const char *) volume {
+	NSLog(@"Alerting user of missing volume");
+	NSAlert *alert = [[NSAlert alloc] init];
+	[alert addButtonWithTitle:@"OK"];
+	[alert setMessageText:[NSString stringWithFormat:@"Archive part %s is missing.", volume]];
+	[alert setInformativeText:@"Unable to extract all files from RAR archive as part of it is missing"];
+	[alert setAlertStyle:NSCriticalAlertStyle];
+	
+	[alert runModal];
+
+	[alert release];
 }
 
 @end
