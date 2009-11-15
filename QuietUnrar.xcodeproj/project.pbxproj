@@ -12,6 +12,7 @@
 		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
 		D488BC6810AF437B00B3451C /* libunrar.so in Frameworks */ = {isa = PBXBuildFile; fileRef = D488BC6710AF437B00B3451C /* libunrar.so */; };
 		D488BCC110AF49C700B3451C /* libunrar.so in CopyFiles */ = {isa = PBXBuildFile; fileRef = D488BC6710AF437B00B3451C /* libunrar.so */; };
+		D488BDB710B0160300B3451C /* OverwriteFilesDialog.xib in Resources */ = {isa = PBXBuildFile; fileRef = D488BDB610B0160300B3451C /* OverwriteFilesDialog.xib */; };
 		D4A49691105435BE00BE38AE /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165CFE840E0CC02AAC07 /* InfoPlist.strings */; };
 		D4A49692105435C100BE38AE /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1DDD58140DA1D0A300B32029 /* MainMenu.xib */; };
 		D4A96E2110545E9A0091ECB4 /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4A96E2010545E9A0091ECB4 /* Carbon.framework */; };
@@ -54,6 +55,7 @@
 		8D1107310486CEB800E47090 /* QuietUnrar-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "QuietUnrar-Info.plist"; sourceTree = "<group>"; };
 		8D1107320486CEB800E47090 /* QuietUnrar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QuietUnrar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D488BC6710AF437B00B3451C /* libunrar.so */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libunrar.so; path = libunrar/libunrar.so; sourceTree = "<group>"; };
+		D488BDB610B0160300B3451C /* OverwriteFilesDialog.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OverwriteFilesDialog.xib; sourceTree = "<group>"; };
 		D4A495741054177300BE38AE /* arccmt.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = arccmt.cpp; path = libunrar/arccmt.cpp; sourceTree = "<group>"; };
 		D4A495751054177300BE38AE /* archive.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = archive.cpp; path = libunrar/archive.cpp; sourceTree = "<group>"; };
 		D4A495761054177300BE38AE /* archive.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = archive.hpp; path = libunrar/archive.hpp; sourceTree = "<group>"; };
@@ -249,6 +251,7 @@
 				8D1107310486CEB800E47090 /* QuietUnrar-Info.plist */,
 				089C165CFE840E0CC02AAC07 /* InfoPlist.strings */,
 				1DDD58140DA1D0A300B32029 /* MainMenu.xib */,
+				D488BDB610B0160300B3451C /* OverwriteFilesDialog.xib */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -450,6 +453,7 @@
 			files = (
 				D4A49692105435C100BE38AE /* MainMenu.xib in Resources */,
 				D4A49691105435BE00BE38AE /* InfoPlist.strings in Resources */,
+				D488BDB710B0160300B3451C /* OverwriteFilesDialog.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

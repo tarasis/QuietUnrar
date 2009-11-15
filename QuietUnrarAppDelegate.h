@@ -30,5 +30,6 @@ enum
 @property (assign) IBOutlet NSWindow *window;
 
 - (BOOL) extractRarWith:(NSString *) filename;
+- (BOOL) shouldFileBeReplaced:(NSString *) filename;
 
 @end
