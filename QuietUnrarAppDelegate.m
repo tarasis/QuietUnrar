@@ -10,13 +10,13 @@
 #import "QuietUnrarAppDelegate.h"
 #import "libunrar/dll.hpp"
 
-QuietUnrarAppDelegate * quietUnrar; 
+QuietUnrarAppDelegate * quietUnrar;
 
 int changeVolume(char * volumeName, int mode);
 int callbackFunction(UINT message, LPARAM userData, LPARAM parameterOne, LPARAM parameterTwo);
 
 int changeVolume(char * volumeName, int mode) {
-	NSLog(@"Volume Name: %s and mode %d", volumeName, mode);
+	//NSLog(@"Volume Name: %s and mode %d", volumeName, mode);
 	
 	if (mode == RAR_VOL_ASK)
 	{
@@ -26,18 +26,23 @@ int changeVolume(char * volumeName, int mode) {
 }
 
 int callbackFunction(UINT message, LPARAM userData, LPARAM parameterOne, LPARAM parameterTwo) {
-	NSLog(@"Callback Function, args: %d, %D, %D, %D", message, userData, parameterOne, parameterTwo);
+	if (message == UCM_NEEDPASSWORD) {
+		//NSLog(@"Archive password required");
+		[(QuietUnrarAppDelegate *) quietUnrar requestArchivePassword: (id) userData];
+		
+	}
+		//NSLog(@"Callback Function, args: %d, %D, %D, %D", message, userData, parameterOne, parameterTwo);
 }
 
 
 @implementation QuietUnrarAppDelegate
 
-@synthesize window;
+@synthesize window, passwordView, passwordField;
 
 - (void) applicationWillFinishLaunching:(NSNotification *)notification {
 	KeyMap map;
 	GetKeys(map);
-	NSLog(@"Shift or Right Shift: %d", KEYMAP_GET(map, kVKC_Shift) || KEYMAP_GET(map, kVKC_rShift));	
+	//NSLog(@"Shift or Right Shift: %d", KEYMAP_GET(map, kVKC_Shift) || KEYMAP_GET(map, kVKC_rShift));	
 }
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
@@ -51,7 +56,7 @@ int callbackFunction(UINT message, LPARAM userData, LPARAM parameterOne, LPARAM 
 //}
 
 - (BOOL)application:(NSApplication *)theApplication openFile:(NSString *)filename {
-	NSLog(@"openFile: %@", filename);
+	//NSLog(@"openFile: %@", filename);
 	
 	[self extractRarWith:filename];
 	
@@ -83,11 +88,11 @@ int callbackFunction(UINT message, LPARAM userData, LPARAM parameterOne, LPARAM 
 	// Open the Archive for extraction, we set the open result to 3 so we can see it has changed
 	struct RAROpenArchiveData arcData = { filenameCString, RAR_OM_EXTRACT, 3, &commentBuffer[0], BUF_LEN, 0, 0};	
 	HANDLE archive = RAROpenArchive(&arcData);
-	NSLog(@"Opening Archive %s with result %d", filenameCString, arcData.OpenResult);
+	//NSLog(@"Opening Archive %s with result %d", filenameCString, arcData.OpenResult);
 	
 	// set call backs for if password needed or need to change volume
 	RARSetChangeVolProc(archive, &changeVolume);
-	//RARSetCallback(archive, &callbackFunction, 0);
+	RARSetCallback(archive, &callbackFunction, (LPARAM)archive);
 	
 	//
 	struct RARHeaderData headerData;
@@ -95,7 +100,7 @@ int callbackFunction(UINT message, LPARAM userData, LPARAM parameterOne, LPARAM 
 	NSString * currentFilename;
 	
 	while (RARReadHeader(archive, &headerData) != ERAR_END_ARCHIVE) {
-		NSLog(@"Attempting to extract %s to %@", headerData.FileName, defaultFolderToExtractTo);
+		//NSLog(@"Attempting to extract %s to %@", headerData.FileName, defaultFolderToExtractTo);
 		
 		int processResult = 0;
 		BOOL extractFile = YES;
@@ -115,10 +120,10 @@ int callbackFunction(UINT message, LPARAM userData, LPARAM parameterOne, LPARAM 
 //		NSLog(@"Last filename %@, currentFilename %@, equality %d", lastExtractedFilename, currentFilename, [lastExtractedFilename isEqualToString:currentFilename]);
 		
 		if (extractFile) {
-			NSLog(@"...Extracting");
+			//NSLog(@"...Extracting");
 			processResult = RARProcessFile(archive, RAR_EXTRACT, (char *) [defaultFolderToExtractTo cStringUsingEncoding:NSISOLatin1StringEncoding], NULL);
 		} else {
-			NSLog(@"...Skipping as already exists");
+			//NSLog(@"...Skipping as already exists");
 			processResult = RARProcessFile(archive, RAR_SKIP, NULL, NULL);
 			// Curious behavior by the lib, you have SKIP a file number of times (4 in my test example) before
 			// it is skipped. However if you extract it is only processed once.
@@ -136,7 +141,7 @@ int callbackFunction(UINT message, LPARAM userData, LPARAM parameterOne, LPARAM 
 	}
 	
 	int closeResult = RARCloseArchive(archive);
-	NSLog(@"Closing Archive %s with result %d", filenameCString, closeResult);
+	//NSLog(@"Closing Archive %s with result %d", filenameCString, closeResult);
 
 	return extractionSuccessful;
 }
@@ -162,7 +167,7 @@ int callbackFunction(UINT message, LPARAM userData, LPARAM parameterOne, LPARAM 
 }
 
 - (void) alertUserOfMissing:(const char *) volume {
-	NSLog(@"Alerting user of missing volume");
+	//NSLog(@"Alerting user of missing volume");
 	NSAlert *alert = [[NSAlert alloc] init];
 	[alert addButtonWithTitle:@"OK"];
 	[alert setMessageText:[NSString stringWithFormat:@"Archive part %s is missing.", volume]];
@@ -171,6 +176,28 @@ int callbackFunction(UINT message, LPARAM userData, LPARAM parameterOne, LPARAM 
 	
 	[alert runModal];
 
+	[alert release];
+}
+
+- (NSString *) requestArchivePassword:(id) archive {
+	if (!passwordView) {
+		[NSBundle loadNibNamed:@"PasswordView" owner:self];
+	}
+	
+	NSAlert *alert = [[NSAlert alloc] init];
+    [alert addButtonWithTitle:@"OK"];
+    [alert addButtonWithTitle:@"Cancel"];
+    [alert setMessageText:@"Archive Requires a password"];
+    [alert setInformativeText:@"To extract the contents of this archive a password is required."];
+	[alert setAccessoryView:passwordView];
+    [alert setAlertStyle:NSWarningAlertStyle];
+	
+	if ([alert runModal] == NSAlertFirstButtonReturn) {
+		NSString * password = [passwordField stringValue];
+		RARSetPassword((HANDLE)archive, (char *) [password cStringUsingEncoding:NSISOLatin1StringEncoding]);
+		//NSLog(@"Password is: %@", password);
+	}
+	
 	[alert release];
 }
 

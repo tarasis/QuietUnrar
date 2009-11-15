@@ -25,12 +25,18 @@ enum
 
 @interface QuietUnrarAppDelegate : NSObject <NSApplicationDelegate> {
     NSWindow *window;
+	NSView *passwordView;
+	
+	NSSecureTextField * passwordField;
 }
 
 @property (assign) IBOutlet NSWindow *window;
+@property (assign) IBOutlet NSView *passwordView;
+@property (assign) IBOutlet NSSecureTextField * passwordField;
 
 - (BOOL) extractRarWith:(NSString *) filename;
 - (BOOL) shouldFileBeReplaced:(NSString *) filename;
 - (void) alertUserOfMissing:(const char *) volume;
+- (NSString *) requestArchivePassword:(id) archive;
 
 @end
