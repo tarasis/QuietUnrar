@@ -146,7 +146,8 @@ int callbackFunction(UINT message, LPARAM userData, LPARAM parameterOne, LPARAM 
 	
 	NSAlert *alert = [[NSAlert alloc] init];
 	[alert addButtonWithTitle:@"Overwrite"];
-	[alert addButtonWithTitle:@"Skip"];
+	NSButton * skipButton = [alert addButtonWithTitle:@"Skip"];
+	[skipButton setKeyEquivalent:@"\e"];
 	[alert setMessageText:[NSString stringWithFormat:@"Overwrite %@?", filename]];
 	[alert setInformativeText:[NSString stringWithFormat:@"The file already exists. Do you wish to extract it again, overwriting the original file?", filename]];
 	[alert setAlertStyle:NSWarningAlertStyle];
