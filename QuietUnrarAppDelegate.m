@@ -92,7 +92,7 @@ int callbackFunction(UINT message, LPARAM userData, LPARAM parameterOne, LPARAM 
 	
 	//Determine the folder we should extract the archive to. This by default
 	//is the <folderContainingTheArchive>/<archiveNameWithPathExtension>
-	NSString * defaultFolderToExtractTo = [filename stringByDeletingPathExtension];
+	NSString * folderToExtractTo = [filename stringByDeletingPathExtension];
 	
 	char * filenameCString = (char *)[filename cStringUsingEncoding:NSISOLatin1StringEncoding];
 	
@@ -119,7 +119,7 @@ int callbackFunction(UINT message, LPARAM userData, LPARAM parameterOne, LPARAM 
 		
 		NSFileManager * fileManager = [NSFileManager defaultManager];
 		
-		if ([fileManager fileExistsAtPath:[NSString stringWithFormat:@"%@/%s", defaultFolderToExtractTo, headerData.FileName]] ) {
+		if ([fileManager fileExistsAtPath:[NSString stringWithFormat:@"%@/%s", folderToExtractTo, headerData.FileName]] ) {
 			// If we have already processed the file once and the user has told us to skip
 			// don't ask them again, even though we've changed volumes. Otherwise
 			// ask the user what to do.
@@ -132,7 +132,7 @@ int callbackFunction(UINT message, LPARAM userData, LPARAM parameterOne, LPARAM 
 		
 		if (extractFile) {
 			//NSLog(@"...Extracting");
-			processResult = RARProcessFile(archive, RAR_EXTRACT, (char *) [defaultFolderToExtractTo cStringUsingEncoding:NSISOLatin1StringEncoding], NULL);
+			processResult = RARProcessFile(archive, RAR_EXTRACT, (char *) [folderToExtractTo cStringUsingEncoding:NSISOLatin1StringEncoding], NULL);
 		} else {
 			//NSLog(@"...Skipping as already exists");
 			processResult = RARProcessFile(archive, RAR_SKIP, NULL, NULL);
