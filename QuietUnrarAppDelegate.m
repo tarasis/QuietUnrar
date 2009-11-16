@@ -111,19 +111,22 @@ int callbackFunction(UINT message, LPARAM userData, LPARAM parameterOne, LPARAM 
 	NSString * currentFilename;
 	
 	while (RARReadHeader(archive, &headerData) != ERAR_END_ARCHIVE) {
-		//NSLog(@"Attempting to extract %s to %@", headerData.FileName, defaultFolderToExtractTo);
+		//NSLog(@"Attempting to extract %s to %@", headerData.FileName, folderToExtractTo);
 		
 		int processResult = 0;
 		BOOL extractFile = YES;
+		BOOL isDir;
 		currentFilename = [NSString stringWithCString:(const char *) headerData.FileName encoding:NSISOLatin1StringEncoding];
 		
 		NSFileManager * fileManager = [NSFileManager defaultManager];
 		
-		if ([fileManager fileExistsAtPath:[NSString stringWithFormat:@"%@/%s", folderToExtractTo, headerData.FileName]] ) {
+		if ([fileManager fileExistsAtPath:[NSString stringWithFormat:@"%@/%s", folderToExtractTo, headerData.FileName] isDirectory:&isDir] ) {
 			// If we have already processed the file once and the user has told us to skip
 			// don't ask them again, even though we've changed volumes. Otherwise
 			// ask the user what to do.
-			if ([lastExtractedFilename isEqualToString:currentFilename] || ![self shouldFileBeReplaced:currentFilename]) {
+			if ([lastExtractedFilename isEqualToString:currentFilename] || 
+				isDir													||
+				![self shouldFileBeReplaced:currentFilename]) {
 				extractFile = NO;
 			}
 		}
@@ -151,7 +154,7 @@ int callbackFunction(UINT message, LPARAM userData, LPARAM parameterOne, LPARAM 
 
 	}
 	
-	int closeResult = RARCloseArchive(archive);
+	RARCloseArchive(archive);
 	//NSLog(@"Closing Archive %s with result %d", filenameCString, closeResult);
 
 	return extractionSuccessful;
