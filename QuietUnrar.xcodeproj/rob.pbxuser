@@ -16,9 +16,9 @@
 	};
 	256AC3D90F4B6AC300CF3369 /* QuietUnrarAppDelegate.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1167, 3341}}";
-			sepNavSelRange = "{6817, 0}";
-			sepNavVisRange = "{5644, 646}";
+			sepNavIntBoundsRect = "{{0, 0}, {1043, 3120}}";
+			sepNavSelRange = "{4007, 0}";
+			sepNavVisRange = "{3148, 1295}";
 			sepNavWindowFrame = "{{85, 21}, {877, 731}}";
 		};
 	};
@@ -42,7 +42,7 @@
 				PBXFileTableDataSourceColumnWidthsKey = (
 					22,
 					300,
-					753,
+					752.58349609375,
 				);
 				PBXFileTableDataSourceColumnsKey = (
 					PBXExecutablesDataSource_ActiveFlagID,
@@ -77,7 +77,7 @@
 				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
 				PBXFileTableDataSourceColumnWidthsKey = (
 					20,
-					740,
+					825,
 					60,
 					20,
 					48,
@@ -113,6 +113,15 @@
 			D488BF0F10B1A61D00B3451C = D488BF0F10B1A61D00B3451C /* PBXTextBookmark */;
 			D488BF2F10B1B64800B3451C = D488BF2F10B1B64800B3451C /* PBXTextBookmark */;
 			D488BFA310B1F66B00B3451C = D488BFA310B1F66B00B3451C /* PBXTextBookmark */;
+			D488BFC710B1FBD200B3451C /* PBXTextBookmark */ = D488BFC710B1FBD200B3451C /* PBXTextBookmark */;
+			D488BFCD10B1FDF600B3451C /* PlistBookmark */ = D488BFCD10B1FDF600B3451C /* PlistBookmark */;
+			D488BFCE10B1FDF600B3451C /* PBXTextBookmark */ = D488BFCE10B1FDF600B3451C /* PBXTextBookmark */;
+			D488BFCF10B1FDF600B3451C /* PBXTextBookmark */ = D488BFCF10B1FDF600B3451C /* PBXTextBookmark */;
+			D488BFD110B1FE4500B3451C /* PBXTextBookmark */ = D488BFD110B1FE4500B3451C /* PBXTextBookmark */;
+			D488BFD210B1FE4500B3451C /* PlistBookmark */ = D488BFD210B1FE4500B3451C /* PlistBookmark */;
+			D488BFD310B1FE4500B3451C /* PlistBookmark */ = D488BFD310B1FE4500B3451C /* PlistBookmark */;
+			D488BFD810B205CA00B3451C /* PlistBookmark */ = D488BFD810B205CA00B3451C /* PlistBookmark */;
+			D488BFD910B205CA00B3451C /* PBXTextBookmark */ = D488BFD910B205CA00B3451C /* PBXTextBookmark */;
 			D4A4963610541A1C00BE38AE = D4A4963610541A1C00BE38AE /* PBXTextBookmark */;
 			D4A4965D105433E000BE38AE = D4A4965D105433E000BE38AE /* PBXTargetBookmark */;
 			D4A96E4C1054628D0091ECB4 = D4A96E4C1054628D0091ECB4 /* PBXTextBookmark */;
@@ -296,7 +305,7 @@
 		comments = "Value stored to 'closeResult' during its initialization is never read";
 		fRef = 256AC3D90F4B6AC300CF3369 /* QuietUnrarAppDelegate.m */;
 		rLen = 1;
-		rLoc = 171;
+		rLoc = 175;
 		rType = 1;
 	};
 	D488BFA310B1F66B00B3451C /* PBXTextBookmark */ = {
@@ -304,10 +313,104 @@
 		fRef = 256AC3D90F4B6AC300CF3369 /* QuietUnrarAppDelegate.m */;
 		name = "QuietUnrarAppDelegate.m: 72";
 		rLen = 0;
-		rLoc = 3014;
+		rLoc = 3038;
 		rType = 0;
 		vrLen = 1803;
 		vrLoc = 1721;
+	};
+	D488BFC710B1FBD200B3451C /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 256AC3D90F4B6AC300CF3369 /* QuietUnrarAppDelegate.m */;
+		name = "QuietUnrarAppDelegate.m: 100";
+		rLen = 0;
+		rLoc = 4112;
+		rType = 0;
+		vrLen = 1293;
+		vrLoc = 3147;
+	};
+	D488BFCD10B1FDF600B3451C /* PlistBookmark */ = {
+		isa = PlistBookmark;
+		fRef = D488BFCB10B1FD4500B3451C /* Growl Registration Ticket.growlRegDict */;
+		fallbackIsa = PBXBookmark;
+		isK = 0;
+		kPath = (
+		);
+		name = "/Users/rob/Programming/Projects - Mine/QuietUnrar/Growl Registration Ticket.growlRegDict.plist";
+		rLen = 0;
+		rLoc = 9223372036854775807;
+	};
+	D488BFCE10B1FDF600B3451C /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 256AC3D90F4B6AC300CF3369 /* QuietUnrarAppDelegate.m */;
+		name = "QuietUnrarAppDelegate.m: 100";
+		rLen = 0;
+		rLoc = 4112;
+		rType = 0;
+		vrLen = 1292;
+		vrLoc = 3148;
+	};
+	D488BFCF10B1FDF600B3451C /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 256AC3D90F4B6AC300CF3369 /* QuietUnrarAppDelegate.m */;
+		name = "QuietUnrarAppDelegate.m: 99";
+		rLen = 0;
+		rLoc = 4094;
+		rType = 0;
+		vrLen = 1300;
+		vrLoc = 3148;
+	};
+	D488BFD110B1FE4500B3451C /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 256AC3D90F4B6AC300CF3369 /* QuietUnrarAppDelegate.m */;
+		name = "QuietUnrarAppDelegate.m: 99";
+		rLen = 0;
+		rLoc = 4094;
+		rType = 0;
+		vrLen = 1300;
+		vrLoc = 3148;
+	};
+	D488BFD210B1FE4500B3451C /* PlistBookmark */ = {
+		isa = PlistBookmark;
+		fRef = D488BFCB10B1FD4500B3451C /* Growl Registration Ticket.growlRegDict */;
+		fallbackIsa = PBXBookmark;
+		isK = 0;
+		kPath = (
+		);
+		name = "/Users/rob/Programming/Projects - Mine/QuietUnrar/Growl Registration Ticket.growlRegDict.plist";
+		rLen = 0;
+		rLoc = 9223372036854775807;
+	};
+	D488BFD310B1FE4500B3451C /* PlistBookmark */ = {
+		isa = PlistBookmark;
+		fRef = D488BFCB10B1FD4500B3451C /* Growl Registration Ticket.growlRegDict */;
+		fallbackIsa = PBXBookmark;
+		isK = 0;
+		kPath = (
+		);
+		name = "/Users/rob/Programming/Projects - Mine/QuietUnrar/Growl Registration Ticket.growlRegDict.plist";
+		rLen = 0;
+		rLoc = 9223372036854775807;
+	};
+	D488BFD810B205CA00B3451C /* PlistBookmark */ = {
+		isa = PlistBookmark;
+		fRef = D488BFCB10B1FD4500B3451C /* Growl Registration Ticket.growlRegDict */;
+		fallbackIsa = PBXBookmark;
+		isK = 0;
+		kPath = (
+		);
+		name = "/Users/rob/Programming/Projects - Mine/QuietUnrar/Growl Registration Ticket.growlRegDict";
+		rLen = 0;
+		rLoc = 9223372036854775807;
+	};
+	D488BFD910B205CA00B3451C /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 256AC3D90F4B6AC300CF3369 /* QuietUnrarAppDelegate.m */;
+		name = "QuietUnrarAppDelegate.m: 98";
+		rLen = 0;
+		rLoc = 4007;
+		rType = 0;
+		vrLen = 1295;
+		vrLoc = 3148;
 	};
 	D4A4940C1054167200BE38AE /* QuietUnrar */ = {
 		isa = PBXExecutable;

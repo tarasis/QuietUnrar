@@ -265,16 +265,14 @@
 							<array>
 								<string>29B97314FDCFA39411CA2CEA</string>
 								<string>080E96DDFE201D6D7F000001</string>
-								<string>29B97317FDCFA39411CA2CEA</string>
-								<string>1C37FBAC04509CD000000102</string>
-								<string>1C37FAAC04509CD000000102</string>
 								<string>1C37FABC05509CD000000102</string>
 							</array>
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>17</integer>
-									<integer>16</integer>
+									<integer>3</integer>
+									<integer>1</integer>
+									<integer>0</integer>
 								</array>
 							</array>
 							<key>PBXSmartGroupTreeModuleOutlineStateVisibleRectKey</key>
@@ -297,7 +295,7 @@
 							<real>150</real>
 						</array>
 						<key>RubberWindowFrame</key>
-						<string>6 55 1276 723 0 0 1280 778 </string>
+						<string>4 55 1276 723 0 0 1280 778 </string>
 					</dict>
 					<key>Module</key>
 					<string>PBXSmartGroupTreeModule</string>
@@ -327,7 +325,7 @@
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>D488BFA310B1F66B00B3451C</string>
+										<string>D488BFD910B205CA00B3451C</string>
 										<key>history</key>
 										<array>
 											<string>D4A4963610541A1C00BE38AE</string>
@@ -347,7 +345,8 @@
 											<string>D488BD9010AF7F6900B3451C</string>
 											<string>D488BEFE10B18CFC00B3451C</string>
 											<string>D488BF0F10B1A61D00B3451C</string>
-											<string>D488BF2F10B1B64800B3451C</string>
+											<string>D488BFD810B205CA00B3451C</string>
+											<string>D488BFD110B1FE4500B3451C</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -359,14 +358,14 @@
 							<key>GeometryConfiguration</key>
 							<dict>
 								<key>Frame</key>
-								<string>{{0, 0}, {1104, 618}}</string>
+								<string>{{0, 0}, {1104, 539}}</string>
 								<key>RubberWindowFrame</key>
-								<string>6 55 1276 723 0 0 1280 778 </string>
+								<string>4 55 1276 723 0 0 1280 778 </string>
 							</dict>
 							<key>Module</key>
 							<string>PBXNavigatorGroup</string>
 							<key>Proportion</key>
-							<string>618pt</string>
+							<string>539pt</string>
 						</dict>
 						<dict>
 							<key>ContentConfiguration</key>
@@ -379,14 +378,14 @@
 							<key>GeometryConfiguration</key>
 							<dict>
 								<key>Frame</key>
-								<string>{{0, 623}, {1104, 59}}</string>
+								<string>{{0, 544}, {1104, 138}}</string>
 								<key>RubberWindowFrame</key>
-								<string>6 55 1276 723 0 0 1280 778 </string>
+								<string>4 55 1276 723 0 0 1280 778 </string>
 							</dict>
 							<key>Module</key>
 							<string>XCDetailModule</string>
 							<key>Proportion</key>
-							<string>59pt</string>
+							<string>138pt</string>
 						</dict>
 					</array>
 					<key>Proportion</key>
@@ -405,9 +404,9 @@
 			</array>
 			<key>TableOfContents</key>
 			<array>
-				<string>D488B02310AF188A00B3451C</string>
+				<string>D488BFC810B1FBD200B3451C</string>
 				<string>1CE0B1FE06471DED0097A5F4</string>
-				<string>D488B02410AF188A00B3451C</string>
+				<string>D488BFC910B1FBD200B3451C</string>
 				<string>1CE0B20306471E060097A5F4</string>
 				<string>1CE0B20506471E060097A5F4</string>
 			</array>
@@ -545,17 +544,11 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
-		<string>1C530D57069F1CE1000CFCEE</string>
-		<string>D488BD7710AF722600B3451C</string>
-		<string>D488B03D10AF1C2900B3451C</string>
-		<string>D488B03E10AF1C2900B3451C</string>
-		<string>1CD10A99069EF8BA00B06720</string>
 		<string>D4A49630105419F700BE38AE</string>
-		<string>1C78EAAD065D492600B07095</string>
 		<string>/Users/rob/Programming/Projects - Mine/QuietUnrar/QuietUnrar.xcodeproj</string>
 	</array>
 	<key>WindowString</key>
-	<string>6 55 1276 723 0 0 1280 778 </string>
+	<string>4 55 1276 723 0 0 1280 778 </string>
 	<key>WindowToolsV3</key>
 	<array>
 		<dict>
@@ -576,7 +569,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CD0528F0623707200166675</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>QuietUnrarAppDelegate.m</string>
+								<string></string>
 								<key>StatusBarVisibility</key>
 								<true/>
 							</dict>
@@ -593,8 +586,6 @@
 							<string>267pt</string>
 						</dict>
 						<dict>
-							<key>BecomeActive</key>
-							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
@@ -634,7 +625,7 @@
 			<key>TableOfContents</key>
 			<array>
 				<string>D4A49630105419F700BE38AE</string>
-				<string>D488B02610AF188A00B3451C</string>
+				<string>D488BFCA10B1FBD200B3451C</string>
 				<string>1CD0528F0623707200166675</string>
 				<string>XCMainBuildResultsModuleGUID</string>
 			</array>

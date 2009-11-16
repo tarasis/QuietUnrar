@@ -12,8 +12,10 @@
 		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
 		D488BC6810AF437B00B3451C /* libunrar.so in Frameworks */ = {isa = PBXBuildFile; fileRef = D488BC6710AF437B00B3451C /* libunrar.so */; };
 		D488BCC110AF49C700B3451C /* libunrar.so in CopyFiles */ = {isa = PBXBuildFile; fileRef = D488BC6710AF437B00B3451C /* libunrar.so */; };
-		D488BDB710B0160300B3451C /* PasswordDialog.xib in Resources */ = {isa = PBXBuildFile; fileRef = D488BDB610B0160300B3451C /* PasswordDialog.xib */; };
 		D488BE5510B05F3800B3451C /* PasswordView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D488BE5410B05F3800B3451C /* PasswordView.xib */; };
+		D488BFB010B1F97F00B3451C /* Growl.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D488BFAF10B1F97F00B3451C /* Growl.framework */; };
+		D488BFBF10B1FBC700B3451C /* Growl.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = D488BFAF10B1F97F00B3451C /* Growl.framework */; };
+		D488BFCC10B1FD4500B3451C /* Growl Registration Ticket.growlRegDict in Resources */ = {isa = PBXBuildFile; fileRef = D488BFCB10B1FD4500B3451C /* Growl Registration Ticket.growlRegDict */; };
 		D4A49691105435BE00BE38AE /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165CFE840E0CC02AAC07 /* InfoPlist.strings */; };
 		D4A49692105435C100BE38AE /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1DDD58140DA1D0A300B32029 /* MainMenu.xib */; };
 		D4A96E2110545E9A0091ECB4 /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4A96E2010545E9A0091ECB4 /* Carbon.framework */; };
@@ -36,6 +38,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				D488BFBF10B1FBC700B3451C /* Growl.framework in CopyFiles */,
 				D488BCC110AF49C700B3451C /* libunrar.so in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -58,6 +61,8 @@
 		D488BC6710AF437B00B3451C /* libunrar.so */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libunrar.so; path = libunrar/libunrar.so; sourceTree = "<group>"; };
 		D488BDB610B0160300B3451C /* PasswordDialog.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PasswordDialog.xib; sourceTree = "<group>"; };
 		D488BE5410B05F3800B3451C /* PasswordView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PasswordView.xib; sourceTree = "<group>"; };
+		D488BFAF10B1F97F00B3451C /* Growl.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Growl.framework; path = Frameworks/Growl.framework; sourceTree = "<group>"; };
+		D488BFCB10B1FD4500B3451C /* Growl Registration Ticket.growlRegDict */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "Growl Registration Ticket.growlRegDict"; sourceTree = "<group>"; };
 		D4A495741054177300BE38AE /* arccmt.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = arccmt.cpp; path = libunrar/arccmt.cpp; sourceTree = "<group>"; };
 		D4A495751054177300BE38AE /* archive.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = archive.cpp; path = libunrar/archive.cpp; sourceTree = "<group>"; };
 		D4A495761054177300BE38AE /* archive.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = archive.hpp; path = libunrar/archive.hpp; sourceTree = "<group>"; };
@@ -183,6 +188,7 @@
 				D488BC6810AF437B00B3451C /* libunrar.so in Frameworks */,
 				8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */,
 				D4A96E2110545E9A0091ECB4 /* Carbon.framework in Frameworks */,
+				D488BFB010B1F97F00B3451C /* Growl.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -255,6 +261,7 @@
 				089C165CFE840E0CC02AAC07 /* InfoPlist.strings */,
 				1DDD58140DA1D0A300B32029 /* MainMenu.xib */,
 				D488BDB610B0160300B3451C /* PasswordDialog.xib */,
+				D488BFCB10B1FD4500B3451C /* Growl Registration Ticket.growlRegDict */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -265,6 +272,7 @@
 				D488BC6710AF437B00B3451C /* libunrar.so */,
 				1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */,
 				1058C7A2FEA54F0111CA2CBB /* Other Frameworks */,
+				D488BFAF10B1F97F00B3451C /* Growl.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -456,8 +464,8 @@
 			files = (
 				D4A49692105435C100BE38AE /* MainMenu.xib in Resources */,
 				D4A49691105435BE00BE38AE /* InfoPlist.strings in Resources */,
-				D488BDB710B0160300B3451C /* PasswordDialog.xib in Resources */,
 				D488BE5510B05F3800B3451C /* PasswordView.xib in Resources */,
+				D488BFCC10B1FD4500B3451C /* Growl Registration Ticket.growlRegDict in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -524,6 +532,10 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/Frameworks\"",
+				);
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_FIX_AND_CONTINUE = YES;
 				GCC_MODEL_TUNING = G5;
@@ -548,6 +560,10 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/Frameworks\"",
+				);
 				GCC_MODEL_TUNING = G5;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = QuietUnrar_Prefix.pch;

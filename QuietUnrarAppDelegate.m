@@ -7,6 +7,7 @@
 //
 
 #import <Carbon/Carbon.h>
+#import <Growl/Growl.h>
 #import "QuietUnrarAppDelegate.h"
 #import "libunrar/dll.hpp"
 
@@ -88,7 +89,19 @@ int callbackFunction(UINT message, LPARAM userData, LPARAM parameterOne, LPARAM 
 //	NSLog(@"openFiles: %@", arrayOfFilenames);
 	
 	for (NSString * filename in arrayOfFilenames) {
-		[self extractRarWith:filename];
+		BOOL extracted = [self extractRarWith:filename];
+		if (extracted) {
+			[GrowlApplicationBridge setGrowlDelegate:@""];
+			
+			[GrowlApplicationBridge
+			 notifyWithTitle:@"QuietUnrar: Extraction Complete"
+			 description:[NSString stringWithFormat:@"The archive %@ was successfully extracted", filename]
+			 notificationName:@"QuietUnrarExtractionComplete"
+			 iconData:nil
+			 priority:0
+			 isSticky:NO
+			 clickContext:nil];
+		}
 	}
 }
 
