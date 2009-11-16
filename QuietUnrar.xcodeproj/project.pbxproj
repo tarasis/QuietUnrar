@@ -24,7 +24,7 @@
 			isa = PBXContainerItemProxy;
 			containerPortal = 29B97313FDCFA39411CA2CEA /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = D4A4962A105419AA00BE38AE /* libunrar */;
+			remoteGlobalIDString = D4A4962A105419AA00BE38AE;
 			remoteInfo = libunrar;
 		};
 /* End PBXContainerItemProxy section */

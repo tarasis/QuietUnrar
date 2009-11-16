@@ -84,32 +84,38 @@ int callbackFunction(UINT message, LPARAM userData, LPARAM parameterOne, LPARAM 
 	return YES;
 }
 
+- (void)application:(NSApplication *)theApplication openFiles:(NSArray *) arrayOfFilenames {
+//	NSLog(@"openFiles: %@", arrayOfFilenames);
+	
+	for (NSString * filename in arrayOfFilenames) {
+		[self extractRarWith:filename];
+	}
+}
+
 #pragma mark "Main" 
 - (BOOL) extractRarWith:(NSString *) filename {
 	quietUnrar = (void *) self;
 	char commentBuffer[BUF_LEN];
 	BOOL extractionSuccessful = YES;
+	struct RARHeaderData headerData;
+	NSString * lastExtractedFilename = @"";
+	NSString * currentFilename;
 	
 	//Determine the folder we should extract the archive to. This by default
 	//is the <folderContainingTheArchive>/<archiveNameWithPathExtension>
 	NSString * folderToExtractTo = [filename stringByDeletingPathExtension];
 	
-	char * filenameCString = (char *)[filename cStringUsingEncoding:NSISOLatin1StringEncoding];
-	
 	// Open the Archive for extraction, we set the open result to 3 so we can see it has changed
+	char * filenameCString = (char *)[filename cStringUsingEncoding:NSISOLatin1StringEncoding];
 	struct RAROpenArchiveData arcData = { filenameCString, RAR_OM_EXTRACT, 3, &commentBuffer[0], BUF_LEN, 0, 0};	
+
 	HANDLE archive = RAROpenArchive(&arcData);
 	//NSLog(@"Opening Archive %s with result %d", filenameCString, arcData.OpenResult);
 	
 	// set call backs for if password needed or need to change volume
 	RARSetChangeVolProc(archive, &changeVolume);
 	RARSetCallback(archive, &callbackFunction, (LPARAM)archive);
-	
-	//
-	struct RARHeaderData headerData;
-	NSString * lastExtractedFilename = @"";
-	NSString * currentFilename;
-	
+		
 	while (RARReadHeader(archive, &headerData) != ERAR_END_ARCHIVE) {
 		//NSLog(@"Attempting to extract %s to %@", headerData.FileName, folderToExtractTo);
 		
