@@ -9,16 +9,16 @@
 	};
 	256AC3D80F4B6AC300CF3369 /* QuietUnrarAppDelegate.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {958, 559}}";
-			sepNavSelRange = "{1000, 0}";
-			sepNavVisRange = "{46, 971}";
+			sepNavIntBoundsRect = "{{0, 0}, {1043, 561}}";
+			sepNavSelRange = "{996, 0}";
+			sepNavVisRange = "{0, 1004}";
 		};
 	};
 	256AC3D90F4B6AC300CF3369 /* QuietUnrarAppDelegate.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {958, 2808}}";
-			sepNavSelRange = "{629, 0}";
-			sepNavVisRange = "{46, 1116}";
+			sepNavIntBoundsRect = "{{0, 0}, {1167, 2860}}";
+			sepNavSelRange = "{4820, 0}";
+			sepNavVisRange = "{4796, 1748}";
 			sepNavWindowFrame = "{{85, 21}, {877, 731}}";
 		};
 	};
@@ -55,7 +55,7 @@
 				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
 				PBXFileTableDataSourceColumnWidthsKey = (
 					20,
-					780,
+					865,
 					20,
 					48,
 					43,
@@ -372,6 +372,16 @@
 			D488BEE110B075CA00B3451C /* PBXTextBookmark */ = D488BEE110B075CA00B3451C /* PBXTextBookmark */;
 			D488BEE210B075CA00B3451C /* PBXTextBookmark */ = D488BEE210B075CA00B3451C /* PBXTextBookmark */;
 			D488BEE510B0769000B3451C /* PBXTextBookmark */ = D488BEE510B0769000B3451C /* PBXTextBookmark */;
+			D488BEE610B09B2A00B3451C /* PBXTextBookmark */ = D488BEE610B09B2A00B3451C /* PBXTextBookmark */;
+			D488BEE710B09B2A00B3451C /* PBXTextBookmark */ = D488BEE710B09B2A00B3451C /* PBXTextBookmark */;
+			D488BEE810B09B2A00B3451C /* PBXTextBookmark */ = D488BEE810B09B2A00B3451C /* PBXTextBookmark */;
+			D488BEE910B09B2A00B3451C /* PBXTextBookmark */ = D488BEE910B09B2A00B3451C /* PBXTextBookmark */;
+			D488BEEA10B09B2A00B3451C /* PBXTextBookmark */ = D488BEEA10B09B2A00B3451C /* PBXTextBookmark */;
+			D488BEEB10B09B2E00B3451C /* PBXTextBookmark */ = D488BEEB10B09B2E00B3451C /* PBXTextBookmark */;
+			D488BEFE10B18CFC00B3451C /* PBXTextBookmark */ = D488BEFE10B18CFC00B3451C /* PBXTextBookmark */;
+			D488BEFF10B18CFC00B3451C /* PBXTextBookmark */ = D488BEFF10B18CFC00B3451C /* PBXTextBookmark */;
+			D488BF0010B18CFC00B3451C /* PBXTextBookmark */ = D488BF0010B18CFC00B3451C /* PBXTextBookmark */;
+			D488BF0110B1926600B3451C /* PBXTextBookmark */ = D488BF0110B1926600B3451C /* PBXTextBookmark */;
 			D4A4963610541A1C00BE38AE = D4A4963610541A1C00BE38AE /* PBXTextBookmark */;
 			D4A4965D105433E000BE38AE = D4A4965D105433E000BE38AE /* PBXTargetBookmark */;
 			D4A496731054350F00BE38AE = D4A496731054350F00BE38AE /* PBXTextBookmark */;
@@ -410,7 +420,7 @@
 		fRef = 256AC3D90F4B6AC300CF3369 /* QuietUnrarAppDelegate.m */;
 		name = "QuietUnrarAppDelegate.m: 29";
 		rLen = 0;
-		rLoc = 1684;
+		rLoc = 3212;
 		rType = 0;
 		vrLen = 882;
 		vrLoc = 235;
@@ -457,7 +467,7 @@
 		fRef = 256AC3D90F4B6AC300CF3369 /* QuietUnrarAppDelegate.m */;
 		name = "QuietUnrarAppDelegate.m: 29";
 		rLen = 0;
-		rLoc = 1684;
+		rLoc = 3212;
 		rType = 0;
 		vrLen = 847;
 		vrLoc = 275;
@@ -477,7 +487,7 @@
 		fRef = 256AC3D90F4B6AC300CF3369 /* QuietUnrarAppDelegate.m */;
 		name = "QuietUnrarAppDelegate.m: 29";
 		rLen = 0;
-		rLoc = 1684;
+		rLoc = 3212;
 		rType = 0;
 		vrLen = 1122;
 		vrLoc = 0;
@@ -497,7 +507,7 @@
 		fRef = 256AC3D90F4B6AC300CF3369 /* QuietUnrarAppDelegate.m */;
 		name = "QuietUnrarAppDelegate.m: 29";
 		rLen = 0;
-		rLoc = 1684;
+		rLoc = 3212;
 		rType = 0;
 		vrLen = 1122;
 		vrLoc = 0;
@@ -517,7 +527,7 @@
 		fRef = 256AC3D90F4B6AC300CF3369 /* QuietUnrarAppDelegate.m */;
 		name = "QuietUnrarAppDelegate.m: 29";
 		rLen = 0;
-		rLoc = 1684;
+		rLoc = 3212;
 		rType = 0;
 		vrLen = 1122;
 		vrLoc = 0;
@@ -537,7 +547,7 @@
 		fRef = 256AC3D90F4B6AC300CF3369 /* QuietUnrarAppDelegate.m */;
 		name = "QuietUnrarAppDelegate.m: 29";
 		rLen = 0;
-		rLoc = 1684;
+		rLoc = 3212;
 		rType = 0;
 		vrLen = 1122;
 		vrLoc = 0;
@@ -557,7 +567,7 @@
 		fRef = 256AC3D90F4B6AC300CF3369 /* QuietUnrarAppDelegate.m */;
 		name = "QuietUnrarAppDelegate.m: 14";
 		rLen = 0;
-		rLoc = 1038;
+		rLoc = 2479;
 		rType = 0;
 		vrLen = 999;
 		vrLoc = 0;
@@ -577,7 +587,7 @@
 		fRef = 256AC3D90F4B6AC300CF3369 /* QuietUnrarAppDelegate.m */;
 		name = "QuietUnrarAppDelegate.m: 14";
 		rLen = 0;
-		rLoc = 1038;
+		rLoc = 2479;
 		rType = 0;
 		vrLen = 999;
 		vrLoc = 0;
@@ -597,7 +607,7 @@
 		fRef = 256AC3D90F4B6AC300CF3369 /* QuietUnrarAppDelegate.m */;
 		name = "QuietUnrarAppDelegate.m: 14";
 		rLen = 0;
-		rLoc = 1038;
+		rLoc = 2479;
 		rType = 0;
 		vrLen = 999;
 		vrLoc = 0;
@@ -617,7 +627,7 @@
 		fRef = 256AC3D90F4B6AC300CF3369 /* QuietUnrarAppDelegate.m */;
 		name = "QuietUnrarAppDelegate.m: 23";
 		rLen = 0;
-		rLoc = 1503;
+		rLoc = 3120;
 		rType = 0;
 		vrLen = 957;
 		vrLoc = 0;
@@ -637,7 +647,7 @@
 		fRef = 256AC3D90F4B6AC300CF3369 /* QuietUnrarAppDelegate.m */;
 		name = "QuietUnrarAppDelegate.m: 14";
 		rLen = 0;
-		rLoc = 1038;
+		rLoc = 2479;
 		rType = 0;
 		vrLen = 1040;
 		vrLoc = 0;
@@ -657,7 +667,7 @@
 		fRef = 256AC3D90F4B6AC300CF3369 /* QuietUnrarAppDelegate.m */;
 		name = "QuietUnrarAppDelegate.m: 17";
 		rLen = 0;
-		rLoc = 1321;
+		rLoc = 2938;
 		rType = 0;
 		vrLen = 957;
 		vrLoc = 0;
@@ -677,7 +687,7 @@
 		fRef = 256AC3D90F4B6AC300CF3369 /* QuietUnrarAppDelegate.m */;
 		name = "QuietUnrarAppDelegate.m: 20";
 		rLen = 0;
-		rLoc = 1503;
+		rLoc = 3120;
 		rType = 0;
 		vrLen = 955;
 		vrLoc = 0;
@@ -1286,7 +1296,7 @@
 		fRef = 256AC3D90F4B6AC300CF3369 /* QuietUnrarAppDelegate.m */;
 		fallbackIsa = XCBuildMessageTextBookmark;
 		rLen = 0;
-		rLoc = 49;
+		rLoc = 72;
 		rType = 1;
 	};
 	D488BCCB10AF4A0900B3451C /* PBXTextBookmark */ = {
@@ -1294,7 +1304,7 @@
 		fRef = 256AC3D90F4B6AC300CF3369 /* QuietUnrarAppDelegate.m */;
 		name = "QuietUnrarAppDelegate.m: 19";
 		rLen = 0;
-		rLoc = 1503;
+		rLoc = 3120;
 		rType = 0;
 		vrLen = 395;
 		vrLoc = 174;
@@ -1325,7 +1335,7 @@
 		fRef = 256AC3D90F4B6AC300CF3369 /* QuietUnrarAppDelegate.m */;
 		fallbackIsa = XCBuildMessageTextBookmark;
 		rLen = 0;
-		rLoc = 49;
+		rLoc = 72;
 		rType = 1;
 	};
 	D488BCD310AF4A1700B3451C /* PBXTextBookmark */ = {
@@ -1333,7 +1343,7 @@
 		fRef = 256AC3D90F4B6AC300CF3369 /* QuietUnrarAppDelegate.m */;
 		name = "QuietUnrarAppDelegate.m: 18";
 		rLen = 0;
-		rLoc = 1503;
+		rLoc = 3120;
 		rType = 0;
 		vrLen = 456;
 		vrLoc = 274;
@@ -1378,7 +1388,7 @@
 		fRef = 256AC3D90F4B6AC300CF3369 /* QuietUnrarAppDelegate.m */;
 		fallbackIsa = XCBuildMessageTextBookmark;
 		rLen = 0;
-		rLoc = 49;
+		rLoc = 72;
 		rType = 1;
 	};
 	D488BCE410AF4A9600B3451C /* PBXTextBookmark */ = {
@@ -1386,7 +1396,7 @@
 		fRef = 256AC3D90F4B6AC300CF3369 /* QuietUnrarAppDelegate.m */;
 		name = "QuietUnrarAppDelegate.m: 18";
 		rLen = 0;
-		rLoc = 1503;
+		rLoc = 3120;
 		rType = 0;
 		vrLen = 562;
 		vrLoc = 174;
@@ -1397,7 +1407,7 @@
 		fRef = 256AC3D90F4B6AC300CF3369 /* QuietUnrarAppDelegate.m */;
 		fallbackIsa = XCBuildMessageTextBookmark;
 		rLen = 0;
-		rLoc = 49;
+		rLoc = 72;
 		rType = 1;
 	};
 	D488BCE610AF4AA200B3451C /* PBXTextBookmark */ = {
@@ -1405,7 +1415,7 @@
 		fRef = 256AC3D90F4B6AC300CF3369 /* QuietUnrarAppDelegate.m */;
 		name = "QuietUnrarAppDelegate.m: 24";
 		rLen = 0;
-		rLoc = 1505;
+		rLoc = 3122;
 		rType = 0;
 		vrLen = 468;
 		vrLoc = 274;
@@ -1449,7 +1459,7 @@
 		fRef = 256AC3D90F4B6AC300CF3369 /* QuietUnrarAppDelegate.m */;
 		name = "QuietUnrarAppDelegate.m: 17";
 		rLen = 0;
-		rLoc = 1503;
+		rLoc = 3120;
 		rType = 0;
 		vrLen = 456;
 		vrLoc = 216;
@@ -1459,7 +1469,7 @@
 		fRef = 256AC3D90F4B6AC300CF3369 /* QuietUnrarAppDelegate.m */;
 		name = "QuietUnrarAppDelegate.m: 36";
 		rLen = 0;
-		rLoc = 1996;
+		rLoc = 3523;
 		rType = 0;
 		vrLen = 1024;
 		vrLoc = 148;
@@ -1479,7 +1489,7 @@
 		fRef = 256AC3D90F4B6AC300CF3369 /* QuietUnrarAppDelegate.m */;
 		name = "QuietUnrarAppDelegate.m: 30";
 		rLen = 0;
-		rLoc = 1656;
+		rLoc = 3185;
 		rType = 0;
 		vrLen = 1008;
 		vrLoc = 148;
@@ -1499,7 +1509,7 @@
 		fRef = 256AC3D90F4B6AC300CF3369 /* QuietUnrarAppDelegate.m */;
 		name = "QuietUnrarAppDelegate.m: 34";
 		rLen = 0;
-		rLoc = 1657;
+		rLoc = 3185;
 		rType = 0;
 		vrLen = 1077;
 		vrLoc = 147;
@@ -1545,7 +1555,7 @@
 		fRef = 256AC3D90F4B6AC300CF3369 /* QuietUnrarAppDelegate.m */;
 		name = "QuietUnrarAppDelegate.m: 50";
 		rLen = 0;
-		rLoc = 2663;
+		rLoc = 3923;
 		rType = 0;
 		vrLen = 1106;
 		vrLoc = 0;
@@ -1555,7 +1565,7 @@
 		fRef = 256AC3D90F4B6AC300CF3369 /* QuietUnrarAppDelegate.m */;
 		name = "QuietUnrarAppDelegate.m: 63";
 		rLen = 0;
-		rLoc = 2663;
+		rLoc = 3923;
 		rType = 0;
 		vrLen = 1060;
 		vrLoc = 983;
@@ -1576,7 +1586,7 @@
 		fRef = 256AC3D90F4B6AC300CF3369 /* QuietUnrarAppDelegate.m */;
 		fallbackIsa = XCBuildMessageTextBookmark;
 		rLen = 1;
-		rLoc = 130;
+		rLoc = 141;
 		rType = 1;
 	};
 	D488BD0F10AF56B700B3451C /* PBXTextBookmark */ = {
@@ -1584,7 +1594,7 @@
 		fRef = 256AC3D90F4B6AC300CF3369 /* QuietUnrarAppDelegate.m */;
 		name = "QuietUnrarAppDelegate.m: 63";
 		rLen = 0;
-		rLoc = 2663;
+		rLoc = 3923;
 		rType = 0;
 		vrLen = 532;
 		vrLoc = 1490;
@@ -1593,7 +1603,7 @@
 		isa = PBXTextBookmark;
 		fRef = 256AC3D80F4B6AC300CF3369 /* QuietUnrarAppDelegate.h */;
 		name = "QuietUnrarAppDelegate.h: 32";
-		rLen = 203;
+		rLen = 190;
 		rLoc = 808;
 		rType = 0;
 		vrLen = 687;
@@ -1604,7 +1614,7 @@
 		fRef = 256AC3D90F4B6AC300CF3369 /* QuietUnrarAppDelegate.m */;
 		name = "QuietUnrarAppDelegate.m: 65";
 		rLen = 0;
-		rLoc = 2663;
+		rLoc = 3923;
 		rType = 0;
 		vrLen = 1115;
 		vrLoc = 983;
@@ -1614,7 +1624,7 @@
 		fRef = 256AC3D90F4B6AC300CF3369 /* QuietUnrarAppDelegate.m */;
 		name = "QuietUnrarAppDelegate.m: 53";
 		rLen = 0;
-		rLoc = 2656;
+		rLoc = 3916;
 		rType = 0;
 		vrLen = 1132;
 		vrLoc = 983;
@@ -1634,7 +1644,7 @@
 		fRef = 256AC3D90F4B6AC300CF3369 /* QuietUnrarAppDelegate.m */;
 		name = "QuietUnrarAppDelegate.m: 65";
 		rLen = 0;
-		rLoc = 2663;
+		rLoc = 3923;
 		rType = 0;
 		vrLen = 1137;
 		vrLoc = 983;
@@ -1654,7 +1664,7 @@
 		fRef = 256AC3D90F4B6AC300CF3369 /* QuietUnrarAppDelegate.m */;
 		name = "QuietUnrarAppDelegate.m: 65";
 		rLen = 0;
-		rLoc = 2663;
+		rLoc = 3923;
 		rType = 0;
 		vrLen = 1151;
 		vrLoc = 983;
@@ -1674,7 +1684,7 @@
 		fRef = 256AC3D90F4B6AC300CF3369 /* QuietUnrarAppDelegate.m */;
 		name = "QuietUnrarAppDelegate.m: 58";
 		rLen = 0;
-		rLoc = 2663;
+		rLoc = 3923;
 		rType = 0;
 		vrLen = 1180;
 		vrLoc = 1062;
@@ -1694,7 +1704,7 @@
 		fRef = 256AC3D90F4B6AC300CF3369 /* QuietUnrarAppDelegate.m */;
 		name = "QuietUnrarAppDelegate.m: 84";
 		rLen = 0;
-		rLoc = 7181;
+		rLoc = 8649;
 		rType = 0;
 		vrLen = 1164;
 		vrLoc = 1267;
@@ -1714,7 +1724,7 @@
 		fRef = 256AC3D90F4B6AC300CF3369 /* QuietUnrarAppDelegate.m */;
 		name = "QuietUnrarAppDelegate.m: 70";
 		rLen = 0;
-		rLoc = 2663;
+		rLoc = 3923;
 		rType = 0;
 		vrLen = 1289;
 		vrLoc = 1267;
@@ -1734,7 +1744,7 @@
 		fRef = 256AC3D90F4B6AC300CF3369 /* QuietUnrarAppDelegate.m */;
 		name = "QuietUnrarAppDelegate.m: 53";
 		rLen = 0;
-		rLoc = 2650;
+		rLoc = 3910;
 		rType = 0;
 		vrLen = 1285;
 		vrLoc = 1267;
@@ -1754,7 +1764,7 @@
 		fRef = 256AC3D90F4B6AC300CF3369 /* QuietUnrarAppDelegate.m */;
 		name = "QuietUnrarAppDelegate.m: 75";
 		rLen = 0;
-		rLoc = 2663;
+		rLoc = 3923;
 		rType = 0;
 		vrLen = 1555;
 		vrLoc = 1154;
@@ -1774,7 +1784,7 @@
 		fRef = 256AC3D90F4B6AC300CF3369 /* QuietUnrarAppDelegate.m */;
 		name = "QuietUnrarAppDelegate.m: 89";
 		rLen = 0;
-		rLoc = 3084;
+		rLoc = 4344;
 		rType = 0;
 		vrLen = 992;
 		vrLoc = 0;
@@ -1794,8 +1804,8 @@
 		comments = "Expected ';' after expression";
 		fRef = 256AC3D90F4B6AC300CF3369 /* QuietUnrarAppDelegate.m */;
 		fallbackIsa = XCBuildMessageTextBookmark;
-		rLen = 1;
-		rLoc = 33;
+		rLen = 0;
+		rLoc = 54;
 		rType = 1;
 	};
 	D488BD6A10AF6EC600B3451C /* PBXTextBookmark */ = {
@@ -1803,7 +1813,7 @@
 		fRef = 256AC3D90F4B6AC300CF3369 /* QuietUnrarAppDelegate.m */;
 		name = "QuietUnrarAppDelegate.m: 21";
 		rLen = 0;
-		rLoc = 995;
+		rLoc = 2425;
 		rType = 0;
 		vrLen = 513;
 		vrLoc = 379;
@@ -1813,7 +1823,7 @@
 		fRef = 256AC3D80F4B6AC300CF3369 /* QuietUnrarAppDelegate.h */;
 		name = "QuietUnrarAppDelegate.h: 32";
 		rLen = 0;
-		rLoc = 1011;
+		rLoc = 998;
 		rType = 0;
 		vrLen = 687;
 		vrLoc = 0;
@@ -1823,8 +1833,8 @@
 		comments = "Expected ';' after expression";
 		fRef = 256AC3D90F4B6AC300CF3369 /* QuietUnrarAppDelegate.m */;
 		fallbackIsa = XCBuildMessageTextBookmark;
-		rLen = 1;
-		rLoc = 33;
+		rLen = 0;
+		rLoc = 54;
 		rType = 1;
 	};
 	D488BD6F10AF6ED200B3451C /* PBXTextBookmark */ = {
@@ -1832,7 +1842,7 @@
 		fRef = 256AC3D90F4B6AC300CF3369 /* QuietUnrarAppDelegate.m */;
 		name = "QuietUnrarAppDelegate.m: 21";
 		rLen = 0;
-		rLoc = 995;
+		rLoc = 2425;
 		rType = 0;
 		vrLen = 1071;
 		vrLoc = 3;
@@ -1852,7 +1862,7 @@
 		fRef = 256AC3D90F4B6AC300CF3369 /* QuietUnrarAppDelegate.m */;
 		name = "QuietUnrarAppDelegate.m: 79";
 		rLen = 0;
-		rLoc = 2663;
+		rLoc = 3923;
 		rType = 0;
 		vrLen = 1532;
 		vrLoc = 1608;
@@ -1872,7 +1882,7 @@
 		fRef = 256AC3D90F4B6AC300CF3369 /* QuietUnrarAppDelegate.m */;
 		name = "QuietUnrarAppDelegate.m: 70";
 		rLen = 7;
-		rLoc = 2656;
+		rLoc = 3916;
 		rType = 0;
 		vrLen = 456;
 		vrLoc = 312;
@@ -1882,7 +1892,7 @@
 		fRef = 256AC3D90F4B6AC300CF3369 /* QuietUnrarAppDelegate.m */;
 		name = "QuietUnrarAppDelegate.m: 74";
 		rLen = 0;
-		rLoc = 2988;
+		rLoc = 4248;
 		rType = 0;
 		vrLen = 1137;
 		vrLoc = 144;
@@ -1902,7 +1912,7 @@
 		fRef = 256AC3D90F4B6AC300CF3369 /* QuietUnrarAppDelegate.m */;
 		name = "QuietUnrarAppDelegate.m: 101";
 		rLen = 0;
-		rLoc = 3084;
+		rLoc = 4344;
 		rType = 0;
 		vrLen = 456;
 		vrLoc = 312;
@@ -1912,7 +1922,7 @@
 		fRef = 256AC3D90F4B6AC300CF3369 /* QuietUnrarAppDelegate.m */;
 		name = "QuietUnrarAppDelegate.m: 25";
 		rLen = 0;
-		rLoc = 999;
+		rLoc = 2440;
 		rType = 0;
 		vrLen = 1220;
 		vrLoc = 2169;
@@ -1932,7 +1942,7 @@
 		fRef = 256AC3D90F4B6AC300CF3369 /* QuietUnrarAppDelegate.m */;
 		name = "QuietUnrarAppDelegate.m: 25";
 		rLen = 0;
-		rLoc = 999;
+		rLoc = 2440;
 		rType = 0;
 		vrLen = 1220;
 		vrLoc = 2169;
@@ -2024,7 +2034,7 @@
 		fRef = 256AC3D90F4B6AC300CF3369 /* QuietUnrarAppDelegate.m */;
 		name = "QuietUnrarAppDelegate.m: 25";
 		rLen = 0;
-		rLoc = 999;
+		rLoc = 2440;
 		rType = 0;
 		vrLen = 1220;
 		vrLoc = 2169;
@@ -2034,7 +2044,7 @@
 		fRef = 256AC3D90F4B6AC300CF3369 /* QuietUnrarAppDelegate.m */;
 		name = "QuietUnrarAppDelegate.m: 79";
 		rLen = 0;
-		rLoc = 3084;
+		rLoc = 4344;
 		rType = 0;
 		vrLen = 1219;
 		vrLoc = 2169;
@@ -2044,7 +2054,7 @@
 		fRef = 256AC3D90F4B6AC300CF3369 /* QuietUnrarAppDelegate.m */;
 		name = "QuietUnrarAppDelegate.m: 91";
 		rLen = 0;
-		rLoc = 3084;
+		rLoc = 4344;
 		rType = 0;
 		vrLen = 1225;
 		vrLoc = 2169;
@@ -2054,7 +2064,7 @@
 		fRef = 256AC3D80F4B6AC300CF3369 /* QuietUnrarAppDelegate.h */;
 		name = "QuietUnrarAppDelegate.h: 32";
 		rLen = 0;
-		rLoc = 1011;
+		rLoc = 998;
 		rType = 0;
 		vrLen = 687;
 		vrLoc = 0;
@@ -2064,7 +2074,7 @@
 		fRef = 256AC3D90F4B6AC300CF3369 /* QuietUnrarAppDelegate.m */;
 		name = "QuietUnrarAppDelegate.m: 35";
 		rLen = 0;
-		rLoc = 1291;
+		rLoc = 2908;
 		rType = 0;
 		vrLen = 1162;
 		vrLoc = 586;
@@ -2074,7 +2084,7 @@
 		fRef = 256AC3D90F4B6AC300CF3369 /* QuietUnrarAppDelegate.m */;
 		name = "QuietUnrarAppDelegate.m: 35";
 		rLen = 0;
-		rLoc = 1291;
+		rLoc = 2908;
 		rType = 0;
 		vrLen = 1104;
 		vrLoc = 685;
@@ -2084,7 +2094,7 @@
 		fRef = 256AC3D90F4B6AC300CF3369 /* QuietUnrarAppDelegate.m */;
 		name = "QuietUnrarAppDelegate.m: 103";
 		rLen = 0;
-		rLoc = 3084;
+		rLoc = 4344;
 		rType = 0;
 		vrLen = 576;
 		vrLoc = 283;
@@ -2171,7 +2181,7 @@
 		fRef = 256AC3D90F4B6AC300CF3369 /* QuietUnrarAppDelegate.m */;
 		name = "QuietUnrarAppDelegate.m: 35";
 		rLen = 0;
-		rLoc = 1291;
+		rLoc = 2908;
 		rType = 0;
 		vrLen = 1153;
 		vrLoc = 685;
@@ -2181,7 +2191,7 @@
 		fRef = 256AC3D90F4B6AC300CF3369 /* QuietUnrarAppDelegate.m */;
 		name = "QuietUnrarAppDelegate.m: 37";
 		rLen = 0;
-		rLoc = 1450;
+		rLoc = 3067;
 		rType = 0;
 		vrLen = 1197;
 		vrLoc = 685;
@@ -2191,7 +2201,7 @@
 		fRef = 256AC3D90F4B6AC300CF3369 /* QuietUnrarAppDelegate.m */;
 		name = "QuietUnrarAppDelegate.m: 88";
 		rLen = 0;
-		rLoc = 3084;
+		rLoc = 4344;
 		rType = 0;
 		vrLen = 1587;
 		vrLoc = 1763;
@@ -2201,7 +2211,7 @@
 		fRef = 256AC3D90F4B6AC300CF3369 /* QuietUnrarAppDelegate.m */;
 		name = "QuietUnrarAppDelegate.m: 89";
 		rLen = 0;
-		rLoc = 3084;
+		rLoc = 4344;
 		rType = 0;
 		vrLen = 1658;
 		vrLoc = 1880;
@@ -2211,7 +2221,7 @@
 		fRef = 256AC3D90F4B6AC300CF3369 /* QuietUnrarAppDelegate.m */;
 		name = "QuietUnrarAppDelegate.m: 89";
 		rLen = 0;
-		rLoc = 3084;
+		rLoc = 4344;
 		rType = 0;
 		vrLen = 1622;
 		vrLoc = 2109;
@@ -2231,7 +2241,7 @@
 		fRef = 256AC3D90F4B6AC300CF3369 /* QuietUnrarAppDelegate.m */;
 		name = "QuietUnrarAppDelegate.m: 113";
 		rLen = 0;
-		rLoc = 7174;
+		rLoc = 8642;
 		rType = 0;
 		vrLen = 1404;
 		vrLoc = 2538;
@@ -2241,7 +2251,7 @@
 		fRef = 256AC3D90F4B6AC300CF3369 /* QuietUnrarAppDelegate.m */;
 		name = "QuietUnrarAppDelegate.m: 91";
 		rLen = 0;
-		rLoc = 3084;
+		rLoc = 4344;
 		rType = 0;
 		vrLen = 1521;
 		vrLoc = 2605;
@@ -2251,7 +2261,7 @@
 		fRef = 256AC3D90F4B6AC300CF3369 /* QuietUnrarAppDelegate.m */;
 		name = "QuietUnrarAppDelegate.m: 91";
 		rLen = 0;
-		rLoc = 3084;
+		rLoc = 4344;
 		rType = 0;
 		vrLen = 1515;
 		vrLoc = 2605;
@@ -2261,7 +2271,7 @@
 		fRef = 256AC3D90F4B6AC300CF3369 /* QuietUnrarAppDelegate.m */;
 		name = "QuietUnrarAppDelegate.m: 129";
 		rLen = 0;
-		rLoc = 3084;
+		rLoc = 4344;
 		rType = 0;
 		vrLen = 1291;
 		vrLoc = 3371;
@@ -2271,7 +2281,7 @@
 		fRef = 256AC3D90F4B6AC300CF3369 /* QuietUnrarAppDelegate.m */;
 		name = "QuietUnrarAppDelegate.m: 95";
 		rLen = 0;
-		rLoc = 3084;
+		rLoc = 4344;
 		rType = 0;
 		vrLen = 1552;
 		vrLoc = 2653;
@@ -2281,7 +2291,7 @@
 		fRef = 256AC3D90F4B6AC300CF3369 /* QuietUnrarAppDelegate.m */;
 		name = "QuietUnrarAppDelegate.m: 96";
 		rLen = 0;
-		rLoc = 3084;
+		rLoc = 4344;
 		rType = 0;
 		vrLen = 1553;
 		vrLoc = 2653;
@@ -2291,7 +2301,7 @@
 		fRef = 256AC3D90F4B6AC300CF3369 /* QuietUnrarAppDelegate.m */;
 		name = "QuietUnrarAppDelegate.m: 82";
 		rLen = 0;
-		rLoc = 3084;
+		rLoc = 4344;
 		rType = 0;
 		vrLen = 1866;
 		vrLoc = 1880;
@@ -2301,7 +2311,7 @@
 		fRef = 256AC3D90F4B6AC300CF3369 /* QuietUnrarAppDelegate.m */;
 		name = "QuietUnrarAppDelegate.m: 95";
 		rLen = 0;
-		rLoc = 3084;
+		rLoc = 4344;
 		rType = 0;
 		vrLen = 1829;
 		vrLoc = 1880;
@@ -2311,7 +2321,7 @@
 		fRef = 256AC3D90F4B6AC300CF3369 /* QuietUnrarAppDelegate.m */;
 		name = "QuietUnrarAppDelegate.m: 102";
 		rLen = 0;
-		rLoc = 3084;
+		rLoc = 4344;
 		rType = 0;
 		vrLen = 1579;
 		vrLoc = 2705;
@@ -2321,7 +2331,7 @@
 		fRef = 256AC3D90F4B6AC300CF3369 /* QuietUnrarAppDelegate.m */;
 		name = "QuietUnrarAppDelegate.m: 102";
 		rLen = 0;
-		rLoc = 3084;
+		rLoc = 4344;
 		rType = 0;
 		vrLen = 1579;
 		vrLoc = 2705;
@@ -2331,7 +2341,7 @@
 		fRef = 256AC3D90F4B6AC300CF3369 /* QuietUnrarAppDelegate.m */;
 		name = "QuietUnrarAppDelegate.m: 101";
 		rLen = 0;
-		rLoc = 3084;
+		rLoc = 4344;
 		rType = 0;
 		vrLen = 1736;
 		vrLoc = 2705;
@@ -2341,7 +2351,7 @@
 		fRef = 256AC3D90F4B6AC300CF3369 /* QuietUnrarAppDelegate.m */;
 		name = "QuietUnrarAppDelegate.m: 102";
 		rLen = 0;
-		rLoc = 3084;
+		rLoc = 4344;
 		rType = 0;
 		vrLen = 1736;
 		vrLoc = 2705;
@@ -2351,7 +2361,7 @@
 		fRef = 256AC3D90F4B6AC300CF3369 /* QuietUnrarAppDelegate.m */;
 		name = "QuietUnrarAppDelegate.m: 102";
 		rLen = 0;
-		rLoc = 3084;
+		rLoc = 4344;
 		rType = 0;
 		vrLen = 1668;
 		vrLoc = 2705;
@@ -2361,7 +2371,7 @@
 		fRef = 256AC3D90F4B6AC300CF3369 /* QuietUnrarAppDelegate.m */;
 		name = "QuietUnrarAppDelegate.m: 140";
 		rLen = 0;
-		rLoc = 3084;
+		rLoc = 4344;
 		rType = 0;
 		vrLen = 991;
 		vrLoc = 4329;
@@ -2371,7 +2381,7 @@
 		fRef = 256AC3D90F4B6AC300CF3369 /* QuietUnrarAppDelegate.m */;
 		name = "QuietUnrarAppDelegate.m: 122";
 		rLen = 0;
-		rLoc = 3084;
+		rLoc = 4344;
 		rType = 0;
 		vrLen = 1576;
 		vrLoc = 3217;
@@ -2381,7 +2391,7 @@
 		fRef = 256AC3D90F4B6AC300CF3369 /* QuietUnrarAppDelegate.m */;
 		name = "QuietUnrarAppDelegate.m: 77";
 		rLen = 0;
-		rLoc = 3084;
+		rLoc = 4344;
 		rType = 0;
 		vrLen = 1292;
 		vrLoc = 144;
@@ -2401,7 +2411,7 @@
 		fRef = 256AC3D90F4B6AC300CF3369 /* QuietUnrarAppDelegate.m */;
 		name = "QuietUnrarAppDelegate.m: 21";
 		rLen = 0;
-		rLoc = 626;
+		rLoc = 1307;
 		rType = 0;
 		vrLen = 1061;
 		vrLoc = 0;
@@ -2411,7 +2421,7 @@
 		fRef = 256AC3D90F4B6AC300CF3369 /* QuietUnrarAppDelegate.m */;
 		name = "QuietUnrarAppDelegate.m: 169";
 		rLen = 0;
-		rLoc = 7181;
+		rLoc = 8649;
 		rType = 0;
 		vrLen = 1173;
 		vrLoc = 4625;
@@ -2421,7 +2431,7 @@
 		fRef = 256AC3D90F4B6AC300CF3369 /* QuietUnrarAppDelegate.m */;
 		name = "QuietUnrarAppDelegate.m: 157";
 		rLen = 0;
-		rLoc = 3084;
+		rLoc = 4344;
 		rType = 0;
 		vrLen = 1217;
 		vrLoc = 4625;
@@ -2431,7 +2441,7 @@
 		fRef = 256AC3D80F4B6AC300CF3369 /* QuietUnrarAppDelegate.h */;
 		name = "QuietUnrarAppDelegate.h: 36";
 		rLen = 0;
-		rLoc = 1011;
+		rLoc = 998;
 		rType = 0;
 		vrLen = 842;
 		vrLoc = 0;
@@ -2441,7 +2451,7 @@
 		fRef = 256AC3D90F4B6AC300CF3369 /* QuietUnrarAppDelegate.m */;
 		name = "QuietUnrarAppDelegate.m: 16";
 		rLen = 45;
-		rLoc = 416;
+		rLoc = 1162;
 		rType = 0;
 		vrLen = 1241;
 		vrLoc = 148;
@@ -2451,7 +2461,7 @@
 		fRef = 256AC3D90F4B6AC300CF3369 /* QuietUnrarAppDelegate.m */;
 		name = "QuietUnrarAppDelegate.m: 83";
 		rLen = 0;
-		rLoc = 3084;
+		rLoc = 4344;
 		rType = 0;
 		vrLen = 1933;
 		vrLoc = 1837;
@@ -2461,7 +2471,7 @@
 		fRef = 256AC3D80F4B6AC300CF3369 /* QuietUnrarAppDelegate.h */;
 		name = "QuietUnrarAppDelegate.h: 35";
 		rLen = 0;
-		rLoc = 1011;
+		rLoc = 998;
 		rType = 0;
 		vrLen = 789;
 		vrLoc = 0;
@@ -2471,7 +2481,7 @@
 		fRef = 256AC3D90F4B6AC300CF3369 /* QuietUnrarAppDelegate.m */;
 		name = "QuietUnrarAppDelegate.m: 169";
 		rLen = 0;
-		rLoc = 7175;
+		rLoc = 8643;
 		rType = 0;
 		vrLen = 1214;
 		vrLoc = 4684;
@@ -2481,7 +2491,7 @@
 		fRef = 256AC3D90F4B6AC300CF3369 /* QuietUnrarAppDelegate.m */;
 		name = "QuietUnrarAppDelegate.m: 68";
 		rLen = 0;
-		rLoc = 2285;
+		rLoc = 3545;
 		rType = 0;
 		vrLen = 1498;
 		vrLoc = 936;
@@ -2491,7 +2501,7 @@
 		fRef = 256AC3D90F4B6AC300CF3369 /* QuietUnrarAppDelegate.m */;
 		name = "QuietUnrarAppDelegate.m: 69";
 		rLen = 0;
-		rLoc = 2360;
+		rLoc = 3620;
 		rType = 0;
 		vrLen = 1505;
 		vrLoc = 936;
@@ -2511,7 +2521,7 @@
 		fRef = 256AC3D90F4B6AC300CF3369 /* QuietUnrarAppDelegate.m */;
 		name = "QuietUnrarAppDelegate.m: 163";
 		rLen = 0;
-		rLoc = 3084;
+		rLoc = 4344;
 		rType = 0;
 		vrLen = 1169;
 		vrLoc = 4779;
@@ -2521,7 +2531,7 @@
 		fRef = 256AC3D90F4B6AC300CF3369 /* QuietUnrarAppDelegate.m */;
 		name = "QuietUnrarAppDelegate.m: 163";
 		rLen = 0;
-		rLoc = 3084;
+		rLoc = 4344;
 		rType = 0;
 		vrLen = 1214;
 		vrLoc = 4734;
@@ -2531,7 +2541,7 @@
 		fRef = 256AC3D90F4B6AC300CF3369 /* QuietUnrarAppDelegate.m */;
 		name = "QuietUnrarAppDelegate.m: 168";
 		rLen = 0;
-		rLoc = 3084;
+		rLoc = 4344;
 		rType = 0;
 		vrLen = 1164;
 		vrLoc = 4952;
@@ -2541,7 +2551,7 @@
 		fRef = 256AC3D90F4B6AC300CF3369 /* QuietUnrarAppDelegate.m */;
 		name = "QuietUnrarAppDelegate.m: 150";
 		rLen = 0;
-		rLoc = 3084;
+		rLoc = 4344;
 		rType = 0;
 		vrLen = 1276;
 		vrLoc = 4808;
@@ -2551,7 +2561,7 @@
 		fRef = 256AC3D90F4B6AC300CF3369 /* QuietUnrarAppDelegate.m */;
 		name = "QuietUnrarAppDelegate.m: 150";
 		rLen = 0;
-		rLoc = 3084;
+		rLoc = 4344;
 		rType = 0;
 		vrLen = 1277;
 		vrLoc = 4808;
@@ -2561,7 +2571,7 @@
 		fRef = 256AC3D90F4B6AC300CF3369 /* QuietUnrarAppDelegate.m */;
 		name = "QuietUnrarAppDelegate.m: 150";
 		rLen = 0;
-		rLoc = 3084;
+		rLoc = 4344;
 		rType = 0;
 		vrLen = 1277;
 		vrLoc = 4808;
@@ -2571,7 +2581,7 @@
 		fRef = 256AC3D90F4B6AC300CF3369 /* QuietUnrarAppDelegate.m */;
 		name = "QuietUnrarAppDelegate.m: 29";
 		rLen = 0;
-		rLoc = 747;
+		rLoc = 2194;
 		rType = 0;
 		vrLen = 1042;
 		vrLoc = 0;
@@ -2581,7 +2591,7 @@
 		fRef = 256AC3D90F4B6AC300CF3369 /* QuietUnrarAppDelegate.m */;
 		name = "QuietUnrarAppDelegate.m: 182";
 		rLen = 0;
-		rLoc = 7173;
+		rLoc = 8641;
 		rType = 0;
 		vrLen = 1161;
 		vrLoc = 5144;
@@ -2590,7 +2600,7 @@
 		isa = PBXTextBookmark;
 		fRef = 256AC3D80F4B6AC300CF3369 /* QuietUnrarAppDelegate.h */;
 		name = "QuietUnrarAppDelegate.h: 35";
-		rLen = 51;
+		rLen = 38;
 		rLoc = 959;
 		rType = 0;
 		vrLen = 830;
@@ -2611,7 +2621,7 @@
 		fRef = 256AC3D80F4B6AC300CF3369 /* QuietUnrarAppDelegate.h */;
 		name = "QuietUnrarAppDelegate.h: 38";
 		rLen = 0;
-		rLoc = 1010;
+		rLoc = 997;
 		rType = 0;
 		vrLen = 898;
 		vrLoc = 31;
@@ -2621,7 +2631,7 @@
 		fRef = 256AC3D80F4B6AC300CF3369 /* QuietUnrarAppDelegate.h */;
 		name = "QuietUnrarAppDelegate.h: 38";
 		rLen = 0;
-		rLoc = 1010;
+		rLoc = 997;
 		rType = 0;
 		vrLen = 898;
 		vrLoc = 31;
@@ -2641,7 +2651,7 @@
 		fRef = 256AC3D90F4B6AC300CF3369 /* QuietUnrarAppDelegate.m */;
 		name = "QuietUnrarAppDelegate.m: 182";
 		rLen = 0;
-		rLoc = 3084;
+		rLoc = 4344;
 		rType = 0;
 		vrLen = 985;
 		vrLoc = 5685;
@@ -2651,7 +2661,7 @@
 		fRef = 256AC3D90F4B6AC300CF3369 /* QuietUnrarAppDelegate.m */;
 		name = "QuietUnrarAppDelegate.m: 193";
 		rLen = 0;
-		rLoc = 3084;
+		rLoc = 4344;
 		rType = 0;
 		vrLen = 961;
 		vrLoc = 5687;
@@ -2661,7 +2671,7 @@
 		fRef = 256AC3D90F4B6AC300CF3369 /* QuietUnrarAppDelegate.m */;
 		name = "QuietUnrarAppDelegate.m: 196";
 		rLen = 0;
-		rLoc = 7174;
+		rLoc = 8642;
 		rType = 0;
 		vrLen = 941;
 		vrLoc = 5779;
@@ -2671,7 +2681,7 @@
 		fRef = 256AC3D80F4B6AC300CF3369 /* QuietUnrarAppDelegate.h */;
 		name = "QuietUnrarAppDelegate.h: 40";
 		rLen = 0;
-		rLoc = 1010;
+		rLoc = 997;
 		rType = 0;
 		vrLen = 955;
 		vrLoc = 46;
@@ -2701,7 +2711,7 @@
 		fRef = 256AC3D90F4B6AC300CF3369 /* QuietUnrarAppDelegate.m */;
 		name = "QuietUnrarAppDelegate.m: 31";
 		rLen = 0;
-		rLoc = 887;
+		rLoc = 2424;
 		rType = 0;
 		vrLen = 1143;
 		vrLoc = 465;
@@ -2711,7 +2721,7 @@
 		fRef = 256AC3D90F4B6AC300CF3369 /* QuietUnrarAppDelegate.m */;
 		name = "QuietUnrarAppDelegate.m: 187";
 		rLen = 0;
-		rLoc = 3084;
+		rLoc = 4344;
 		rType = 0;
 		vrLen = 944;
 		vrLoc = 5844;
@@ -2731,7 +2741,7 @@
 		fRef = 256AC3D90F4B6AC300CF3369 /* QuietUnrarAppDelegate.m */;
 		name = "QuietUnrarAppDelegate.m: 186";
 		rLen = 0;
-		rLoc = 3084;
+		rLoc = 4344;
 		rType = 0;
 		vrLen = 962;
 		vrLoc = 5826;
@@ -2741,7 +2751,7 @@
 		fRef = 256AC3D90F4B6AC300CF3369 /* QuietUnrarAppDelegate.m */;
 		name = "QuietUnrarAppDelegate.m: 187";
 		rLen = 0;
-		rLoc = 3084;
+		rLoc = 4344;
 		rType = 0;
 		vrLen = 1002;
 		vrLoc = 5706;
@@ -2771,7 +2781,7 @@
 		fRef = 256AC3D90F4B6AC300CF3369 /* QuietUnrarAppDelegate.m */;
 		name = "QuietUnrarAppDelegate.m: 144";
 		rLen = 0;
-		rLoc = 3084;
+		rLoc = 4344;
 		rType = 0;
 		vrLen = 657;
 		vrLoc = 321;
@@ -2820,7 +2830,7 @@
 		fRef = 256AC3D90F4B6AC300CF3369 /* QuietUnrarAppDelegate.m */;
 		name = "QuietUnrarAppDelegate.m: 192";
 		rLen = 0;
-		rLoc = 7172;
+		rLoc = 8640;
 		rType = 0;
 		vrLen = 1012;
 		vrLoc = 5706;
@@ -2830,7 +2840,7 @@
 		fRef = 256AC3D90F4B6AC300CF3369 /* QuietUnrarAppDelegate.m */;
 		name = "QuietUnrarAppDelegate.m: 40";
 		rLen = 0;
-		rLoc = 1086;
+		rLoc = 2527;
 		rType = 0;
 		vrLen = 1330;
 		vrLoc = 634;
@@ -2840,7 +2850,7 @@
 		fRef = 256AC3D90F4B6AC300CF3369 /* QuietUnrarAppDelegate.m */;
 		name = "QuietUnrarAppDelegate.m: 187";
 		rLen = 0;
-		rLoc = 3084;
+		rLoc = 4344;
 		rType = 0;
 		vrLen = 960;
 		vrLoc = 5844;
@@ -2850,7 +2860,7 @@
 		fRef = 256AC3D90F4B6AC300CF3369 /* QuietUnrarAppDelegate.m */;
 		name = "QuietUnrarAppDelegate.m: 184";
 		rLen = 0;
-		rLoc = 3084;
+		rLoc = 4344;
 		rType = 0;
 		vrLen = 1043;
 		vrLoc = 5844;
@@ -2860,7 +2870,7 @@
 		fRef = 256AC3D90F4B6AC300CF3369 /* QuietUnrarAppDelegate.m */;
 		name = "QuietUnrarAppDelegate.m: 184";
 		rLen = 0;
-		rLoc = 3084;
+		rLoc = 4344;
 		rType = 0;
 		vrLen = 1075;
 		vrLoc = 5844;
@@ -2870,7 +2880,7 @@
 		fRef = 256AC3D90F4B6AC300CF3369 /* QuietUnrarAppDelegate.m */;
 		name = "QuietUnrarAppDelegate.m: 184";
 		rLen = 0;
-		rLoc = 3084;
+		rLoc = 4344;
 		rType = 0;
 		vrLen = 1075;
 		vrLoc = 5844;
@@ -2880,7 +2890,7 @@
 		fRef = 256AC3D90F4B6AC300CF3369 /* QuietUnrarAppDelegate.m */;
 		name = "QuietUnrarAppDelegate.m: 186";
 		rLen = 0;
-		rLoc = 3084;
+		rLoc = 4344;
 		rType = 0;
 		vrLen = 1077;
 		vrLoc = 5844;
@@ -2900,7 +2910,7 @@
 		fRef = 256AC3D90F4B6AC300CF3369 /* QuietUnrarAppDelegate.m */;
 		name = "QuietUnrarAppDelegate.m: 184";
 		rLen = 0;
-		rLoc = 3084;
+		rLoc = 4344;
 		rType = 0;
 		vrLen = 1069;
 		vrLoc = 5844;
@@ -2910,7 +2920,7 @@
 		fRef = 256AC3D90F4B6AC300CF3369 /* QuietUnrarAppDelegate.m */;
 		name = "QuietUnrarAppDelegate.m: 40";
 		rLen = 0;
-		rLoc = 1067;
+		rLoc = 2508;
 		rType = 0;
 		vrLen = 1235;
 		vrLoc = 236;
@@ -2920,7 +2930,7 @@
 		fRef = 256AC3D80F4B6AC300CF3369 /* QuietUnrarAppDelegate.h */;
 		name = "QuietUnrarAppDelegate.h: 40";
 		rLen = 0;
-		rLoc = 1010;
+		rLoc = 997;
 		rType = 0;
 		vrLen = 953;
 		vrLoc = 49;
@@ -2930,7 +2940,7 @@
 		fRef = 256AC3D90F4B6AC300CF3369 /* QuietUnrarAppDelegate.m */;
 		name = "QuietUnrarAppDelegate.m: 198";
 		rLen = 0;
-		rLoc = 7175;
+		rLoc = 8643;
 		rType = 0;
 		vrLen = 1006;
 		vrLoc = 5819;
@@ -2940,7 +2950,7 @@
 		fRef = 256AC3D90F4B6AC300CF3369 /* QuietUnrarAppDelegate.m */;
 		name = "QuietUnrarAppDelegate.m: 189";
 		rLen = 0;
-		rLoc = 3084;
+		rLoc = 4344;
 		rType = 0;
 		vrLen = 1047;
 		vrLoc = 5819;
@@ -2960,7 +2970,7 @@
 		fRef = 256AC3D90F4B6AC300CF3369 /* QuietUnrarAppDelegate.m */;
 		name = "QuietUnrarAppDelegate.m: 196";
 		rLen = 0;
-		rLoc = 7149;
+		rLoc = 8598;
 		rType = 0;
 		vrLen = 1679;
 		vrLoc = 3387;
@@ -2970,7 +2980,7 @@
 		fRef = 256AC3D90F4B6AC300CF3369 /* QuietUnrarAppDelegate.m */;
 		name = "QuietUnrarAppDelegate.m: 196";
 		rLen = 0;
-		rLoc = 7139;
+		rLoc = 8598;
 		rType = 0;
 		vrLen = 1171;
 		vrLoc = 5766;
@@ -2980,7 +2990,7 @@
 		fRef = 256AC3D90F4B6AC300CF3369 /* QuietUnrarAppDelegate.m */;
 		name = "QuietUnrarAppDelegate.m: 196";
 		rLen = 0;
-		rLoc = 7139;
+		rLoc = 8598;
 		rType = 0;
 		vrLen = 1103;
 		vrLoc = 5858;
@@ -3000,8 +3010,8 @@
 		comments = "NSSecureTextField  may not respond to 'string'";
 		fRef = 256AC3D90F4B6AC300CF3369 /* QuietUnrarAppDelegate.m */;
 		fallbackIsa = XCBuildMessageTextBookmark;
-		rLen = 1;
-		rLoc = 197;
+		rLen = 0;
+		rLoc = 214;
 		rType = 1;
 	};
 	D488BE9610B065C300B3451C /* PBXTextBookmark */ = {
@@ -3009,7 +3019,7 @@
 		fRef = 256AC3D90F4B6AC300CF3369 /* QuietUnrarAppDelegate.m */;
 		name = "QuietUnrarAppDelegate.m: 196";
 		rLen = 0;
-		rLoc = 7139;
+		rLoc = 8598;
 		rType = 0;
 		vrLen = 621;
 		vrLoc = 6334;
@@ -3039,7 +3049,7 @@
 		fRef = 256AC3D90F4B6AC300CF3369 /* QuietUnrarAppDelegate.m */;
 		name = "QuietUnrarAppDelegate.m: 196";
 		rLen = 0;
-		rLoc = 7139;
+		rLoc = 8598;
 		rType = 0;
 		vrLen = 1103;
 		vrLoc = 5858;
@@ -3049,7 +3059,7 @@
 		fRef = 256AC3D90F4B6AC300CF3369 /* QuietUnrarAppDelegate.m */;
 		name = "QuietUnrarAppDelegate.m: 200";
 		rLen = 0;
-		rLoc = 7173;
+		rLoc = 8641;
 		rType = 0;
 		vrLen = 1874;
 		vrLoc = 2977;
@@ -3059,7 +3069,7 @@
 		fRef = 256AC3D90F4B6AC300CF3369 /* QuietUnrarAppDelegate.m */;
 		name = "QuietUnrarAppDelegate.m: 196";
 		rLen = 0;
-		rLoc = 7139;
+		rLoc = 8598;
 		rType = 0;
 		vrLen = 1108;
 		vrLoc = 5873;
@@ -3069,7 +3079,7 @@
 		fRef = 256AC3D90F4B6AC300CF3369 /* QuietUnrarAppDelegate.m */;
 		name = "QuietUnrarAppDelegate.m: 201";
 		rLen = 0;
-		rLoc = 7108;
+		rLoc = 8598;
 		rType = 0;
 		vrLen = 1224;
 		vrLoc = 5956;
@@ -3079,7 +3089,7 @@
 		fRef = 256AC3D90F4B6AC300CF3369 /* QuietUnrarAppDelegate.m */;
 		name = "QuietUnrarAppDelegate.m: 201";
 		rLen = 0;
-		rLoc = 7106;
+		rLoc = 8598;
 		rType = 0;
 		vrLen = 1223;
 		vrLoc = 5956;
@@ -3088,8 +3098,8 @@
 		isa = PBXTextBookmark;
 		fRef = 256AC3D90F4B6AC300CF3369 /* QuietUnrarAppDelegate.m */;
 		name = "QuietUnrarAppDelegate.m: 178";
-		rLen = 5;
-		rLoc = 5995;
+		rLen = 0;
+		rLoc = 7432;
 		rType = 0;
 		vrLen = 1235;
 		vrLoc = 5548;
@@ -3099,7 +3109,7 @@
 		fRef = 256AC3D90F4B6AC300CF3369 /* QuietUnrarAppDelegate.m */;
 		name = "QuietUnrarAppDelegate.m: 46";
 		rLen = 0;
-		rLoc = 1193;
+		rLoc = 2875;
 		rType = 0;
 		vrLen = 1218;
 		vrLoc = 1005;
@@ -3109,7 +3119,7 @@
 		fRef = 256AC3D90F4B6AC300CF3369 /* QuietUnrarAppDelegate.m */;
 		name = "QuietUnrarAppDelegate.m: 32";
 		rLen = 0;
-		rLoc = 807;
+		rLoc = 2213;
 		rType = 0;
 		vrLen = 1218;
 		vrLoc = 208;
@@ -3119,7 +3129,7 @@
 		fRef = 256AC3D80F4B6AC300CF3369 /* QuietUnrarAppDelegate.h */;
 		name = "QuietUnrarAppDelegate.h: 40";
 		rLen = 0;
-		rLoc = 1000;
+		rLoc = 996;
 		rType = 0;
 		vrLen = 971;
 		vrLoc = 46;
@@ -3129,7 +3139,7 @@
 		fRef = 256AC3D90F4B6AC300CF3369 /* QuietUnrarAppDelegate.m */;
 		name = "QuietUnrarAppDelegate.m: 205";
 		rLen = 0;
-		rLoc = 7038;
+		rLoc = 8598;
 		rType = 0;
 		vrLen = 1240;
 		vrLoc = 6240;
@@ -3139,7 +3149,7 @@
 		fRef = 256AC3D90F4B6AC300CF3369 /* QuietUnrarAppDelegate.m */;
 		name = "QuietUnrarAppDelegate.m: 190";
 		rLen = 0;
-		rLoc = 6438;
+		rLoc = 7994;
 		rType = 0;
 		vrLen = 1252;
 		vrLoc = 6224;
@@ -3149,7 +3159,7 @@
 		fRef = 256AC3D90F4B6AC300CF3369 /* QuietUnrarAppDelegate.m */;
 		name = "QuietUnrarAppDelegate.m: 213";
 		rLen = 0;
-		rLoc = 7181;
+		rLoc = 8649;
 		rType = 0;
 		vrLen = 1244;
 		vrLoc = 6240;
@@ -3159,7 +3169,7 @@
 		fRef = 256AC3D90F4B6AC300CF3369 /* QuietUnrarAppDelegate.m */;
 		name = "QuietUnrarAppDelegate.m: 103";
 		rLen = 0;
-		rLoc = 3251;
+		rLoc = 4511;
 		rType = 0;
 		vrLen = 1762;
 		vrLoc = 2776;
@@ -3169,7 +3179,7 @@
 		fRef = 256AC3D80F4B6AC300CF3369 /* QuietUnrarAppDelegate.h */;
 		name = "QuietUnrarAppDelegate.h: 40";
 		rLen = 0;
-		rLoc = 1000;
+		rLoc = 996;
 		rType = 0;
 		vrLen = 971;
 		vrLoc = 46;
@@ -3179,7 +3189,7 @@
 		fRef = 256AC3D90F4B6AC300CF3369 /* QuietUnrarAppDelegate.m */;
 		name = "QuietUnrarAppDelegate.m: 31";
 		rLen = 0;
-		rLoc = 875;
+		rLoc = 2298;
 		rType = 0;
 		vrLen = 1116;
 		vrLoc = 46;
@@ -3189,7 +3199,7 @@
 		fRef = 256AC3D90F4B6AC300CF3369 /* QuietUnrarAppDelegate.m */;
 		name = "QuietUnrarAppDelegate.m: 31";
 		rLen = 0;
-		rLoc = 875;
+		rLoc = 2298;
 		rType = 0;
 		vrLen = 1116;
 		vrLoc = 46;
@@ -3199,10 +3209,107 @@
 		fRef = 256AC3D90F4B6AC300CF3369 /* QuietUnrarAppDelegate.m */;
 		name = "QuietUnrarAppDelegate.m: 24";
 		rLen = 0;
-		rLoc = 629;
+		rLoc = 1307;
 		rType = 0;
 		vrLen = 1116;
 		vrLoc = 46;
+	};
+	D488BEE610B09B2A00B3451C /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 256AC3D90F4B6AC300CF3369 /* QuietUnrarAppDelegate.m */;
+		name = "QuietUnrarAppDelegate.m: 198";
+		rLen = 0;
+		rLoc = 8598;
+		rType = 0;
+		vrLen = 646;
+		vrLoc = 6290;
+	};
+	D488BEE710B09B2A00B3451C /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D4A495851054177300BE38AE /* dll.cpp */;
+		name = "dll.cpp: 319";
+		rLen = 6;
+		rLoc = 8815;
+		rType = 0;
+		vrLen = 437;
+		vrLoc = 8706;
+	};
+	D488BEE810B09B2A00B3451C /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D4A495861054177300BE38AE /* dll.hpp */;
+		name = "dll.hpp: 33";
+		rLen = 0;
+		rLoc = 842;
+		rType = 0;
+		vrLen = 302;
+		vrLoc = 635;
+	};
+	D488BEE910B09B2A00B3451C /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D4A495E21054177300BE38AE /* volume.cpp */;
+		rLen = 8;
+		rLoc = 2306;
+		rType = 0;
+	};
+	D488BEEA10B09B2A00B3451C /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D4A495E21054177300BE38AE /* volume.cpp */;
+		name = "volume.cpp: 74";
+		rLen = 8;
+		rLoc = 2306;
+		rType = 0;
+		vrLen = 628;
+		vrLoc = 2191;
+	};
+	D488BEEB10B09B2E00B3451C /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 256AC3D90F4B6AC300CF3369 /* QuietUnrarAppDelegate.m */;
+		name = "QuietUnrarAppDelegate.m: 180";
+		rLen = 0;
+		rLoc = 7790;
+		rType = 0;
+		vrLen = 1244;
+		vrLoc = 5937;
+	};
+	D488BEFE10B18CFC00B3451C /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 256AC3D80F4B6AC300CF3369 /* QuietUnrarAppDelegate.h */;
+		name = "QuietUnrarAppDelegate.h: 40";
+		rLen = 0;
+		rLoc = 996;
+		rType = 0;
+		vrLen = 1004;
+		vrLoc = 0;
+	};
+	D488BEFF10B18CFC00B3451C /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 256AC3D90F4B6AC300CF3369 /* QuietUnrarAppDelegate.m */;
+		name = "QuietUnrarAppDelegate.m: 56";
+		rLen = 0;
+		rLoc = 2440;
+		rType = 0;
+		vrLen = 2065;
+		vrLoc = 880;
+	};
+	D488BF0010B18CFC00B3451C /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 256AC3D90F4B6AC300CF3369 /* QuietUnrarAppDelegate.m */;
+		name = "QuietUnrarAppDelegate.m: 53";
+		rLen = 0;
+		rLoc = 2320;
+		rType = 0;
+		vrLen = 1944;
+		vrLoc = 1308;
+	};
+	D488BF0110B1926600B3451C /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 256AC3D90F4B6AC300CF3369 /* QuietUnrarAppDelegate.m */;
+		name = "QuietUnrarAppDelegate.m: 116";
+		rLen = 0;
+		rLoc = 4820;
+		rType = 0;
+		vrLen = 1748;
+		vrLoc = 4796;
 	};
 	D4A4940C1054167200BE38AE /* QuietUnrar */ = {
 		isa = PBXExecutable;
@@ -3331,9 +3438,9 @@
 	};
 	D4A495E21054177300BE38AE /* volume.cpp */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {942, 3003}}";
-			sepNavSelRange = "{2360, 8}";
-			sepNavVisRange = "{2104, 495}";
+			sepNavIntBoundsRect = "{{0, 0}, {942, 3081}}";
+			sepNavSelRange = "{2306, 8}";
+			sepNavVisRange = "{2191, 628}";
 		};
 	};
 	D4A4962A105419AA00BE38AE /* libunrar */ = {
@@ -3418,7 +3525,7 @@
 		fRef = 256AC3D90F4B6AC300CF3369 /* QuietUnrarAppDelegate.m */;
 		name = "QuietUnrarAppDelegate.m: 29";
 		rLen = 0;
-		rLoc = 1684;
+		rLoc = 3212;
 		rType = 0;
 		vrLen = 827;
 		vrLoc = 295;

@@ -10,39 +10,62 @@
 #import "QuietUnrarAppDelegate.h"
 #import "libunrar/dll.hpp"
 
+#pragma mark Callbacks
+// Declartions that are not to be part of the public interface.
+// The two methods are for callbacks passed to the RAR library
 QuietUnrarAppDelegate * quietUnrar;
 
 int changeVolume(char * volumeName, int mode);
 int callbackFunction(UINT message, LPARAM userData, LPARAM parameterOne, LPARAM parameterTwo);
 
+// Called everytime a new volume (part) of the RAR is needed.
+// mode will either be
+// RAR_VOL_NOTIFY that just notifies us that the volume has changed
+// RAR_VOL_ASK indicates that a volume is needed and the library is asking for it.
+// 
+// in both case volumeName is that name of the volume (for instance .r00)
+//
+// Note in the event of a volume being missing, there is no way to indicate to the
+// library that you have found it. You would need to block the copy, let the user find the 
+// volume, copy it to where the other volumes are and unblock to let the library
+// continue processing
 int changeVolume(char * volumeName, int mode) {
-	//NSLog(@"Volume Name: %s and mode %d", volumeName, mode);
-	
 	if (mode == RAR_VOL_ASK)
-	{
 		[(QuietUnrarAppDelegate *) quietUnrar alertUserOfMissing:volumeName];
-	}
-	
 }
 
+// Multipurpose callback function that is called un changing a volume, when data is being processed
+// and when a password is required. This is indicated by the message parameter
+//
+// UCM_CHANGEVOLUME sent when changing volumes
+// UCM_PROCESSDATA sent as each file in the archive is being extracted in chunks, useful for progress bars
+// UCM_NEEDPASSWORD sent when the library discovers a password is needed.
+//
+// The userData param is a pointer to something we supplied when the callback was registered. In my
+// case I am passing in the pointer to the archive data so that the requestArchivePassword method
+// can supply the password to the RAR library via RARSetPassword
+//
+// parameterOne & parameterTwo have different meanings depending on what message is passed.
 int callbackFunction(UINT message, LPARAM userData, LPARAM parameterOne, LPARAM parameterTwo) {
 	if (message == UCM_NEEDPASSWORD) {
-		//NSLog(@"Archive password required");
-		[(QuietUnrarAppDelegate *) quietUnrar requestArchivePassword: (id) userData];
-		
+		NSString * password = [(QuietUnrarAppDelegate *) quietUnrar requestArchivePassword];
+		if (password)
+			RARSetPassword((HANDLE)userData, (char *) [password cStringUsingEncoding:NSISOLatin1StringEncoding]);
 	}
-		//NSLog(@"Callback Function, args: %d, %D, %D, %D", message, userData, parameterOne, parameterTwo);
 }
 
-
+#pragma mark
 @implementation QuietUnrarAppDelegate
 
 @synthesize window, passwordView, passwordField;
 
 - (void) applicationWillFinishLaunching:(NSNotification *)notification {
+	// The following is used to determine is the left or right shift keys were depressed
+	// as the application was launched. Could be used to display a gui on Application start.
 	KeyMap map;
 	GetKeys(map);
-	//NSLog(@"Shift or Right Shift: %d", KEYMAP_GET(map, kVKC_Shift) || KEYMAP_GET(map, kVKC_rShift));	
+	if (KEYMAP_GET(map, kVKC_Shift) || KEYMAP_GET(map, kVKC_rShift))
+		NSLog(@"Shift or Right Shift");	
 }
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
@@ -50,11 +73,7 @@ int callbackFunction(UINT message, LPARAM userData, LPARAM parameterOne, LPARAM 
 	[[NSApplication sharedApplication] terminate:self];
 }
 
-//- (BOOL)application:(id)sender openFileWithoutUI:(NSString *)filename {
-//	NSLog(@"openFileWithoutUI with file: %@", filename);
-//	return YES;
-//}
-
+// Call one at a time for each file selected when app is run
 - (BOOL)application:(NSApplication *)theApplication openFile:(NSString *)filename {
 	//NSLog(@"openFile: %@", filename);
 	
@@ -65,15 +84,7 @@ int callbackFunction(UINT message, LPARAM userData, LPARAM parameterOne, LPARAM 
 	return YES;
 }
 
-//- (void)application:(NSApplication *)sender openFiles:(NSArray *)filenames {
-//	for (NSString * filename in filenames) {
-//		NSLog(@"openFiles: %@", filename);
-//	}
-//	
-//	// If we get passed files don't open the UI
-//	[sender replyToOpenOrPrint:NSApplicationDelegateReplySuccess];
-//}
-
+#pragma mark "Main" 
 - (BOOL) extractRarWith:(NSString *) filename {
 	quietUnrar = (void *) self;
 	char commentBuffer[BUF_LEN];
@@ -146,6 +157,8 @@ int callbackFunction(UINT message, LPARAM userData, LPARAM parameterOne, LPARAM 
 	return extractionSuccessful;
 }
 
+// Presents a dialog to the user allowing them to Skip a file or overwrite an existing version
+// returns YES or NO
 - (BOOL) shouldFileBeReplaced:(NSString *) filename {
 	BOOL result = NO;
 	
@@ -166,8 +179,8 @@ int callbackFunction(UINT message, LPARAM userData, LPARAM parameterOne, LPARAM 
 	return result;
 }
 
+// Indicate to the user that part of the RAR volume is missing.
 - (void) alertUserOfMissing:(const char *) volume {
-	//NSLog(@"Alerting user of missing volume");
 	NSAlert *alert = [[NSAlert alloc] init];
 	[alert addButtonWithTitle:@"OK"];
 	[alert setMessageText:[NSString stringWithFormat:@"Archive part %s is missing.", volume]];
@@ -179,10 +192,14 @@ int callbackFunction(UINT message, LPARAM userData, LPARAM parameterOne, LPARAM 
 	[alert release];
 }
 
-- (NSString *) requestArchivePassword:(id) archive {
+// Creates a dialog with a custom view with a NSSecureTextField which is displayed
+// to the user so they can provide a password. Returns the entered password or nil
+- (NSString *) requestArchivePassword {
 	if (!passwordView) {
 		[NSBundle loadNibNamed:@"PasswordView" owner:self];
 	}
+	
+	NSString * password = nil;
 	
 	NSAlert *alert = [[NSAlert alloc] init];
     [alert addButtonWithTitle:@"OK"];
@@ -193,12 +210,13 @@ int callbackFunction(UINT message, LPARAM userData, LPARAM parameterOne, LPARAM 
     [alert setAlertStyle:NSWarningAlertStyle];
 	
 	if ([alert runModal] == NSAlertFirstButtonReturn) {
-		NSString * password = [passwordField stringValue];
-		RARSetPassword((HANDLE)archive, (char *) [password cStringUsingEncoding:NSISOLatin1StringEncoding]);
-		//NSLog(@"Password is: %@", password);
+		password = [passwordField stringValue];
+		[password autorelease];
 	}
 	
 	[alert release];
+	
+	return password;
 }
 
 @end

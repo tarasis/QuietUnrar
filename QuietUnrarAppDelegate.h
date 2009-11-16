@@ -37,6 +37,6 @@ enum
 - (BOOL) extractRarWith:(NSString *) filename;
 - (BOOL) shouldFileBeReplaced:(NSString *) filename;
 - (void) alertUserOfMissing:(const char *) volume;
-- (NSString *) requestArchivePassword:(id) archive;
+- (NSString *) requestArchivePassword;
 
 @end
