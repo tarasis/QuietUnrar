@@ -6,159 +6,123 @@ StringList::StringList()
 }
 
 
-StringList::~StringList()
-{
-}
-
-
 void StringList::Reset()
 {
   Rewind();
   StringData.Reset();
-  StringDataW.Reset();
-  PosDataW.Reset();
   StringsCount=0;
   SavePosNumber=0;
 }
 
 
-size_t StringList::AddString(const char *Str)
+void StringList::AddStringA(const char *Str)
 {
-  return(AddString(Str,NULL));
+  Array<wchar> StrW(strlen(Str));
+  CharToWide(Str,&StrW[0],StrW.Size());
+  AddString(&StrW[0]);
 }
 
 
-size_t StringList::AddString(const char *Str,const wchar *StrW)
+void StringList::AddString(const wchar *Str)
 {
+  if (Str==NULL)
+    Str=L"";
+
   size_t PrevSize=StringData.Size();
-  StringData.Add(strlen(Str)+1);
-  strcpy(&StringData[PrevSize],Str);
-  if (StrW!=NULL && *StrW!=0)
-  {
-    size_t PrevPos=PosDataW.Size();
-    PosDataW.Add(1);
-    PosDataW[PrevPos]=PrevSize;
+  StringData.Add(wcslen(Str)+1);
+  wcscpy(&StringData[PrevSize],Str);
 
-    size_t PrevSizeW=StringDataW.Size();
-    StringDataW.Add(strlenw(StrW)+1);
-    strcpyw(&StringDataW[PrevSizeW],StrW);
-  }
   StringsCount++;
-  return(PrevSize);
 }
 
 
-bool StringList::GetString(char *Str,size_t MaxLength)
+bool StringList::GetStringA(char *Str,size_t MaxLength)
 {
-  return(GetString(Str,NULL,MaxLength));
+  Array<wchar> StrW(MaxLength);
+  if (!GetString(&StrW[0],StrW.Size()))
+    return false;
+  WideToChar(&StrW[0],Str,MaxLength);
+  return true;
 }
 
 
-bool StringList::GetString(char *Str,wchar *StrW,size_t MaxLength)
+bool StringList::GetString(wchar *Str,size_t MaxLength)
 {
-  char *StrPtr;
-  wchar *StrPtrW;
-  if (Str==NULL || !GetString(&StrPtr,&StrPtrW))
-    return(false);
-  strncpy(Str,StrPtr,MaxLength);
-  if (StrW!=NULL)
-    strncpyw(StrW,NullToEmpty(StrPtrW),MaxLength);
-  return(true);
+  wchar *StrPtr;
+  if (!GetString(&StrPtr))
+    return false;
+  wcsncpyz(Str,StrPtr,MaxLength);
+  return true;
 }
 
 
 #ifndef SFX_MODULE
-bool StringList::GetString(char *Str,wchar *StrW,size_t MaxLength,int StringNum)
+bool StringList::GetString(wchar *Str,size_t MaxLength,int StringNum)
 {
   SavePosition();
   Rewind();
   bool RetCode=true;
   while (StringNum-- >=0)
-    if (!GetString(Str,StrW,MaxLength))
+    if (!GetString(Str,MaxLength))
     {
       RetCode=false;
       break;
     }
   RestorePosition();
-  return(RetCode);
+  return RetCode;
 }
 #endif
 
 
-char* StringList::GetString()
+wchar* StringList::GetString()
 {
-  char *Str;
-  GetString(&Str,NULL);
-  return(Str);
+  wchar *Str;
+  GetString(&Str);
+  return Str;
 }
 
 
-
-bool StringList::GetString(char **Str,wchar **StrW)
+bool StringList::GetString(wchar **Str)
 {
-  if (CurPos>=StringData.Size())
+  if (CurPos>=StringData.Size()) // No more strings left unprocessed.
   {
-    *Str=NULL;
-    return(false);
+    if (Str!=NULL)
+      *Str=NULL;
+    return false;
   }
-  *Str=&StringData[CurPos];
-  if (PosDataItem<PosDataW.Size() && PosDataW[PosDataItem]==CurPos)
-  {
-    PosDataItem++;
-    if (StrW!=NULL)
-      *StrW=&StringDataW[CurPosW];
-    CurPosW+=strlenw(&StringDataW[CurPosW])+1;
-  }
-  else
-    if (StrW!=NULL)
-      *StrW=NULL;
-  CurPos+=strlen(*Str)+1;
-  return(true);
-}
 
+  wchar *CurStr=&StringData[CurPos];
+  CurPos+=wcslen(CurStr)+1;
+  if (Str!=NULL)
+    *Str=CurStr;
 
-char* StringList::GetString(uint StringPos)
-{
-  if (StringPos>=StringData.Size())
-    return(NULL);
-  return(&StringData[StringPos]);
+  return true;
 }
 
 
 void StringList::Rewind()
 {
   CurPos=0;
-  CurPosW=0;
-  PosDataItem=0;
-}
-
-
-size_t StringList::GetBufferSize()
-{
-  return(StringData.Size()+StringDataW.Size());
 }
 
 
 #ifndef SFX_MODULE
-bool StringList::Search(char *Str,wchar *StrW,bool CaseSensitive)
+bool StringList::Search(const wchar *Str,bool CaseSensitive)
 {
   SavePosition();
   Rewind();
   bool Found=false;
-  char *CurStr;
-  wchar *CurStrW;
-  while (GetString(&CurStr,&CurStrW))
+  wchar *CurStr;
+  while (GetString(&CurStr))
   {
-    if ((CaseSensitive ? strcmp(Str,CurStr):stricomp(Str,CurStr))!=0)
-      continue;
-    if (StrW!=NULL && CurStrW!=NULL)
-      if ((CaseSensitive ? strcmpw(StrW,CurStrW):stricmpw(StrW,CurStrW))!=0)
+    if (Str!=NULL && CurStr!=NULL)
+      if ((CaseSensitive ? wcscmp(Str,CurStr):wcsicomp(Str,CurStr))!=0)
         continue;
     Found=true;
     break;
   }
   RestorePosition();
-  return(Found);
+  return Found;
 }
 #endif
 
@@ -169,8 +133,6 @@ void StringList::SavePosition()
   if (SavePosNumber<ASIZE(SaveCurPos))
   {
     SaveCurPos[SavePosNumber]=CurPos;
-    SaveCurPosW[SavePosNumber]=CurPosW;
-    SavePosDataItem[SavePosNumber]=PosDataItem;
     SavePosNumber++;
   }
 }
@@ -184,8 +146,6 @@ void StringList::RestorePosition()
   {
     SavePosNumber--;
     CurPos=SaveCurPos[SavePosNumber];
-    CurPosW=SaveCurPosW[SavePosNumber];
-    PosDataItem=SavePosDataItem[SavePosNumber];
   }
 }
 #endif

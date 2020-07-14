@@ -11,10 +11,8 @@
 		8D11072D0486CEB800E47090 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
 		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
 		D488BC6810AF437B00B3451C /* libunrar.so in Frameworks */ = {isa = PBXBuildFile; fileRef = D488BC6710AF437B00B3451C /* libunrar.so */; };
-		D488BCC110AF49C700B3451C /* libunrar.so in CopyFiles */ = {isa = PBXBuildFile; fileRef = D488BC6710AF437B00B3451C /* libunrar.so */; };
+		D488BCC110AF49C700B3451C /* libunrar.so in CopyFiles */ = {isa = PBXBuildFile; fileRef = D488BC6710AF437B00B3451C /* libunrar.so */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		D488BE5510B05F3800B3451C /* PasswordView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D488BE5410B05F3800B3451C /* PasswordView.xib */; };
-		D488BFB010B1F97F00B3451C /* Growl.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D488BFAF10B1F97F00B3451C /* Growl.framework */; };
-		D488BFBF10B1FBC700B3451C /* Growl.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = D488BFAF10B1F97F00B3451C /* Growl.framework */; };
 		D488BFCC10B1FD4500B3451C /* Growl Registration Ticket.growlRegDict in Resources */ = {isa = PBXBuildFile; fileRef = D488BFCB10B1FD4500B3451C /* Growl Registration Ticket.growlRegDict */; };
 		D4A49691105435BE00BE38AE /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165CFE840E0CC02AAC07 /* InfoPlist.strings */; };
 		D4A49692105435C100BE38AE /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1DDD58140DA1D0A300B32029 /* MainMenu.xib */; };
@@ -38,7 +36,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				D488BFBF10B1FBC700B3451C /* Growl.framework in CopyFiles */,
 				D488BCC110AF49C700B3451C /* libunrar.so in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -46,10 +43,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		089C165DFE840E0CC02AAC07 /* English */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
 		13E42FB307B3F0F600E4EEF1 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = /System/Library/Frameworks/CoreData.framework; sourceTree = "<absolute>"; };
-		1DDD58150DA1D0A300B32029 /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		256AC3D80F4B6AC300CF3369 /* QuietUnrarAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuietUnrarAppDelegate.h; sourceTree = "<group>"; };
 		256AC3D90F4B6AC300CF3369 /* QuietUnrarAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuietUnrarAppDelegate.m; sourceTree = "<group>"; };
 		256AC3F00F4B6AF500CF3369 /* QuietUnrar_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuietUnrar_Prefix.pch; sourceTree = "<group>"; };
@@ -68,7 +63,6 @@
 		D4A495761054177300BE38AE /* archive.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = archive.hpp; path = libunrar/archive.hpp; sourceTree = "<group>"; };
 		D4A495771054177300BE38AE /* arcread.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = arcread.cpp; path = libunrar/arcread.cpp; sourceTree = "<group>"; };
 		D4A495781054177300BE38AE /* array.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = array.hpp; path = libunrar/array.hpp; sourceTree = "<group>"; };
-		D4A495791054177300BE38AE /* beosea.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = beosea.cpp; path = libunrar/beosea.cpp; sourceTree = "<group>"; };
 		D4A4957A1054177300BE38AE /* cmddata.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = cmddata.cpp; path = libunrar/cmddata.cpp; sourceTree = "<group>"; };
 		D4A4957B1054177300BE38AE /* cmddata.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = cmddata.hpp; path = libunrar/cmddata.hpp; sourceTree = "<group>"; };
 		D4A4957C1054177300BE38AE /* coder.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = coder.cpp; path = libunrar/coder.cpp; sourceTree = "<group>"; };
@@ -112,7 +106,6 @@
 		D4A495A21054177300BE38AE /* loclang.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = loclang.hpp; path = libunrar/loclang.hpp; sourceTree = "<group>"; };
 		D4A495A31054177300BE38AE /* log.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = log.cpp; path = libunrar/log.cpp; sourceTree = "<group>"; };
 		D4A495A41054177300BE38AE /* log.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = log.hpp; path = libunrar/log.hpp; sourceTree = "<group>"; };
-		D4A495A51054177300BE38AE /* makefile.unix */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = makefile.unix; path = libunrar/makefile.unix; sourceTree = "<group>"; };
 		D4A495A61054177300BE38AE /* match.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = match.cpp; path = libunrar/match.cpp; sourceTree = "<group>"; };
 		D4A495A71054177300BE38AE /* match.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = match.hpp; path = libunrar/match.hpp; sourceTree = "<group>"; };
 		D4A495A81054177300BE38AE /* model.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = model.cpp; path = libunrar/model.cpp; sourceTree = "<group>"; };
@@ -120,7 +113,6 @@
 		D4A495AA1054177300BE38AE /* options.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = options.cpp; path = libunrar/options.cpp; sourceTree = "<group>"; };
 		D4A495AB1054177300BE38AE /* options.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = options.hpp; path = libunrar/options.hpp; sourceTree = "<group>"; };
 		D4A495AC1054177300BE38AE /* os.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = os.hpp; path = libunrar/os.hpp; sourceTree = "<group>"; };
-		D4A495AD1054177300BE38AE /* os2ea.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = os2ea.cpp; path = libunrar/os2ea.cpp; sourceTree = "<group>"; };
 		D4A495AE1054177300BE38AE /* pathfn.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = pathfn.cpp; path = libunrar/pathfn.cpp; sourceTree = "<group>"; };
 		D4A495AF1054177300BE38AE /* pathfn.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = pathfn.hpp; path = libunrar/pathfn.hpp; sourceTree = "<group>"; };
 		D4A495B01054177300BE38AE /* rar.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = rar.cpp; path = libunrar/rar.cpp; sourceTree = "<group>"; };
@@ -131,7 +123,6 @@
 		D4A495B51054177300BE38AE /* rartypes.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = rartypes.hpp; path = libunrar/rartypes.hpp; sourceTree = "<group>"; };
 		D4A495B61054177300BE38AE /* rarvm.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = rarvm.cpp; path = libunrar/rarvm.cpp; sourceTree = "<group>"; };
 		D4A495B71054177300BE38AE /* rarvm.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = rarvm.hpp; path = libunrar/rarvm.hpp; sourceTree = "<group>"; };
-		D4A495B81054177300BE38AE /* rarvmtbl.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = rarvmtbl.cpp; path = libunrar/rarvmtbl.cpp; sourceTree = "<group>"; };
 		D4A495B91054177300BE38AE /* rawread.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = rawread.cpp; path = libunrar/rawread.cpp; sourceTree = "<group>"; };
 		D4A495BA1054177300BE38AE /* rawread.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = rawread.hpp; path = libunrar/rawread.hpp; sourceTree = "<group>"; };
 		D4A495BB1054177300BE38AE /* rdwrfn.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = rdwrfn.cpp; path = libunrar/rdwrfn.cpp; sourceTree = "<group>"; };
@@ -144,7 +135,6 @@
 		D4A495C21054177300BE38AE /* rijndael.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = rijndael.hpp; path = libunrar/rijndael.hpp; sourceTree = "<group>"; };
 		D4A495C31054177300BE38AE /* rs.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = rs.cpp; path = libunrar/rs.cpp; sourceTree = "<group>"; };
 		D4A495C41054177300BE38AE /* rs.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = rs.hpp; path = libunrar/rs.hpp; sourceTree = "<group>"; };
-		D4A495C51054177300BE38AE /* savepos.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = savepos.cpp; path = libunrar/savepos.cpp; sourceTree = "<group>"; };
 		D4A495C61054177300BE38AE /* savepos.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = savepos.hpp; path = libunrar/savepos.hpp; sourceTree = "<group>"; };
 		D4A495C71054177300BE38AE /* scantree.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = scantree.cpp; path = libunrar/scantree.cpp; sourceTree = "<group>"; };
 		D4A495C81054177300BE38AE /* scantree.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = scantree.hpp; path = libunrar/scantree.hpp; sourceTree = "<group>"; };
@@ -163,10 +153,8 @@
 		D4A495D51054177300BE38AE /* timefn.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = timefn.cpp; path = libunrar/timefn.cpp; sourceTree = "<group>"; };
 		D4A495D61054177300BE38AE /* timefn.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = timefn.hpp; path = libunrar/timefn.hpp; sourceTree = "<group>"; };
 		D4A495D71054177300BE38AE /* ulinks.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ulinks.cpp; path = libunrar/ulinks.cpp; sourceTree = "<group>"; };
-		D4A495D81054177300BE38AE /* ulinks.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = ulinks.hpp; path = libunrar/ulinks.hpp; sourceTree = "<group>"; };
 		D4A495D91054177300BE38AE /* unicode.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = unicode.cpp; path = libunrar/unicode.cpp; sourceTree = "<group>"; };
 		D4A495DA1054177300BE38AE /* unicode.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = unicode.hpp; path = libunrar/unicode.hpp; sourceTree = "<group>"; };
-		D4A495DB1054177300BE38AE /* unios2.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = unios2.cpp; path = libunrar/unios2.cpp; sourceTree = "<group>"; };
 		D4A495DC1054177300BE38AE /* unpack.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = unpack.cpp; path = libunrar/unpack.cpp; sourceTree = "<group>"; };
 		D4A495DD1054177300BE38AE /* unpack.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = unpack.hpp; path = libunrar/unpack.hpp; sourceTree = "<group>"; };
 		D4A495DE1054177300BE38AE /* unpack15.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = unpack15.cpp; path = libunrar/unpack15.cpp; sourceTree = "<group>"; };
@@ -178,6 +166,8 @@
 		D4A495E41054177300BE38AE /* win32acl.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = win32acl.cpp; path = libunrar/win32acl.cpp; sourceTree = "<group>"; };
 		D4A495E51054177300BE38AE /* win32stm.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = win32stm.cpp; path = libunrar/win32stm.cpp; sourceTree = "<group>"; };
 		D4A96E2010545E9A0091ECB4 /* Carbon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carbon.framework; path = System/Library/Frameworks/Carbon.framework; sourceTree = SDKROOT; };
+		E296811D24BE4BCD00974229 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		E296811E24BE4BCD00974229 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -188,7 +178,6 @@
 				D488BC6810AF437B00B3451C /* libunrar.so in Frameworks */,
 				8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */,
 				D4A96E2110545E9A0091ECB4 /* Carbon.framework in Frameworks */,
-				D488BFB010B1F97F00B3451C /* Growl.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -285,7 +274,6 @@
 				D4A495761054177300BE38AE /* archive.hpp */,
 				D4A495771054177300BE38AE /* arcread.cpp */,
 				D4A495781054177300BE38AE /* array.hpp */,
-				D4A495791054177300BE38AE /* beosea.cpp */,
 				D4A4957A1054177300BE38AE /* cmddata.cpp */,
 				D4A4957B1054177300BE38AE /* cmddata.hpp */,
 				D4A4957C1054177300BE38AE /* coder.cpp */,
@@ -329,7 +317,6 @@
 				D4A495A21054177300BE38AE /* loclang.hpp */,
 				D4A495A31054177300BE38AE /* log.cpp */,
 				D4A495A41054177300BE38AE /* log.hpp */,
-				D4A495A51054177300BE38AE /* makefile.unix */,
 				D4A495A61054177300BE38AE /* match.cpp */,
 				D4A495A71054177300BE38AE /* match.hpp */,
 				D4A495A81054177300BE38AE /* model.cpp */,
@@ -337,7 +324,6 @@
 				D4A495AA1054177300BE38AE /* options.cpp */,
 				D4A495AB1054177300BE38AE /* options.hpp */,
 				D4A495AC1054177300BE38AE /* os.hpp */,
-				D4A495AD1054177300BE38AE /* os2ea.cpp */,
 				D4A495AE1054177300BE38AE /* pathfn.cpp */,
 				D4A495AF1054177300BE38AE /* pathfn.hpp */,
 				D4A495B01054177300BE38AE /* rar.cpp */,
@@ -348,7 +334,6 @@
 				D4A495B51054177300BE38AE /* rartypes.hpp */,
 				D4A495B61054177300BE38AE /* rarvm.cpp */,
 				D4A495B71054177300BE38AE /* rarvm.hpp */,
-				D4A495B81054177300BE38AE /* rarvmtbl.cpp */,
 				D4A495B91054177300BE38AE /* rawread.cpp */,
 				D4A495BA1054177300BE38AE /* rawread.hpp */,
 				D4A495BB1054177300BE38AE /* rdwrfn.cpp */,
@@ -361,7 +346,6 @@
 				D4A495C21054177300BE38AE /* rijndael.hpp */,
 				D4A495C31054177300BE38AE /* rs.cpp */,
 				D4A495C41054177300BE38AE /* rs.hpp */,
-				D4A495C51054177300BE38AE /* savepos.cpp */,
 				D4A495C61054177300BE38AE /* savepos.hpp */,
 				D4A495C71054177300BE38AE /* scantree.cpp */,
 				D4A495C81054177300BE38AE /* scantree.hpp */,
@@ -380,10 +364,8 @@
 				D4A495D51054177300BE38AE /* timefn.cpp */,
 				D4A495D61054177300BE38AE /* timefn.hpp */,
 				D4A495D71054177300BE38AE /* ulinks.cpp */,
-				D4A495D81054177300BE38AE /* ulinks.hpp */,
 				D4A495D91054177300BE38AE /* unicode.cpp */,
 				D4A495DA1054177300BE38AE /* unicode.hpp */,
-				D4A495DB1054177300BE38AE /* unios2.cpp */,
 				D4A495DC1054177300BE38AE /* unpack.cpp */,
 				D4A495DD1054177300BE38AE /* unpack.hpp */,
 				D4A495DE1054177300BE38AE /* unpack15.cpp */,
@@ -403,7 +385,7 @@
 /* Begin PBXLegacyTarget section */
 		D4A4962A105419AA00BE38AE /* libunrar */ = {
 			isa = PBXLegacyTarget;
-			buildArgumentsString = "-f makefile.unix lib $(ACTION)";
+			buildArgumentsString = "-f makefile lib";
 			buildConfigurationList = D4A4962D105419C800BE38AE /* Build configuration list for PBXLegacyTarget "libunrar" */;
 			buildPhases = (
 			);
@@ -444,9 +426,17 @@
 /* Begin PBXProject section */
 		29B97313FDCFA39411CA2CEA /* Project object */ = {
 			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1200;
+			};
 			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "QuietUnrar" */;
 			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = en;
 			hasScannedForEncodings = 1;
+			knownRegions = (
+				en,
+				Base,
+			);
 			mainGroup = 29B97314FDCFA39411CA2CEA /* QuietUnrar */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -511,7 +501,7 @@
 		089C165CFE840E0CC02AAC07 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				089C165DFE840E0CC02AAC07 /* English */,
+				E296811D24BE4BCD00974229 /* en */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -519,7 +509,7 @@
 		1DDD58140DA1D0A300B32029 /* MainMenu.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
-				1DDD58150DA1D0A300B32029 /* English */,
+				E296811E24BE4BCD00974229 /* en */,
 			);
 			name = MainMenu.xib;
 			sourceTree = "<group>";
@@ -531,13 +521,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CODE_SIGN_IDENTITY = "-";
 				COPY_PHASE_STRIP = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/Frameworks\"",
 				);
 				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_ENABLE_FIX_AND_CONTINUE = YES;
 				GCC_MODEL_TUNING = G5;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -551,6 +542,7 @@
 					"$(inherited)",
 					"\"$(SRCROOT)/libunrar\"",
 				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.yourcompany.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = QuietUnrar;
 			};
 			name = Debug;
@@ -559,6 +551,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CODE_SIGN_IDENTITY = "-";
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -576,6 +570,7 @@
 					"$(inherited)",
 					"\"$(SRCROOT)/libunrar\"",
 				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.yourcompany.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = QuietUnrar;
 			};
 			name = Release;
@@ -583,52 +578,102 @@
 		C01FCF4F08A954540054247B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_ENABLE_OBJC_GC = required;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
 				ONLY_ACTIVE_ARCH = YES;
-				PREBINDING = NO;
-				SDKROOT = macosx10.6;
-				VALID_ARCHS = "i386 x86_64";
+				SDKROOT = macosx;
+				VALID_ARCHS = "arm64 arm64e i386 x86_64";
 			};
 			name = Debug;
 		};
 		C01FCF5008A954540054247B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_ENABLE_OBJC_GC = required;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				PREBINDING = NO;
-				SDKROOT = macosx10.6;
-				VALID_ARCHS = "i386 x86_64";
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				SDKROOT = macosx;
+				VALID_ARCHS = "arm64 arm64e i386 x86_64";
 			};
 			name = Release;
 		};
 		D4A4962B105419AA00BE38AE /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = YES;
 				COPY_PHASE_STRIP = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				PRODUCT_NAME = libunrar;
+				SDKROOT = macosx;
 			};
 			name = Debug;
 		};
 		D4A4962C105419AA00BE38AE /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = YES;
 				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				GCC_ENABLE_FIX_AND_CONTINUE = NO;
 				PRODUCT_NAME = libunrar;
+				SDKROOT = macosx;
 				ZERO_LINK = NO;
 			};
 			name = Release;

@@ -1,48 +1,31 @@
 #ifndef _RAR_UNICODE_
 #define _RAR_UNICODE_
 
-#ifndef _EMX
-#define MBFUNCTIONS
-#endif
-
-#if defined(MBFUNCTIONS) || defined(_WIN_32) || defined(_EMX) && !defined(_DJGPP)
-#define UNICODE_SUPPORTED
-#endif
-
-#ifdef _WIN_32
+#if defined( _WIN_ALL)
 #define DBCS_SUPPORTED
 #endif
 
-#ifdef _EMX
-int uni_init(int codepage);
-int uni_done();
-#endif
-
-bool WideToChar(const wchar *Src,char *Dest,size_t DestSize=0x1000000);
-bool CharToWide(const char *Src,wchar *Dest,size_t DestSize=0x1000000);
-byte* WideToRaw(const wchar *Src,byte *Dest,size_t DestSize=0x1000000);
-wchar* RawToWide(const byte *Src,wchar *Dest,size_t DestSize=0x1000000);
+bool WideToChar(const wchar *Src,char *Dest,size_t DestSize);
+bool CharToWide(const char *Src,wchar *Dest,size_t DestSize);
+byte* WideToRaw(const wchar *Src,byte *Dest,size_t SrcSize);
+wchar* RawToWide(const byte *Src,wchar *Dest,size_t DestSize);
 void WideToUtf(const wchar *Src,char *Dest,size_t DestSize);
-void UtfToWide(const char *Src,wchar *Dest,size_t DestSize);
-bool UnicodeEnabled();
+size_t WideToUtfSize(const wchar *Src);
+bool UtfToWide(const char *Src,wchar *Dest,size_t DestSize);
+bool IsTextUtf8(const byte *Src);
+bool IsTextUtf8(const byte *Src,size_t SrcSize);
 
-size_t strlenw(const wchar *str);
-wchar* strcpyw(wchar *dest,const wchar *src);
-wchar* strncpyw(wchar *dest,const wchar *src,size_t n);
-wchar* strcatw(wchar *dest,const wchar *src);
-wchar* strncatw(wchar *dest,const wchar *src,size_t n);
-int strcmpw(const wchar *s1,const wchar *s2);
-int strncmpw(const wchar *s1,const wchar *s2,size_t n);
-int stricmpw(const wchar *s1,const wchar *s2);
-int strnicmpw(const wchar *s1,const wchar *s2,size_t n);
-wchar *strchrw(const wchar *s,int c);
-wchar* strrchrw(const wchar *s,int c);
-wchar* strpbrkw(const wchar *s1,const wchar *s2);
-wchar* strlowerw(wchar *Str);
-wchar* strupperw(wchar *Str);
-wchar* strdupw(const wchar *Str);
+int wcsicomp(const wchar *s1,const wchar *s2);
+int wcsnicomp(const wchar *s1,const wchar *s2,size_t n);
+const wchar_t* wcscasestr(const wchar_t *str, const wchar_t *search);
+#ifndef SFX_MODULE
+wchar* wcslower(wchar *s);
+wchar* wcsupper(wchar *s);
+#endif
 int toupperw(int ch);
+int tolowerw(int ch);
 int atoiw(const wchar *s);
+int64 atoilw(const wchar *s);
 
 #ifdef DBCS_SUPPORTED
 class SupportDBCS
@@ -79,5 +62,6 @@ inline void InitDBCS() {gdbcs.Init();}
 #define IsDBCSMode() (true)
 inline void copychrd(char *dest,const char *src) {*dest=*src;}
 #endif
+
 
 #endif

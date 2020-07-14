@@ -1,6 +1,6 @@
-#include "GrowlDefines.h"
+#include <Growl/GrowlDefines.h>
 
 #ifdef __OBJC__
-#	include "GrowlApplicationBridge.h"
+#	include <Growl/GrowlApplicationBridge.h>
 #endif
-#include "GrowlApplicationBridge-Carbon.h"
+#include <Growl/GrowlApplicationBridge-Carbon.h>

@@ -4,34 +4,26 @@
 class StringList
 {
   private:
-    Array<char> StringData;
+    Array<wchar> StringData;
     size_t CurPos;
 
-    Array<wchar> StringDataW;
-    size_t CurPosW;
+    size_t StringsCount;
 
-    Array<size_t> PosDataW;
-    size_t PosDataItem;
-
-    uint StringsCount;
-
-    size_t SaveCurPos[16],SaveCurPosW[16],SavePosDataItem[16],SavePosNumber;
+    size_t SaveCurPos[16],SavePosNumber;
   public:
     StringList();
-    ~StringList();
     void Reset();
-    size_t AddString(const char *Str);
-    size_t AddString(const char *Str,const wchar *StrW);
-    bool GetString(char *Str,size_t MaxLength);
-    bool GetString(char *Str,wchar *StrW,size_t MaxLength);
-    bool GetString(char *Str,wchar *StrW,size_t MaxLength,int StringNum);
-    char* GetString();
-    bool GetString(char **Str,wchar **StrW);
-    char* GetString(uint StringPos);
+    void AddStringA(const char *Str);
+    void AddString(const wchar *Str);
+    bool GetStringA(char *Str,size_t MaxLength);
+    bool GetString(wchar *Str,size_t MaxLength);
+    bool GetString(wchar *Str,size_t MaxLength,int StringNum);
+    wchar* GetString();
+    bool GetString(wchar **Str);
     void Rewind();
-    uint ItemsCount() {return(StringsCount);};
-    size_t GetBufferSize();
-    bool Search(char *Str,wchar *StrW,bool CaseSensitive);
+    size_t ItemsCount() {return StringsCount;};
+    size_t GetCharCount() {return StringData.Size();}
+    bool Search(const wchar *Str,bool CaseSensitive);
     void SavePosition();
     void RestorePosition();
 };
