@@ -178,7 +178,7 @@ void   PASCAL RARSetCallback(HANDLE hArcData,UNRARCALLBACK Callback,LPARAM UserD
 void   PASCAL RARSetChangeVolProc(HANDLE hArcData,CHANGEVOLPROC ChangeVolProc);
 void   PASCAL RARSetProcessDataProc(HANDLE hArcData,PROCESSDATAPROC ProcessDataProc);
 void   PASCAL RARSetPassword(HANDLE hArcData,char *Password);
-int    PASCAL RARGetDllVersion(void);
+int    PASCAL RARGetDllVersion();
 
 #ifdef __cplusplus
 }

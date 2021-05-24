@@ -107,6 +107,7 @@ int callbackFunction(UINT message, LPARAM userData, LPARAM parameterOne, LPARAM 
 
 #pragma mark "Main"
 - (BOOL) extractRarWith:(NSString *) filename {
+    quietUnrar = (__bridge QuietUnrarAppDelegate *)((__bridge void *) self);
 	char commentBuffer[BUF_LEN];
 	BOOL extractionSuccessful = YES;
 	struct RARHeaderData headerData;
@@ -219,7 +220,9 @@ int callbackFunction(UINT message, LPARAM userData, LPARAM parameterOne, LPARAM 
         NSBundle* bundle = [NSBundle bundleForClass:[self class]];
 
         [bundle loadNibNamed:@"PasswordView" owner:self topLevelObjects: nil];
-	}
+    } else {
+        [passwordField setStringValue:@""];
+    }
 
 	NSString * password = nil;
 
