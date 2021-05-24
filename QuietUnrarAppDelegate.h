@@ -24,15 +24,15 @@ enum
 #define BUF_LEN 64000
 
 @interface QuietUnrarAppDelegate : NSObject <NSApplicationDelegate> {
-    NSWindow *window;
-	NSView *passwordView;
+    NSWindow *__weak window;
+	NSView *__weak passwordView;
 	
-	NSSecureTextField * passwordField;
+	NSSecureTextField * __weak passwordField;
 }
 
-@property (assign) IBOutlet NSWindow *window;
-@property (assign) IBOutlet NSView *passwordView;
-@property (assign) IBOutlet NSSecureTextField * passwordField;
+@property (weak) IBOutlet NSWindow *window;
+@property (weak) IBOutlet NSView *passwordView;
+@property (weak) IBOutlet NSSecureTextField * passwordField;
 
 - (BOOL) extractRarWith:(NSString *) filename;
 - (BOOL) shouldFileBeReplaced:(NSString *) filename;
