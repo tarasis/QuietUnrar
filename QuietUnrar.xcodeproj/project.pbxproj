@@ -135,7 +135,6 @@
 		D4A495C21054177300BE38AE /* rijndael.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = rijndael.hpp; path = libunrar/rijndael.hpp; sourceTree = "<group>"; };
 		D4A495C31054177300BE38AE /* rs.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = rs.cpp; path = libunrar/rs.cpp; sourceTree = "<group>"; };
 		D4A495C41054177300BE38AE /* rs.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = rs.hpp; path = libunrar/rs.hpp; sourceTree = "<group>"; };
-		D4A495C61054177300BE38AE /* savepos.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = savepos.hpp; path = libunrar/savepos.hpp; sourceTree = "<group>"; };
 		D4A495C71054177300BE38AE /* scantree.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = scantree.cpp; path = libunrar/scantree.cpp; sourceTree = "<group>"; };
 		D4A495C81054177300BE38AE /* scantree.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = scantree.hpp; path = libunrar/scantree.hpp; sourceTree = "<group>"; };
 		D4A495C91054177300BE38AE /* sha1.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = sha1.cpp; path = libunrar/sha1.cpp; sourceTree = "<group>"; };
@@ -346,7 +345,6 @@
 				D4A495C21054177300BE38AE /* rijndael.hpp */,
 				D4A495C31054177300BE38AE /* rs.cpp */,
 				D4A495C41054177300BE38AE /* rs.hpp */,
-				D4A495C61054177300BE38AE /* savepos.hpp */,
 				D4A495C71054177300BE38AE /* scantree.cpp */,
 				D4A495C81054177300BE38AE /* scantree.hpp */,
 				D4A495C91054177300BE38AE /* sha1.cpp */,
