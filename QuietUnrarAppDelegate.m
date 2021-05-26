@@ -8,8 +8,11 @@
 
 #import <Carbon/Carbon.h>
 //#import <Growl/Growl.h>
+#import <UnrarKit/UnrarKit.h>
 #import "QuietUnrarAppDelegate.h"
 #import "libunrar/dll.hpp"
+#import "libunrar/rardefs.hpp"
+#import <wchar.h>
 
 #pragma mark Callbacks
 // Declartions that are not to be part of the public interface.
@@ -33,6 +36,8 @@ int callbackFunction(UINT message, LPARAM userData, LPARAM parameterOne, LPARAM 
 int changeVolume(char * volumeName, int mode) {
 	if (mode == RAR_VOL_ASK)
 		[(QuietUnrarAppDelegate *) quietUnrar alertUserOfMissing:volumeName];
+
+    return 0;
 }
 
 // Multipurpose callback function that is called un changing a volume, when data is being processed
@@ -48,11 +53,43 @@ int changeVolume(char * volumeName, int mode) {
 //
 // parameterOne & parameterTwo have different meanings depending on what message is passed.
 int callbackFunction(UINT message, LPARAM userData, LPARAM parameterOne, LPARAM parameterTwo) {
-	if (message == UCM_NEEDPASSWORD) {
-		NSString * password = [(QuietUnrarAppDelegate *) quietUnrar requestArchivePassword];
-		if (password)
-			RARSetPassword((HANDLE)userData, (char *) [password cStringUsingEncoding:NSISOLatin1StringEncoding]);
-	}
+    if (message == UCM_NEEDPASSWORDW) {
+        NSString * password = [(QuietUnrarAppDelegate *) quietUnrar requestArchivePassword];
+
+        if (password) {
+            wchar_t const *passwordAsWChar = (const wchar_t *)[password cStringUsingEncoding:NSUTF32LittleEndianStringEncoding];
+            wcscpy((wchar_t *) parameterOne, passwordAsWChar);
+            return 1;
+        } else {
+            return -1;
+        }
+    }
+
+    return 0;
+
+    /*
+     You need to copy the password string to buffer with P1 address
+     and P2 size.
+
+     This password string must use little endian Unicode encoding in case
+     UCM_NEEDPASSWORDW message. Namely, it must be wchar_t and not UTF-8.
+
+     case UCM_NEEDPASSWORDW:
+          {
+            wchar_t *eol;
+            printf("\nPassword required: ");
+
+            // fgetws may fail to read non-English characters from stdin
+            // in some compilers. In this case use something more appropriate
+            // for Unicode input.
+            fgetws((wchar_t *)P1,(int)P2,stdin);
+
+            eol=wcspbrk((wchar_t *)P1,L"\r\n");
+            if (eol!=NULL)
+              *eol=0;
+          }
+          return(1);
+     */
 }
 
 #pragma mark
@@ -129,7 +166,7 @@ int callbackFunction(UINT message, LPARAM userData, LPARAM parameterOne, LPARAM 
 	RARSetChangeVolProc(archive, &changeVolume);
 	RARSetCallback(archive, &callbackFunction, (LPARAM)archive);
 
-	while (RARReadHeader(archive, &headerData) != ERAR_END_ARCHIVE) {
+    while (RARReadHeader(archive, &headerData) == ERAR_SUCCESS) {
 		//NSLog(@"Attempting to extract %s to %@", headerData.FileName, folderToExtractTo);
 
 		int processResult = 0;
