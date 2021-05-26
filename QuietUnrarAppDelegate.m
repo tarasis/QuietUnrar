@@ -6,12 +6,12 @@
 //  Copyright 2009 Tarasis. All rights reserved.
 //
 
+#import <wchar.h>
 #import <Carbon/Carbon.h>
 #import <UnrarKit/UnrarKit.h>
 #import "QuietUnrarAppDelegate.h"
 #import "libunrar/dll.hpp"
 #import "libunrar/rardefs.hpp"
-#import <wchar.h>
 
 #pragma mark Callbacks
 // Declartions that are not to be part of the public interface.
