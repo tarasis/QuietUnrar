@@ -7,7 +7,6 @@
 //
 
 #import <Carbon/Carbon.h>
-//#import <Growl/Growl.h>
 #import <UnrarKit/UnrarKit.h>
 #import "QuietUnrarAppDelegate.h"
 #import "libunrar/dll.hpp"
@@ -112,6 +111,7 @@ int callbackFunction(UINT message, LPARAM userData, LPARAM parameterOne, LPARAM 
 }
 
 // Call one at a time for each file selected when app is run
+// This is seemingly never called, even when only selecting a single file.
 - (BOOL)application:(NSApplication *)theApplication openFile:(NSString *)filename {
 	//NSLog(@"openFile: %@", filename);
 
@@ -128,16 +128,7 @@ int callbackFunction(UINT message, LPARAM userData, LPARAM parameterOne, LPARAM 
 	for (NSString * filename in arrayOfFilenames) {
 		BOOL extracted = [self extractRarWith:filename];
 		if (extracted) {
-			//[GrowlApplicationBridge setGrowlDelegate:@""];
-
-//			[GrowlApplicationBridge
-//			 notifyWithTitle:@"QuietUnrar: Extraction Complete"
-//			 description:[NSString stringWithFormat:@"The archive %@ was successfully extracted", filename]
-//			 notificationName:@"QuietUnrarExtractionComplete"
-//			 iconData:nil
-//			 priority:0
-//			 isSticky:NO
-//			 clickContext:nil];
+            // post notification based on user preference
 		}
 	}
 }
