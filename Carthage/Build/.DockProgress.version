@@ -1,0 +1,11 @@
+{
+  "commitish" : "v3.2.0",
+  "Mac" : [
+    {
+      "hash" : "13e7fe07ca491fe900ae7c858e66797a66d0a2e1dffde3a2c0b64188b211012e",
+      "name" : "DockProgress",
+      "linking" : "dynamic",
+      "swiftToolchainVersion" : "5.4 (swiftlang-1205.0.26.9 clang-1205.0.19.55)"
+    }
+  ]
+}

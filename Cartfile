@@ -1,2 +1,3 @@
 github "abbeycode/UnrarKit"
 github "abbeycode/UnzipKit"
+github "sindresorhus/DockProgress"

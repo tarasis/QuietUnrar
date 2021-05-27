@@ -1,0 +1,23 @@
+{
+  "Mac" : [
+    {
+      "name" : "UnzipKit",
+      "hash" : "9abff02fa1d67e3e8a850a88223b68dc71c18639ddec837f69fd982b96ad7f65",
+      "linking" : "dynamic"
+    }
+  ],
+  "watchOS" : [
+
+  ],
+  "tvOS" : [
+
+  ],
+  "commitish" : "1.9",
+  "iOS" : [
+    {
+      "name" : "UnzipKit",
+      "hash" : "9d5e11808c6d978519ec6c1e814060b11c9a804e102061d93a7d8004829f2614",
+      "linking" : "dynamic"
+    }
+  ]
+}

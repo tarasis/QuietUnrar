@@ -1,0 +1,15 @@
+build
+*.mode*
+*.pbxuser
+*.perspective*
+.DS_Store
+*.swp
+**/*.xccheckout
+**/xcuserdata/*
+analyzer-output/**
+
+UnzipKitDemo/Pods/*
+UnzipKitDemo/Podfile.lock
+UnzipKitDemo/Carthage/*
+UnzipKitDemo/Cartfile
+UnzipKitDemo/Cartfile.resolved

@@ -1,0 +1,23 @@
+{
+  "Mac" : [
+    {
+      "name" : "UnrarKit",
+      "hash" : "0ee8db439c431777277ec76976faa8a1d19ba93d3f6977094746350e942215d3",
+      "linking" : "dynamic"
+    }
+  ],
+  "watchOS" : [
+
+  ],
+  "tvOS" : [
+
+  ],
+  "commitish" : "2.9",
+  "iOS" : [
+    {
+      "name" : "UnrarKit",
+      "hash" : "2c752a88c360be277b938f55190d07bc6688ce0452932b4fbf52a12e9bfcf5d0",
+      "linking" : "dynamic"
+    }
+  ]
+}

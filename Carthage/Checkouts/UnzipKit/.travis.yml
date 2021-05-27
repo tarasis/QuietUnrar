@@ -1,0 +1,41 @@
+language:
+  - objective-c
+
+osx_image: xcode9.3
+
+before_script:
+    # Make log level less verbose. Temporarily undo if more info is needed
+    - sudo log config --mode "level:default"
+
+matrix:
+  include:
+   - stage: Test
+     env: Name=Mac
+     # The CLANG arguments and find command fail the build on analyzer errors
+     script: xcodebuild -workspace UnzipKit.xcworkspace -scheme UnzipKit -sdk macosx -configuration Release analyze test ENABLE_NS_ASSERTIONS=1 CLANG_ANALYZER_OUTPUT=html CLANG_ANALYZER_OUTPUT_DIR=analyzer-output && [[ -z `find analyzer-output -name "*.html"` ]]
+
+   - stage: Test
+     env: Name=iOS
+     # The CLANG arguments and find command fail the build on analyzer errors
+     script: xcodebuild -workspace UnzipKit.xcworkspace -scheme UnzipKit -destination 'platform=iOS Simulator,name=iPhone 7,OS=latest' -configuration Release analyze test ENABLE_NS_ASSERTIONS=1 CLANG_ANALYZER_OUTPUT=html CLANG_ANALYZER_OUTPUT_DIR=analyzer-output && [[ -z `find analyzer-output -name "*.html"` ]]
+
+   - stage: Test
+     env: Name=DemoAppBuild
+     # The CLANG arguments and find command fail the build on analyzer errors
+     script: ./Scripts/install-demo-libs.sh && xcodebuild -workspace UnzipKitDemo/UnzipKitDemo.xcworkspace -scheme UnzipKitDemo -destination 'platform=iOS Simulator,name=iPhone 7,OS=latest' -configuration Release analyze test ENABLE_NS_ASSERTIONS=1 CLANG_ANALYZER_OUTPUT=html CLANG_ANALYZER_OUTPUT_DIR=analyzer-output && [[ -z `find analyzer-output -name "*.html"` ]]
+
+   - stage: Validate
+     env: Name=CocoaPods
+     script: ./Scripts/cocoapod-validate.sh
+
+   - stage: Validate
+     env: Name=Carthage
+     script: ./Scripts/carthage-validate.sh
+
+   - stage: Release
+     if: tag IS present
+     before_install: brew upgrade python # Needs Python 3
+     script: ./Scripts/push-output.sh
+
+# Turn on Docker, container-based infrastructure
+sudo: false
