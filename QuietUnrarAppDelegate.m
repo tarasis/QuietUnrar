@@ -249,7 +249,8 @@ BOOL appRunning = NO;
         preferencesWindowController.quietUnrar = self;
     }
 
-    [preferencesWindowController showWindow:nil];
+    [preferencesWindowController.window makeKeyAndOrderFront:self];
+    [NSApp activateIgnoringOtherApps:YES];
 }
 
 - (void) quit {
