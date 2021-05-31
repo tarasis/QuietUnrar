@@ -624,7 +624,7 @@
 					"$(inherited)",
 					"\"$(SRCROOT)/libunrar\"",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.yourcompany.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_BUNDLE_IDENTIFIER = net.tarasis.mac.QuietUnarchiver;
 				PRODUCT_NAME = QuietUnrar;
 			};
 			name = Debug;
@@ -656,7 +656,7 @@
 					"$(inherited)",
 					"\"$(SRCROOT)/libunrar\"",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.yourcompany.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_BUNDLE_IDENTIFIER = net.tarasis.mac.QuietUnarchiver;
 				PRODUCT_NAME = QuietUnrar;
 			};
 			name = Release;
