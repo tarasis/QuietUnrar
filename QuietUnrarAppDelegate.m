@@ -107,6 +107,7 @@ BOOL appRunning = NO;
             unarchiver = [[TDNUnarchiver alloc] init];
             unarchiver.quietUnrar = self;
         }
+
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0), ^{
             for (NSString * filename in self->arrayOfFilesToProcess) {
                 BOOL extracted = [self->unarchiver extractArchiveWithFilename:filename];
@@ -118,8 +119,25 @@ BOOL appRunning = NO;
                     }
                 }
             }
+
+            // If we're in the foreground, hide and return focus to whereever
+            // has side effect of making the preferences window disappear after a short time
+            // which is not what I want.
+            //
+            // I'd like to use the frontmostApplication trick to store old app, and restore
+            // focus to it, but if app already running it appears to be my app, even though
+            // I did the open from Finder. Hmm
+            // NSRunningApplication * oldApp = [[NSWorkspace sharedWorkspace] frontmostApplication];
+            // do activity
+            // [_oldApp activateWithOptions:NSApplicationActivateIgnoringOtherApps];
+            [NSApp hide:self];
         });
     }
+}
+
+- (void)applicationWillBecomeActive:(NSNotification *)notification {
+    //no use, if app is already running when I try and openfile it is my apps bundle id
+    NSLog(@"%@", [[NSWorkspace sharedWorkspace] frontmostApplication].bundleIdentifier);
 }
 
 - (BOOL)application:(id)sender openFileWithoutUI:(NSString *)filename {
