@@ -219,28 +219,28 @@ BOOL appRunning = NO;
 
 - (void) showStatusBarItem: (BOOL) show {
     if (show) {
-//        if (statusBarItem == nil) {
-            statusBarItem = [NSStatusBar.systemStatusBar statusItemWithLength:NSVariableStatusItemLength];
-            statusBarItem.button.title = @"🎫"; //RMCG
-
-        // optional create a menu for the button
-        NSMenu * statusBarMenu = [[NSMenu alloc] init];
-        [statusBarMenu setTitle:@"QuietUnrar Menu"];
-
-        NSMenuItem * preferencesMenuItem = [[NSMenuItem alloc] initWithTitle:@"Show Preferences" action:@selector(showPreferencesWindow) keyEquivalent:@""];
-        [statusBarMenu addItem:preferencesMenuItem];
-
-        NSMenuItem * showDockItem = [[NSMenuItem alloc] initWithTitle:@"Show Dock" action:@selector(showPreferencesWindow) keyEquivalent:@""];
-        [statusBarMenu addItem:showDockItem];
-
-        NSMenuItem * quitMenuItem = [[NSMenuItem alloc] initWithTitle:@"Quit QuietUnrar" action:@selector(quit) keyEquivalent:@""];
-        [statusBarMenu addItem:quitMenuItem];
-
-        [statusBarItem setMenu:statusBarMenu];
-//        }
+        statusBarItem = [NSStatusBar.systemStatusBar statusItemWithLength:NSVariableStatusItemLength];
+        statusBarItem.button.title = @"🎫"; //RMCG change to something more appropriate
+        [statusBarItem setMenu:[self makeStatusBarMenu]];
     } else {
         [NSStatusBar.systemStatusBar removeStatusItem:statusBarItem];
     }
+}
+
+- (NSMenu *) makeStatusBarMenu {
+    NSMenu * statusBarMenu = [[NSMenu alloc] init];
+    [statusBarMenu setTitle:@"QuietUnrar Menu"];
+
+    NSMenuItem * preferencesMenuItem = [[NSMenuItem alloc] initWithTitle:@"Show Preferences" action:@selector(showPreferencesWindow) keyEquivalent:@""];
+    [statusBarMenu addItem:preferencesMenuItem];
+
+//    NSMenuItem * showDockItem = [[NSMenuItem alloc] initWithTitle:@"Show Dock " action:@selector(showPreferencesWindow) keyEquivalent:@""];
+//    [statusBarMenu addItem:showDockItem];
+//
+    NSMenuItem * quitMenuItem = [[NSMenuItem alloc] initWithTitle:@"Quit QuietUnrar" action:@selector(quit) keyEquivalent:@""];
+    [statusBarMenu addItem:quitMenuItem];
+
+    return statusBarMenu;
 }
 
 - (void) showPreferencesWindow {
