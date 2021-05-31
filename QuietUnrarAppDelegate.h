@@ -7,6 +7,7 @@
 //
 
 #import <Cocoa/Cocoa.h>
+#import "TDNPreferencesWindowController.h"
 
 enum
 {
@@ -33,8 +34,9 @@ enum
 @property (weak) IBOutlet NSWindow *window;
 @property (weak) IBOutlet NSView *passwordView;
 @property (weak) IBOutlet NSSecureTextField * passwordField;
+@property TDNPreferencesWindowController * preferencesWindowController;
 
-- (BOOL) extractRarWith:(NSString *) filename;
+// UI Based methods
 - (BOOL) shouldFileBeReplaced:(NSString *) filename;
 - (void) alertUserOfMissing:(const char *) volume;
 - (NSString *) requestArchivePassword;
