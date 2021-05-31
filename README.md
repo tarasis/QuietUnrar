@@ -8,9 +8,9 @@ Original was written in 2009 as a little thing for me, and now its getting some 
 
 ## TO DO
 
-* Store preferences in User Defaults (or mac equvalent)
+* ✅ Store preferences in User Defaults
 * ✅ Move code handling un archiving into seperate class
-* add model code for preferences
+* ✅add model code for preferences
 * add support for 7zip https://github.com/OlehKulykov/PLzmaSDK
 * Investigate metal warning, something to ignore?
 * Add testing
@@ -18,6 +18,8 @@ Original was written in 2009 as a little thing for me, and now its getting some 
 * if keeping my extractRARArchiveWithFilename method rather than unrarkit, swap to using the wide text process method
 * reduce menu to only essential - preferences + quit
 * about box with thanks & liecense info
+* post notification on finishing
+* what to do if app open and user unarchives a file? (apart from not make the preferences window front and central)
 
 ### Metal Warning
 

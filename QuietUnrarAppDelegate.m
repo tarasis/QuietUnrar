@@ -30,6 +30,8 @@
 
 @synthesize window, passwordView, passwordField, preferencesWindowController, unarchiver, userDefaults, statusBarItem, arrayOfFilesToProcess;
 
+BOOL appRunning = NO;
+
 - (void) applicationWillFinishLaunching:(NSNotification *)notification {
     NSLog(@"applicationWillFinishLaunching");
 	// The following is used to determine is the left or right shift keys were depressed
@@ -40,6 +42,10 @@
 		NSLog(@"Shift or Right Shift");
 
     userDefaults = [TDNUserDefaults sharedInstance];
+
+    if (userDefaults.hideDock) {
+        [self hideDockIcon:TRUE];
+    }
 }
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
@@ -48,36 +54,34 @@
     [self requestUserPermissionForNotifications];
 
     if (arrayOfFilesToProcess == nil || arrayOfFilesToProcess.count == 0) {
-        if (userDefaults.hideDock) {
-            [self hideDockIcon:TRUE];
-        }
-
         preferencesWindowController = [[TDNPreferencesWindowController alloc] init];
         preferencesWindowController.quietUnrar = self;
 
-        [preferencesWindowController showWindow:nil];
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            [self->preferencesWindowController.window makeKeyAndOrderFront:self];
+            [NSApp activateIgnoringOtherApps:YES];
+        });
+
+        appRunning = YES;
 
     } else {
         unarchiver = [[TDNUnarchiver alloc] init];
         unarchiver.quietUnrar = self;
 
-        [self requestUserPermissionForNotifications];
-
-        if (userDefaults.hideDock) {
-            [self hideDockIcon:TRUE];
-        }
-
-        for (NSString * filename in arrayOfFilesToProcess) {
-            BOOL extracted = [unarchiver extractArchiveWithFilename:filename];
-            if (extracted) {
-                // post notification based on user preference
-                if (userDefaults.showNotification && userDefaults.notificationsAllowed) { // if show notification + permission granted ...
-                    [self postNotificationUncompressedFile:filename];
+        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0), ^{
+            for (NSString * filename in self->arrayOfFilesToProcess) {
+                BOOL extracted = [self->unarchiver extractArchiveWithFilename:filename];
+                if (extracted) {
+                    // post notification based on user preference
+                    if (self->userDefaults.showNotification && self->userDefaults.notificationsAllowed) { // if show notification + permission granted ...
+                        [self postNotificationUncompressedFile:filename];
+                        // maybe don't want to spam lots of notifications if unarchiving a lot of archives
+                    }
                 }
             }
-        }
 
-        [[NSApplication sharedApplication] terminate:self];
+            [[NSApplication sharedApplication] terminate:self];
+        });
     }
 }
 
@@ -98,32 +102,40 @@
 
     arrayOfFilesToProcess = arrayOfFilenames;
 
-//    unarchiver = [[TDNUnarchiver alloc] init];
-//    unarchiver.quietUnrar = self;
-//
-//    userDefaults = [TDNUserDefaults sharedInstance];
-//
-//    [self requestUserPermissionForNotifications];
-//
-//    if (userDefaults.hideDock) {
-//        [self hideDockIcon:TRUE];
-//    }
-//
-//	for (NSString * filename in arrayOfFilenames) {
-//		BOOL extracted = [unarchiver extractArchiveWithFilename:filename];
-//		if (extracted) {
-//            // post notification based on user preference
-//            if (userDefaults.showNotification && userDefaults.notificationsAllowed) { // if show notification + permission granted ...
-//                [self postNotificationUncompressedFile:filename];
-//            }
-//		}
-//	}
-//
-//    [[NSApplication sharedApplication] terminate:self];
+    if (appRunning) {
+        if (!unarchiver) {
+            unarchiver = [[TDNUnarchiver alloc] init];
+            unarchiver.quietUnrar = self;
+        }
+        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0), ^{
+            for (NSString * filename in self->arrayOfFilesToProcess) {
+                BOOL extracted = [self->unarchiver extractArchiveWithFilename:filename];
+                if (extracted) {
+                    // post notification based on user preference
+                    if (self->userDefaults.showNotification && self->userDefaults.notificationsAllowed) { // if show notification + permission granted ...
+                        [self postNotificationUncompressedFile:filename];
+                        // maybe don't want to spam lots of notifications if unarchiving a lot of archives
+                    }
+                }
+            }
+        });
+    }
+}
+
+- (BOOL)application:(id)sender openFileWithoutUI:(NSString *)filename {
+    NSLog(@"called openFileWithoutUI %@", filename);
+    return YES;
 }
 
 - (BOOL)applicationShouldTerminateAfterLastWindowClosed:(NSApplication *)sender {
-    return YES;
+    // Possibly not the behaviour wanted
+    if (userDefaults.hideDock) {
+        NSLog(@"applicationShouldTerminateAfterLastWindowClosed -- NO");
+        return NO;
+    } else {
+        NSLog(@"applicationShouldTerminateAfterLastWindowClosed -- YES");
+        return YES;
+    }
 }
 
 #pragma mark UI Methods
@@ -193,12 +205,9 @@
 - (void) hideDockIcon: (BOOL) hide {
     BOOL result;
     if (hide) {
-        NSLog(@"Setting Policy to Accesosry");
+        NSLog(@"Setting Policy to Accessory");
         result = [NSApp setActivationPolicy:NSApplicationActivationPolicyAccessory];
-
         NSLog(@"Result of setting ActivationPolicy %d", result);
-
-        NSLog(@"%@", [[[NSApplication sharedApplication]delegate] description]);
         [self showStatusBarItem:TRUE];
     } else {
         NSLog(@"Setting Policy to Regular");
