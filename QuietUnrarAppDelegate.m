@@ -12,17 +12,23 @@
 
 #import "QuietUnrarAppDelegate.h"
 #import "TDNUnarchiver.h"
+#import "TDNUserDefaults.h"
+#import "TDNPreferencesWindowController.h"
 
 @interface QuietUnrarAppDelegate ()
 
 @property TDNUnarchiver * unarchiver;
+@property TDNUserDefaults * userDefaults;
+@property NSStatusItem * statusBarItem;
+
+@property NSArray * arrayOfFilesToProcess;
 
 @end
 
 #pragma mark
 @implementation QuietUnrarAppDelegate
 
-@synthesize window, passwordView, passwordField, preferencesWindowController, unarchiver;
+@synthesize window, passwordView, passwordField, preferencesWindowController, unarchiver, userDefaults, statusBarItem, arrayOfFilesToProcess;
 
 - (void) applicationWillFinishLaunching:(NSNotification *)notification {
     NSLog(@"applicationWillFinishLaunching");
@@ -32,18 +38,47 @@
 	GetKeys(map);
 	if (KEYMAP_GET(map, kVKC_Shift) || KEYMAP_GET(map, kVKC_rShift))
 		NSLog(@"Shift or Right Shift");
+
+    userDefaults = [TDNUserDefaults sharedInstance];
 }
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
     NSLog(@"applicationDidFinishLaunching");
 
-	// Having extracted our file or not, quit. Though should not if error is displayed.
-	//[[NSApplication sharedApplication] terminate:self];
     [self requestUserPermissionForNotifications];
 
-    preferencesWindowController = [[TDNPreferencesWindowController alloc] init];
+    if (arrayOfFilesToProcess == nil || arrayOfFilesToProcess.count == 0) {
+        if (userDefaults.hideDock) {
+            [self hideDockIcon:TRUE];
+        }
 
-    [preferencesWindowController showWindow:nil];
+        preferencesWindowController = [[TDNPreferencesWindowController alloc] init];
+        preferencesWindowController.quietUnrar = self;
+
+        [preferencesWindowController showWindow:nil];
+
+    } else {
+        unarchiver = [[TDNUnarchiver alloc] init];
+        unarchiver.quietUnrar = self;
+
+        [self requestUserPermissionForNotifications];
+
+        if (userDefaults.hideDock) {
+            [self hideDockIcon:TRUE];
+        }
+
+        for (NSString * filename in arrayOfFilesToProcess) {
+            BOOL extracted = [unarchiver extractArchiveWithFilename:filename];
+            if (extracted) {
+                // post notification based on user preference
+                if (userDefaults.showNotification && userDefaults.notificationsAllowed) { // if show notification + permission granted ...
+                    [self postNotificationUncompressedFile:filename];
+                }
+            }
+        }
+
+        [[NSApplication sharedApplication] terminate:self];
+    }
 }
 
 // Call one at a time for each file selected when app is run
@@ -60,22 +95,31 @@
 
 - (void)application:(NSApplication *)theApplication openFiles:(NSArray *) arrayOfFilenames {
 	NSLog(@"openFiles: %@", arrayOfFilenames);
-    unarchiver = [[TDNUnarchiver alloc] init];
-    unarchiver.quietUnrar = self;
 
-    [self requestUserPermissionForNotifications];
+    arrayOfFilesToProcess = arrayOfFilenames;
 
-	for (NSString * filename in arrayOfFilenames) {
-		BOOL extracted = [unarchiver extractArchiveWithFilename:filename];
-		if (extracted) {
-            // post notification based on user preference
-            if (true && true) { // if show notification + permission granted ...
-                [self postNotificationUncompressedFile:filename];
-            }
-		}
-	}
-
-    [[NSApplication sharedApplication] terminate:self];
+//    unarchiver = [[TDNUnarchiver alloc] init];
+//    unarchiver.quietUnrar = self;
+//
+//    userDefaults = [TDNUserDefaults sharedInstance];
+//
+//    [self requestUserPermissionForNotifications];
+//
+//    if (userDefaults.hideDock) {
+//        [self hideDockIcon:TRUE];
+//    }
+//
+//	for (NSString * filename in arrayOfFilenames) {
+//		BOOL extracted = [unarchiver extractArchiveWithFilename:filename];
+//		if (extracted) {
+//            // post notification based on user preference
+//            if (userDefaults.showNotification && userDefaults.notificationsAllowed) { // if show notification + permission granted ...
+//                [self postNotificationUncompressedFile:filename];
+//            }
+//		}
+//	}
+//
+//    [[NSApplication sharedApplication] terminate:self];
 }
 
 - (BOOL)applicationShouldTerminateAfterLastWindowClosed:(NSApplication *)sender {
@@ -146,6 +190,63 @@
 	return password;
 }
 
+- (void) hideDockIcon: (BOOL) hide {
+    BOOL result;
+    if (hide) {
+        NSLog(@"Setting Policy to Accesosry");
+        result = [NSApp setActivationPolicy:NSApplicationActivationPolicyAccessory];
+
+        NSLog(@"Result of setting ActivationPolicy %d", result);
+
+        NSLog(@"%@", [[[NSApplication sharedApplication]delegate] description]);
+        [self showStatusBarItem:TRUE];
+    } else {
+        NSLog(@"Setting Policy to Regular");
+        result = [NSApp setActivationPolicy:NSApplicationActivationPolicyRegular];
+        NSLog(@"Result of setting ActivationPolicy %d", result);
+        [self showStatusBarItem:FALSE];
+    }
+}
+
+- (void) showStatusBarItem: (BOOL) show {
+    if (show) {
+//        if (statusBarItem == nil) {
+            statusBarItem = [NSStatusBar.systemStatusBar statusItemWithLength:NSVariableStatusItemLength];
+            statusBarItem.button.title = @"🎫"; //RMCG
+
+        // optional create a menu for the button
+        NSMenu * statusBarMenu = [[NSMenu alloc] init];
+        [statusBarMenu setTitle:@"QuietUnrar Menu"];
+
+        NSMenuItem * preferencesMenuItem = [[NSMenuItem alloc] initWithTitle:@"Show Preferences" action:@selector(showPreferencesWindow) keyEquivalent:@""];
+        [statusBarMenu addItem:preferencesMenuItem];
+
+        NSMenuItem * showDockItem = [[NSMenuItem alloc] initWithTitle:@"Show Dock" action:@selector(showPreferencesWindow) keyEquivalent:@""];
+        [statusBarMenu addItem:showDockItem];
+
+        NSMenuItem * quitMenuItem = [[NSMenuItem alloc] initWithTitle:@"Quit QuietUnrar" action:@selector(quit) keyEquivalent:@""];
+        [statusBarMenu addItem:quitMenuItem];
+
+        [statusBarItem setMenu:statusBarMenu];
+//        }
+    } else {
+        [NSStatusBar.systemStatusBar removeStatusItem:statusBarItem];
+    }
+}
+
+- (void) showPreferencesWindow {
+    if (preferencesWindowController == nil) {
+        preferencesWindowController = [[TDNPreferencesWindowController alloc] init];
+        preferencesWindowController.quietUnrar = self;
+    }
+
+    [preferencesWindowController showWindow:nil];
+}
+
+- (void) quit {
+    [[NSApplication sharedApplication] terminate:self];
+}
+
 #pragma mark "Notifications"
 
 - (void) requestUserPermissionForNotifications {
@@ -157,11 +258,13 @@
         if (granted) {
             // set some flag, that would be used to see if notifications should be posted
             NSLog(@"Notification Permission Granted");
+            self->userDefaults.notificationsAllowed = TRUE;
         }
     }];
 }
 
 - (void) postNotificationUncompressedFile:(NSString *) filename {
     // add details of notification
+    NSLog(@"Posting notification for %@", filename);
 }
 @end

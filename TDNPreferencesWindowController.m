@@ -6,12 +6,23 @@
 //
 
 #import "TDNPreferencesWindowController.h"
+#import "TDNUserDefaults.h"
+//#import "QuietUnrarAppDelegate.h"
 
 @interface TDNPreferencesWindowController ()
+
+@property (weak) IBOutlet NSSwitch *showNotificationsSwitch;
+@property (weak) IBOutlet NSSwitch *playSoundSwitch;
+@property (weak) IBOutlet NSSwitch *hideDockIconSwitch;
+
+@property TDNUserDefaults * userDefaults;
 
 @end
 
 @implementation TDNPreferencesWindowController
+
+@synthesize userDefaults, showNotificationsSwitch, playSoundSwitch, hideDockIconSwitch;
+@synthesize quietUnrar;
 
 - (id) init {
     return [super initWithWindowNibName:@"PreferencesWindow"];
@@ -19,24 +30,34 @@
 
 - (void)windowDidLoad {
     [super windowDidLoad];
-    
+
+    userDefaults = [TDNUserDefaults sharedInstance];
+
     // Implement this method to handle any initialization after your window controller's window has been loaded from its nib file.
+    if (userDefaults.hideDock) {
+        [hideDockIconSwitch setState:NSControlStateValueOn];
+    }
+
+    if (userDefaults.showNotification) {
+        [showNotificationsSwitch setState:NSControlStateValueOn];
+    }
+
+    if (userDefaults.playSounds) {
+        [playSoundSwitch setState:NSControlStateValueOn];
+    }
 }
 
-BOOL showingDock = TRUE;
+- (IBAction)showNotificationsSwitchToggled:(id)sender {
+    userDefaults.showNotification = [showNotificationsSwitch state];
+}
 
-- (IBAction)showHideButtonPressed:(id)sender {
-    if (showingDock) {
-        showingDock = FALSE;
-        NSLog(@"Setting Policy to Accesosry");
-        [NSApp setActivationPolicy:NSApplicationActivationPolicyAccessory];
+- (IBAction)playSoundSwitchToggled:(id)sender {
+    userDefaults.playSounds = [playSoundSwitch state];
+}
 
-        NSLog(@"%@", [[[NSApplication sharedApplication]delegate] description]);
-    } else {
-        showingDock = TRUE;
-        NSLog(@"Setting Policy to Regular");
-        [NSApp setActivationPolicy:NSApplicationActivationPolicyRegular];
-    }
+- (IBAction)hideDockIconSwitchToggled:(id)sender {
+    userDefaults.hideDock = [hideDockIconSwitch state];
+    [quietUnrar hideDockIcon: userDefaults.hideDock];
 }
 
 @end

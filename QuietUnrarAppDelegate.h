@@ -7,7 +7,6 @@
 //
 
 #import <Cocoa/Cocoa.h>
-#import "TDNPreferencesWindowController.h"
 
 enum
 {
@@ -24,6 +23,8 @@ enum
 
 #define BUF_LEN 64000
 
+@class TDNPreferencesWindowController;
+
 @interface QuietUnrarAppDelegate : NSObject <NSApplicationDelegate> {
     NSWindow *__weak window;
 	NSView *__weak passwordView;
@@ -39,6 +40,7 @@ enum
 // UI Based methods
 - (BOOL) shouldFileBeReplaced:(NSString *) filename;
 - (void) alertUserOfMissing:(const char *) volume;
+- (void) hideDockIcon: (BOOL) hide;
 - (NSString *) requestArchivePassword;
 
 @end
