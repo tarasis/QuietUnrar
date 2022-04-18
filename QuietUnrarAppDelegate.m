@@ -139,7 +139,7 @@ BOOL appRunning = NO;
 
 - (void)applicationWillBecomeActive:(NSNotification *)notification {
     //no use, if app is already running when I try and openfile it is my apps bundle id
-    NSLog(@"%@", [[NSWorkspace sharedWorkspace] frontmostApplication].bundleIdentifier);
+    NSLog(@"%@", [NSWorkspace sharedWorkspace].frontmostApplication.bundleIdentifier);
 }
 
 - (BOOL)application:(id)sender openFileWithoutUI:(NSString *)filename {
@@ -168,10 +168,10 @@ BOOL appRunning = NO;
     NSAlert *alert = [[NSAlert alloc] init];
     [alert addButtonWithTitle:@"Overwrite"];
     NSButton * skipButton = [alert addButtonWithTitle:@"Skip"];
-    [skipButton setKeyEquivalent:@"\e"];
-    [alert setMessageText:[NSString stringWithFormat:@"Overwrite %@?", filename]];
-    [alert setInformativeText:[NSString stringWithFormat:@"The file %@ already exists. Do you wish to extract it again, overwriting the original file?", filename]];
-    [alert setAlertStyle:NSAlertStyleWarning];
+    skipButton.keyEquivalent = @"\e";
+    alert.messageText = [NSString stringWithFormat:@"Overwrite %@?", filename];
+    alert.informativeText = [NSString stringWithFormat:@"The file %@ already exists. Do you wish to extract it again, overwriting the original file?", filename];
+    alert.alertStyle = NSAlertStyleWarning;
 
     if ([alert runModal] == NSAlertFirstButtonReturn) {
         result = YES;
@@ -185,9 +185,9 @@ BOOL appRunning = NO;
 - (void) alertUserOfMissing:(const char *) volume {
     NSAlert *alert = [[NSAlert alloc] init];
     [alert addButtonWithTitle:@"OK"];
-    [alert setMessageText:[NSString stringWithFormat:@"Archive part %s is missing.", volume]];
-    [alert setInformativeText:@"Unable to extract all files from RAR archive as part of it is missing"];
-    [alert setAlertStyle:NSAlertStyleCritical];
+    alert.messageText = [NSString stringWithFormat:@"Archive part %s is missing.", volume];
+    alert.informativeText = @"Unable to extract all files from RAR archive as part of it is missing";
+    alert.alertStyle = NSAlertStyleCritical;
 
     [alert runModal];
 
@@ -202,7 +202,7 @@ BOOL appRunning = NO;
 
         [bundle loadNibNamed:@"PasswordView" owner:self topLevelObjects: nil];
     } else {
-        [passwordField setStringValue:@""];
+        passwordField.stringValue = @"";
     }
 
     NSString * password = nil;
@@ -210,13 +210,13 @@ BOOL appRunning = NO;
     NSAlert *alert = [[NSAlert alloc] init];
     [alert addButtonWithTitle:@"OK"];
     [alert addButtonWithTitle:@"Cancel"];
-    [alert setMessageText:@"Archive Requires a password"];
-    [alert setInformativeText:@"To extract the contents of this archive a password is required."];
-    [alert setAccessoryView:passwordView];
-    [alert setAlertStyle:NSAlertStyleWarning];
+    alert.messageText = @"Archive Requires a password";
+    alert.informativeText = @"To extract the contents of this archive a password is required.";
+    alert.accessoryView = passwordView;
+    alert.alertStyle = NSAlertStyleWarning;
 
     if ([alert runModal] == NSAlertFirstButtonReturn) {
-        password = [passwordField stringValue];
+        password = passwordField.stringValue;
     }
 
     return password;
@@ -241,7 +241,7 @@ BOOL appRunning = NO;
     if (show) {
         statusBarItem = [NSStatusBar.systemStatusBar statusItemWithLength:NSVariableStatusItemLength];
         statusBarItem.button.title = @"🎫"; //RMCG change to something more appropriate
-        [statusBarItem setMenu:[self makeStatusBarMenu]];
+        statusBarItem.menu = [self makeStatusBarMenu];
     } else {
         [NSStatusBar.systemStatusBar removeStatusItem:statusBarItem];
     }
@@ -249,7 +249,7 @@ BOOL appRunning = NO;
 
 - (NSMenu *) makeStatusBarMenu {
     NSMenu * statusBarMenu = [[NSMenu alloc] init];
-    [statusBarMenu setTitle:@"QuietUnarchiver Menu"];
+    statusBarMenu.title = @"QuietUnarchiver Menu";
 
     NSMenuItem * preferencesMenuItem = [[NSMenuItem alloc] initWithTitle:@"Show Preferences" action:@selector(showPreferencesWindow) keyEquivalent:@""];
     [statusBarMenu addItem:preferencesMenuItem];

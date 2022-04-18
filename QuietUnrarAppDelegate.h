@@ -41,6 +41,6 @@ enum
 - (BOOL) shouldFileBeReplaced:(NSString *) filename;
 - (void) alertUserOfMissing:(const char *) volume;
 - (void) hideDockIcon: (BOOL) hide;
-- (NSString *) requestArchivePassword;
+@property (NS_NONATOMIC_IOSONLY, readonly, copy) NSString *requestArchivePassword;
 
 @end

@@ -43,6 +43,6 @@
 @property (nonatomic, strong, readonly) NSUserDefaults *userDefaults;
 
 + (instancetype)sharedInstance;
-- (instancetype)initWithSuiteName:(NSString *)suiteName;
+- (instancetype)initWithSuiteName:(NSString *)suiteName NS_DESIGNATED_INITIALIZER;
 
 @end

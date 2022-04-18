@@ -24,7 +24,7 @@
 @synthesize userDefaults, showNotificationsSwitch, playSoundSwitch, hideDockIconSwitch;
 @synthesize quietUnrar;
 
-- (id) init {
+- (instancetype) init {
     return [super initWithWindowNibName:@"PreferencesWindow"];
 }
 
@@ -34,31 +34,31 @@
     userDefaults = [TDNUserDefaults sharedInstance];
 
     // Implement this method to handle any initialization after your window controller's window has been loaded from its nib file.
-    [self.window setTitle:@"QuietUnarchiver Preferences"];
+    (self.window).title = @"QuietUnarchiver Preferences";
 
     if (userDefaults.hideDock) {
-        [hideDockIconSwitch setState:NSControlStateValueOn];
+        hideDockIconSwitch.state = NSControlStateValueOn;
     }
 
     if (userDefaults.showNotification) {
-        [showNotificationsSwitch setState:NSControlStateValueOn];
+        showNotificationsSwitch.state = NSControlStateValueOn;
     }
 
     if (userDefaults.playSounds) {
-        [playSoundSwitch setState:NSControlStateValueOn];
+        playSoundSwitch.state = NSControlStateValueOn;
     }
 }
 
 - (IBAction)showNotificationsSwitchToggled:(id)sender {
-    userDefaults.showNotification = [showNotificationsSwitch state];
+    userDefaults.showNotification = showNotificationsSwitch.state;
 }
 
 - (IBAction)playSoundSwitchToggled:(id)sender {
-    userDefaults.playSounds = [playSoundSwitch state];
+    userDefaults.playSounds = playSoundSwitch.state;
 }
 
 - (IBAction)hideDockIconSwitchToggled:(id)sender {
-    userDefaults.hideDock = [hideDockIconSwitch state];
+    userDefaults.hideDock = hideDockIconSwitch.state;
     [quietUnrar hideDockIcon: userDefaults.hideDock];
 }
 

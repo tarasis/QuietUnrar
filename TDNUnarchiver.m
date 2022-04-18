@@ -116,7 +116,7 @@ int CALLBACK generalCallbackFunction(UINT message, LPARAM userData, LPARAM param
 
     //Determine the folder we should extract the archive to. This by default
     //is the <folderContainingTheArchive>/<archiveNameWithPathExtension>
-    NSString * folderToExtractTo = [filename stringByDeletingPathExtension];
+    NSString * folderToExtractTo = filename.stringByDeletingPathExtension;
 
     // Open the Archive for extraction, we set the open result to 3 so we can see it has changed
     char * filenameCString = (char *)[filename cStringUsingEncoding:NSISOLatin1StringEncoding];
@@ -202,7 +202,7 @@ int CALLBACK generalCallbackFunction(UINT message, LPARAM userData, LPARAM param
         }
     }
 
-    NSString * folderToExtractTo = [filename stringByDeletingPathExtension];
+    NSString * folderToExtractTo = filename.stringByDeletingPathExtension;
 
     BOOL extractFilesSuccessful = [archive extractFilesTo: folderToExtractTo
                                                 overwrite:NO
