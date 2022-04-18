@@ -36,6 +36,7 @@ static NSURL *originalLargeArchiveURL;
                            @"Test Archive (RAR5).rar",
                            @"Folder Archive.rar",
                            @"Modified CRC Archive.rar",
+                           @"README.md",
                            @"Test File A.txt",
                            @"Test File B.jpg",
                            @"Test File C.m4a",
@@ -129,10 +130,9 @@ static NSURL *originalLargeArchiveURL;
     [super tearDown];
 }
 
-- (void) recordFailureWithDescription:(NSString *) description inFile:(NSString *) filename atLine:(NSUInteger) lineNumber expected:(BOOL) expected;
-{
+- (void)recordIssue:(XCTIssue *)issue {
     self.testFailed = YES;
-    [super recordFailureWithDescription:description inFile:filename atLine:lineNumber expected:expected];
+    [super recordIssue:issue];
 }
 
 
@@ -273,8 +273,9 @@ static NSURL *originalLargeArchiveURL;
         archiveFileName = [uniqueString stringByAppendingPathExtension:@"rar"];
     }
     
-    NSURL *rarExec = [[self.tempDirectory URLByAppendingPathComponent:@"bin"]
-                      URLByAppendingPathComponent:@"rar"];
+    NSURL *rarExec = [[NSBundle bundleForClass:[self class]] URLForResource:@"rar"
+                                                              withExtension:nil
+                                                               subdirectory:@"Test Data/bin"];
     NSURL *archiveURL = [self.tempDirectory URLByAppendingPathComponent:archiveFileName];
     
     NSMutableArray *rarArguments = [NSMutableArray arrayWithArray:@[@"a", @"-ep", archiveURL.path]];
@@ -287,11 +288,14 @@ static NSURL *originalLargeArchiveURL;
     NSFileHandle *file = pipe.fileHandleForReading;
 
     NSTask *task = [[NSTask alloc] init];
-    task.launchPath = rarExec.path;
+    task.executableURL = rarExec;
     task.arguments = rarArguments;
     task.standardOutput = pipe;
     
-    [task launch];
+    NSError *launchError = nil;
+    [task launchAndReturnError:&launchError];
+    XCTAssertNil(launchError);
+    
     [task waitUntilExit];
 
     NSData *data = [file readDataToEndOfFile];
@@ -356,7 +360,9 @@ static NSURL *originalLargeArchiveURL;
     NSString *commandOutputString = nil;
     [self archiveWithFiles:@[textFile]
                       name:baseName
-                 arguments:@[@"-v20k", @"-vn"]
+                 arguments:@[@"-v20k", // Volume size
+                             @"-vn",   // Legacy naming
+                             @"-ma4"]  // v4 archive format
              commandOutput:&commandOutputString];
     
     NSArray<NSString*> *volumePaths = [commandOutputString regexMatches:@"Creating archive (.+)"];

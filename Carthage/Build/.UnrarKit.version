@@ -2,7 +2,7 @@
   "Mac" : [
     {
       "name" : "UnrarKit",
-      "hash" : "0ee8db439c431777277ec76976faa8a1d19ba93d3f6977094746350e942215d3",
+      "hash" : "e18e69a1e9f0344776a442bf542e0a45be0427977b765897399058bb766e83db",
       "linking" : "dynamic"
     }
   ],
@@ -12,11 +12,11 @@
   "tvOS" : [
 
   ],
-  "commitish" : "2.9",
+  "commitish" : "2.10",
   "iOS" : [
     {
       "name" : "UnrarKit",
-      "hash" : "2c752a88c360be277b938f55190d07bc6688ce0452932b4fbf52a12e9bfcf5d0",
+      "hash" : "308b414f23c29d8599f7b214fb8ef39ea574ac8117b21b6946a7c969b9cf38b4",
       "linking" : "dynamic"
     }
   ]

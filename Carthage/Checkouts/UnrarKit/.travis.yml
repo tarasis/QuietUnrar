@@ -1,7 +1,12 @@
 language: objective-c
-osx_image: xcode9.3
+osx_image: xcode12
+
+branches:
+  except:
+  - circle-ci
 
 before_script:
+    - pod --version
     # Make log level less verbose. Temporarily undo if more info is needed
     - sudo log config --mode "level:default"
 
@@ -15,7 +20,7 @@ matrix:
     - stage: Test
       env: Name=iOS
       # The CLANG arguments and find command fail the build on analyzer errors
-      script: xcodebuild -workspace UnrarKit.xcworkspace -scheme UnrarKit -destination 'platform=iOS Simulator,name=iPhone 7,OS=latest' -configuration Release analyze test CLANG_ANALYZER_OUTPUT=html CLANG_ANALYZER_OUTPUT_DIR=analyzer-output && [[ -z `find analyzer-output -name "*.html"` ]]
+      script: xcodebuild -workspace UnrarKit.xcworkspace -scheme UnrarKit -destination 'platform=iOS Simulator,name=iPhone 11,OS=latest' -configuration Release analyze test CLANG_ANALYZER_OUTPUT=html CLANG_ANALYZER_OUTPUT_DIR=analyzer-output && [[ -z `find analyzer-output -name "*.html"` ]]
 
     - stage: Test
       env: Name=ExampleAppBuild
@@ -32,5 +37,4 @@ matrix:
 
     - stage: Release
       if: tag IS present
-      before_install: brew upgrade python # Needs Python 3
       script: ./Scripts/push-output.sh

@@ -70,7 +70,7 @@ bool WideToChar(const wchar *Src,char *Dest,size_t DestSize)
 #endif
   if (DestSize>0)
     Dest[DestSize-1]=0;
-  
+
   // We tried to return the empty string if conversion is failed,
   // but it does not work well. WideCharToMultiByte returns 'failed' code
   // and partially converted string even if we wanted to convert only a part
@@ -138,6 +138,11 @@ bool WideToCharMap(const wchar *Src,char *Dest,size_t DestSize,bool &Success)
   if (wcschr(Src,(wchar)MappedStringMark)==NULL)
     return false;
 
+  // Seems to be that wcrtomb in some memory analyzing libraries
+  // can produce uninitilized output while reporting success on garbage input.
+  // So we clean the destination to calm analyzers.
+  memset(Dest,0,DestSize);
+  
   Success=true;
   uint SrcPos=0,DestPos=0;
   while (Src[SrcPos]!=0 && DestPos<DestSize-MB_CUR_MAX)
@@ -173,7 +178,7 @@ bool WideToCharMap(const wchar *Src,char *Dest,size_t DestSize,bool &Success)
 
 
 #if defined(_UNIX) && defined(MBFUNCTIONS)
-// Convert and map inconvertible Unicode characters. 
+// Convert and map inconvertible Unicode characters.
 // We use it for extended ASCII names in Unix.
 void CharToWideMap(const char *Src,wchar *Dest,size_t DestSize,bool &Success)
 {
@@ -484,6 +489,8 @@ const wchar_t* wcscasestr(const wchar_t *str, const wchar_t *search)
 wchar* wcslower(wchar *s)
 {
 #ifdef _WIN_ALL
+  // _wcslwr requires setlocale and we do not want to depend on setlocale
+  // in Windows. Also CharLower involves less overhead.
   CharLower(s);
 #else
   for (wchar *c=s;*c!=0;c++)
@@ -498,6 +505,8 @@ wchar* wcslower(wchar *s)
 wchar* wcsupper(wchar *s)
 {
 #ifdef _WIN_ALL
+  // _wcsupr requires setlocale and we do not want to depend on setlocale
+  // in Windows. Also CharUpper involves less overhead.
   CharUpper(s);
 #else
   for (wchar *c=s;*c!=0;c++)
@@ -515,8 +524,9 @@ int toupperw(int ch)
 #if defined(_WIN_ALL)
   // CharUpper is more reliable than towupper in Windows, which seems to be
   // C locale dependent even in Unicode version. For example, towupper failed
-  // to convert lowercase Russian characters.
-  return (int)(INT_PTR)CharUpper((wchar *)(INT_PTR)ch);
+  // to convert lowercase Russian characters. Use 0xffff mask to prevent crash
+  // if value larger than 0xffff is passed to this function.
+  return (int)(INT_PTR)CharUpper((wchar *)(INT_PTR)(ch&0xffff));
 #else
   return towupper(ch);
 #endif
@@ -527,8 +537,9 @@ int tolowerw(int ch)
 {
 #if defined(_WIN_ALL)
   // CharLower is more reliable than towlower in Windows.
-  // See comment for towupper above.
-  return (int)(INT_PTR)CharLower((wchar *)(INT_PTR)ch);
+  // See comment for towupper above. Use 0xffff mask to prevent crash
+  // if value larger than 0xffff is passed to this function.
+  return (int)(INT_PTR)CharLower((wchar *)(INT_PTR)(ch&0xffff));
 #else
   return towlower(ch);
 #endif
@@ -643,3 +654,5 @@ char* SupportDBCS::strrchrd(const char *s, int c)
   return((char *)found);
 }
 #endif
+
+

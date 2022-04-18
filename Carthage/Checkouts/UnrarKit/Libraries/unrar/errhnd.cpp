@@ -158,6 +158,7 @@ void ErrorHandler::OpenErrorMsg(const wchar *FileName)
 
 void ErrorHandler::OpenErrorMsg(const wchar *ArcName,const wchar *FileName)
 {
+  Wait(); // Keep GUI responsive if many files cannot be opened when archiving.
   uiMsg(UIERROR_FILEOPEN,ArcName,FileName);
   SysErrMsg();
   SetErrorCode(RARX_OPEN);
@@ -270,6 +271,7 @@ void _stdfunction ProcessSignal(int SigType)
 #endif
 
   ErrHandler.UserBreak=true;
+  ErrHandler.SetDisableShutdown();
   mprintf(St(MBreak));
 
 #ifdef _WIN_ALL
@@ -293,7 +295,7 @@ void _stdfunction ProcessSignal(int SigType)
 #endif
 
 #if defined(_WIN_ALL) && !defined(_MSC_VER)
-  // never reached, just to avoid a compiler warning
+  // Never reached, just to avoid a compiler warning
   return TRUE;
 #endif
 }
@@ -327,7 +329,7 @@ void ErrorHandler::Throw(RAR_EXIT Code)
 
 bool ErrorHandler::GetSysErrMsg(wchar *Msg,size_t Size)
 {
-#if !defined(SFX_MODULE) && !defined(SILENT)
+#ifndef SILENT
 #ifdef _WIN_ALL
   int ErrType=GetLastError();
   if (ErrType!=0)
@@ -360,7 +362,7 @@ void ErrorHandler::SysErrMsg()
     return;
 #ifdef _WIN_ALL
   wchar *CurMsg=Msg;
-  while (CurMsg!=NULL)
+  while (CurMsg!=NULL) // Print string with \r\n as several strings to multiple lines.
   {
     while (*CurMsg=='\r' || *CurMsg=='\n')
       CurMsg++;
