@@ -142,7 +142,7 @@ GENERATE_SETTER_GETTER_METHOD_PAIR(NSURL, NSURL*)
         
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Wpointer-type-mismatch"
-        IMP methodImpl;
+        IMP methodImpl = NULL; // added null to shut compiler warning up if default path taken, which it shouldnt.
         switch (propertyType) {
             case 'c':
             case 'B':
