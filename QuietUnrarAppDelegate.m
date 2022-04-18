@@ -130,7 +130,9 @@ BOOL appRunning = NO;
             // NSRunningApplication * oldApp = [[NSWorkspace sharedWorkspace] frontmostApplication];
             // do activity
             // [_oldApp activateWithOptions:NSApplicationActivateIgnoringOtherApps];
-            [NSApp hide:self];
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [NSApp hide:self];
+            });
         });
     }
 }
@@ -247,7 +249,7 @@ BOOL appRunning = NO;
 
 - (NSMenu *) makeStatusBarMenu {
     NSMenu * statusBarMenu = [[NSMenu alloc] init];
-    [statusBarMenu setTitle:@"QuietUnrar Menu"];
+    [statusBarMenu setTitle:@"QuietUnarchiver Menu"];
 
     NSMenuItem * preferencesMenuItem = [[NSMenuItem alloc] initWithTitle:@"Show Preferences" action:@selector(showPreferencesWindow) keyEquivalent:@""];
     [statusBarMenu addItem:preferencesMenuItem];
@@ -255,7 +257,7 @@ BOOL appRunning = NO;
 //    NSMenuItem * showDockItem = [[NSMenuItem alloc] initWithTitle:@"Show Dock " action:@selector(showPreferencesWindow) keyEquivalent:@""];
 //    [statusBarMenu addItem:showDockItem];
 //
-    NSMenuItem * quitMenuItem = [[NSMenuItem alloc] initWithTitle:@"Quit QuietUnrar" action:@selector(quit) keyEquivalent:@""];
+    NSMenuItem * quitMenuItem = [[NSMenuItem alloc] initWithTitle:@"Quit QuietUnarchiver" action:@selector(quit) keyEquivalent:@""];
     [statusBarMenu addItem:quitMenuItem];
 
     return statusBarMenu;

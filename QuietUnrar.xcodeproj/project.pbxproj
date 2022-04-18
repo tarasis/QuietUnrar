@@ -30,6 +30,26 @@
 		E2A3B895266521FF00A6C0A3 /* FSUserDefaults.m in Sources */ = {isa = PBXBuildFile; fileRef = E2A3B894266521FF00A6C0A3 /* FSUserDefaults.m */; };
 		E2A3B8972665222200A6C0A3 /* LICENSE.txt in Resources */ = {isa = PBXBuildFile; fileRef = E2A3B8962665222200A6C0A3 /* LICENSE.txt */; };
 		E2A3B89A2665225A00A6C0A3 /* TDNUserDefaults.m in Sources */ = {isa = PBXBuildFile; fileRef = E2A3B8992665225A00A6C0A3 /* TDNUserDefaults.m */; };
+		E2E2F5FF280CFEC900C783F6 /* FSUserDefaults.m in Sources */ = {isa = PBXBuildFile; fileRef = E2A3B894266521FF00A6C0A3 /* FSUserDefaults.m */; };
+		E2E2F600280CFEC900C783F6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
+		E2E2F601280CFEC900C783F6 /* TDNPreferencesWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = E2A3B8882663C60200A6C0A3 /* TDNPreferencesWindowController.m */; };
+		E2E2F602280CFEC900C783F6 /* TDNUnarchiver.m in Sources */ = {isa = PBXBuildFile; fileRef = E2A3B88F2664DE8900A6C0A3 /* TDNUnarchiver.m */; };
+		E2E2F603280CFEC900C783F6 /* QuietUnrarAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 256AC3D90F4B6AC300CF3369 /* QuietUnrarAppDelegate.m */; };
+		E2E2F604280CFEC900C783F6 /* TDNUserDefaults.m in Sources */ = {isa = PBXBuildFile; fileRef = E2A3B8992665225A00A6C0A3 /* TDNUserDefaults.m */; };
+		E2E2F607280CFEC900C783F6 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
+		E2E2F608280CFEC900C783F6 /* DockProgress.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2A3B844265F1AA800A6C0A3 /* DockProgress.framework */; };
+		E2E2F609280CFEC900C783F6 /* UnrarKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2A3B83B265EA8B800A6C0A3 /* UnrarKit.framework */; };
+		E2E2F60A280CFEC900C783F6 /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4A96E2010545E9A0091ECB4 /* Carbon.framework */; };
+		E2E2F60B280CFEC900C783F6 /* UnzipKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2A3B83C265EA8B800A6C0A3 /* UnzipKit.framework */; };
+		E2E2F60C280CFEC900C783F6 /* UserNotifications.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2A3B847265F267900A6C0A3 /* UserNotifications.framework */; };
+		E2E2F60E280CFEC900C783F6 /* DockProgress.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = E2A3B844265F1AA800A6C0A3 /* DockProgress.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		E2E2F60F280CFEC900C783F6 /* UnrarKit.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = E2A3B83B265EA8B800A6C0A3 /* UnrarKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		E2E2F611280CFEC900C783F6 /* UnzipKit.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = E2A3B83C265EA8B800A6C0A3 /* UnzipKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		E2E2F613280CFEC900C783F6 /* LICENSE.txt in Resources */ = {isa = PBXBuildFile; fileRef = E2A3B8962665222200A6C0A3 /* LICENSE.txt */; };
+		E2E2F614280CFEC900C783F6 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1DDD58140DA1D0A300B32029 /* MainMenu.xib */; };
+		E2E2F615280CFEC900C783F6 /* PreferencesWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = E2A3B8852663C1FB00A6C0A3 /* PreferencesWindow.xib */; };
+		E2E2F616280CFEC900C783F6 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165CFE840E0CC02AAC07 /* InfoPlist.strings */; };
+		E2E2F618280CFEC900C783F6 /* PasswordView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D488BE5410B05F3800B3451C /* PasswordView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +73,18 @@
 				E2A3B83E265EA8B900A6C0A3 /* UnrarKit.framework in CopyFiles */,
 				D488BCC110AF49C700B3451C /* libunrar.so in CopyFiles */,
 				E2A3B840265EA8B900A6C0A3 /* UnzipKit.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E2E2F60D280CFEC900C783F6 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				E2E2F60E280CFEC900C783F6 /* DockProgress.framework in CopyFiles */,
+				E2E2F60F280CFEC900C783F6 /* UnrarKit.framework in CopyFiles */,
+				E2E2F611280CFEC900C783F6 /* UnzipKit.framework in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -196,6 +228,8 @@
 		E2A3B8962665222200A6C0A3 /* LICENSE.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE.txt; sourceTree = "<group>"; };
 		E2A3B8982665225A00A6C0A3 /* TDNUserDefaults.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TDNUserDefaults.h; sourceTree = "<group>"; };
 		E2A3B8992665225A00A6C0A3 /* TDNUserDefaults.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TDNUserDefaults.m; sourceTree = "<group>"; };
+		E2E2F61E280CFEC900C783F6 /* QuietUnarchiver.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QuietUnarchiver.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E2E2F61F280CFEC900C783F6 /* QuietUnrar copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "QuietUnrar copy-Info.plist"; path = "/Users/tarasis/Programming/Projects/QuietUnrar/QuietUnrar copy-Info.plist"; sourceTree = "<absolute>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -210,6 +244,19 @@
 				D4A96E2110545E9A0091ECB4 /* Carbon.framework in Frameworks */,
 				E2A3B83F265EA8B900A6C0A3 /* UnzipKit.framework in Frameworks */,
 				E2A3B848265F267900A6C0A3 /* UserNotifications.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E2E2F605280CFEC900C783F6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E2E2F607280CFEC900C783F6 /* Cocoa.framework in Frameworks */,
+				E2E2F608280CFEC900C783F6 /* DockProgress.framework in Frameworks */,
+				E2E2F609280CFEC900C783F6 /* UnrarKit.framework in Frameworks */,
+				E2E2F60A280CFEC900C783F6 /* Carbon.framework in Frameworks */,
+				E2E2F60B280CFEC900C783F6 /* UnzipKit.framework in Frameworks */,
+				E2E2F60C280CFEC900C783F6 /* UserNotifications.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -255,6 +302,7 @@
 			isa = PBXGroup;
 			children = (
 				8D1107320486CEB800E47090 /* QuietUnrar.app */,
+				E2E2F61E280CFEC900C783F6 /* QuietUnarchiver.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -267,6 +315,7 @@
 				29B97317FDCFA39411CA2CEA /* Resources */,
 				29B97323FDCFA39411CA2CEA /* Frameworks */,
 				19C28FACFE9D520D11CA2CBB /* Products */,
+				E2E2F61F280CFEC900C783F6 /* QuietUnrar copy-Info.plist */,
 			);
 			name = QuietUnrar;
 			sourceTree = "<group>";
@@ -474,6 +523,26 @@
 			productReference = 8D1107320486CEB800E47090 /* QuietUnrar.app */;
 			productType = "com.apple.product-type.application";
 		};
+		E2E2F5FB280CFEC900C783F6 /* QuietUnarchiver */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E2E2F61B280CFEC900C783F6 /* Build configuration list for PBXNativeTarget "QuietUnarchiver" */;
+			buildPhases = (
+				E2E2F5FE280CFEC900C783F6 /* Sources */,
+				E2E2F605280CFEC900C783F6 /* Frameworks */,
+				E2E2F60D280CFEC900C783F6 /* CopyFiles */,
+				E2E2F612280CFEC900C783F6 /* Resources */,
+				E2E2F61A280CFEC900C783F6 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = QuietUnarchiver;
+			productInstallPath = "$(HOME)/Applications";
+			productName = QuietUnrar;
+			productReference = E2E2F61E280CFEC900C783F6 /* QuietUnarchiver.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -496,6 +565,7 @@
 			targets = (
 				8D1107260486CEB800E47090 /* QuietUnrar */,
 				D4A4962A105419AA00BE38AE /* libunrar */,
+				E2E2F5FB280CFEC900C783F6 /* QuietUnarchiver */,
 			);
 		};
 /* End PBXProject section */
@@ -511,6 +581,18 @@
 				D4A49691105435BE00BE38AE /* InfoPlist.strings in Resources */,
 				E2A3B843265F199A00A6C0A3 /* Cartfile in Resources */,
 				D488BE5510B05F3800B3451C /* PasswordView.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E2E2F612280CFEC900C783F6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E2E2F613280CFEC900C783F6 /* LICENSE.txt in Resources */,
+				E2E2F614280CFEC900C783F6 /* MainMenu.xib in Resources */,
+				E2E2F615280CFEC900C783F6 /* PreferencesWindow.xib in Resources */,
+				E2E2F616280CFEC900C783F6 /* InfoPlist.strings in Resources */,
+				E2E2F618280CFEC900C783F6 /* PasswordView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -549,6 +631,25 @@
 			shellPath = /bin/sh;
 			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n/usr/local/bin/carthage copy-frameworks\n";
 		};
+		E2E2F61A280CFEC900C783F6 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/Mac/UnrarKit.framework",
+				"$(SRCROOT)/Carthage/Build/Mac/UnzipKit.framework",
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n#/opt/homebrew/bin/carthage copy-frameworks\n";
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -562,6 +663,19 @@
 				E2A3B8902664DE8900A6C0A3 /* TDNUnarchiver.m in Sources */,
 				256AC3DA0F4B6AC300CF3369 /* QuietUnrarAppDelegate.m in Sources */,
 				E2A3B89A2665225A00A6C0A3 /* TDNUserDefaults.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E2E2F5FE280CFEC900C783F6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E2E2F5FF280CFEC900C783F6 /* FSUserDefaults.m in Sources */,
+				E2E2F600280CFEC900C783F6 /* main.m in Sources */,
+				E2E2F601280CFEC900C783F6 /* TDNPreferencesWindowController.m in Sources */,
+				E2E2F602280CFEC900C783F6 /* TDNUnarchiver.m in Sources */,
+				E2E2F603280CFEC900C783F6 /* QuietUnrarAppDelegate.m in Sources */,
+				E2E2F604280CFEC900C783F6 /* TDNUserDefaults.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -766,6 +880,65 @@
 			};
 			name = Release;
 		};
+		E2E2F61C280CFEC900C783F6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				EXCLUDED_ARCHS = arm64;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/Frameworks\"",
+					"$(PROJECT_DIR)/Frameworks",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+				);
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = QuietUnrar_Prefix.pch;
+				GCC_PREPROCESSOR_DEFINITIONS = _UNIX;
+				INFOPLIST_FILE = "QuietUnrar copy-Info.plist";
+				INSTALL_PATH = "$(HOME)/Applications";
+				LD_DYLIB_INSTALL_NAME = "";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				ONLY_ACTIVE_ARCH = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = net.tarasis.mac.QuietUnarchiver;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		E2E2F61D280CFEC900C783F6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CODE_SIGN_IDENTITY = "-";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				EXCLUDED_ARCHS = arm64;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/Frameworks\"",
+					"$(PROJECT_DIR)/Frameworks",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+				);
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = QuietUnrar_Prefix.pch;
+				GCC_PREPROCESSOR_DEFINITIONS = _UNIX;
+				INFOPLIST_FILE = "QuietUnrar copy-Info.plist";
+				INSTALL_PATH = "$(HOME)/Applications";
+				LD_DYLIB_INSTALL_NAME = "";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = net.tarasis.mac.QuietUnarchiver;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -792,6 +965,15 @@
 			buildConfigurations = (
 				D4A4962B105419AA00BE38AE /* Debug */,
 				D4A4962C105419AA00BE38AE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E2E2F61B280CFEC900C783F6 /* Build configuration list for PBXNativeTarget "QuietUnarchiver" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E2E2F61C280CFEC900C783F6 /* Debug */,
+				E2E2F61D280CFEC900C783F6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

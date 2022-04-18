@@ -101,7 +101,8 @@ int CALLBACK generalCallbackFunction(UINT message, LPARAM userData, LPARAM param
 #pragma mark Public Methods
 - (BOOL) extractArchiveWithFilename:(NSString *) filename {
     // Add code to distinguish filetypes and pass of to relevant unarchiver
-    return [self extractRARArchiveWithFilename:filename];
+//    return [self extractRARArchiveWithFilename:filename];
+    return [self extractRarUsingUnrarKitWithFilename: filename];
 }
 
 #pragma mark Extraction Methods
@@ -191,9 +192,15 @@ int CALLBACK generalCallbackFunction(UINT message, LPARAM userData, LPARAM param
     }
     //NSArray<URKFileInfo*> *fileInfosInArchive = [archive listFileInfo:&error];
     if (archive.isPasswordProtected) {
-        NSString *givenPassword = [quietUnrar requestArchivePassword];
 
-        archive.password = givenPassword;
+        __block NSString *givenPassword = nil;
+        dispatch_sync(dispatch_get_main_queue(), ^{
+            givenPassword = [quietUnrar requestArchivePassword];
+        });
+
+        if (givenPassword != nil) {
+            archive.password = givenPassword;
+        }
     }
 
     NSString * folderToExtractTo = [filename stringByDeletingPathExtension];
