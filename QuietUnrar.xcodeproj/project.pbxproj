@@ -9,13 +9,11 @@
 /* Begin PBXBuildFile section */
 		256AC3DA0F4B6AC300CF3369 /* QuietUnrarAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 256AC3D90F4B6AC300CF3369 /* QuietUnrarAppDelegate.m */; };
 		8D11072D0486CEB800E47090 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
-		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
 		D488BC6810AF437B00B3451C /* libunrar.so in Frameworks */ = {isa = PBXBuildFile; fileRef = D488BC6710AF437B00B3451C /* libunrar.so */; };
 		D488BCC110AF49C700B3451C /* libunrar.so in CopyFiles */ = {isa = PBXBuildFile; fileRef = D488BC6710AF437B00B3451C /* libunrar.so */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		D488BE5510B05F3800B3451C /* PasswordView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D488BE5410B05F3800B3451C /* PasswordView.xib */; };
 		D4A49691105435BE00BE38AE /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165CFE840E0CC02AAC07 /* InfoPlist.strings */; };
 		D4A49692105435C100BE38AE /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1DDD58140DA1D0A300B32029 /* MainMenu.xib */; };
-		D4A96E2110545E9A0091ECB4 /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4A96E2010545E9A0091ECB4 /* Carbon.framework */; };
 		E2A3B83D265EA8B900A6C0A3 /* UnrarKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2A3B83B265EA8B800A6C0A3 /* UnrarKit.framework */; };
 		E2A3B83E265EA8B900A6C0A3 /* UnrarKit.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = E2A3B83B265EA8B800A6C0A3 /* UnrarKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		E2A3B83F265EA8B900A6C0A3 /* UnzipKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2A3B83C265EA8B800A6C0A3 /* UnzipKit.framework */; };
@@ -23,7 +21,6 @@
 		E2A3B843265F199A00A6C0A3 /* Cartfile in Resources */ = {isa = PBXBuildFile; fileRef = E2A3B842265F199A00A6C0A3 /* Cartfile */; };
 		E2A3B845265F1AA900A6C0A3 /* DockProgress.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2A3B844265F1AA800A6C0A3 /* DockProgress.framework */; };
 		E2A3B846265F1AA900A6C0A3 /* DockProgress.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = E2A3B844265F1AA800A6C0A3 /* DockProgress.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		E2A3B848265F267900A6C0A3 /* UserNotifications.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2A3B847265F267900A6C0A3 /* UserNotifications.framework */; };
 		E2A3B8862663C1FB00A6C0A3 /* PreferencesWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = E2A3B8852663C1FB00A6C0A3 /* PreferencesWindow.xib */; };
 		E2A3B8892663C60200A6C0A3 /* TDNPreferencesWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = E2A3B8882663C60200A6C0A3 /* TDNPreferencesWindowController.m */; };
 		E2A3B8902664DE8900A6C0A3 /* TDNUnarchiver.m in Sources */ = {isa = PBXBuildFile; fileRef = E2A3B88F2664DE8900A6C0A3 /* TDNUnarchiver.m */; };
@@ -36,12 +33,9 @@
 		E2E2F602280CFEC900C783F6 /* TDNUnarchiver.m in Sources */ = {isa = PBXBuildFile; fileRef = E2A3B88F2664DE8900A6C0A3 /* TDNUnarchiver.m */; };
 		E2E2F603280CFEC900C783F6 /* QuietUnrarAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 256AC3D90F4B6AC300CF3369 /* QuietUnrarAppDelegate.m */; };
 		E2E2F604280CFEC900C783F6 /* TDNUserDefaults.m in Sources */ = {isa = PBXBuildFile; fileRef = E2A3B8992665225A00A6C0A3 /* TDNUserDefaults.m */; };
-		E2E2F607280CFEC900C783F6 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
 		E2E2F608280CFEC900C783F6 /* DockProgress.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2A3B844265F1AA800A6C0A3 /* DockProgress.framework */; };
 		E2E2F609280CFEC900C783F6 /* UnrarKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2A3B83B265EA8B800A6C0A3 /* UnrarKit.framework */; };
-		E2E2F60A280CFEC900C783F6 /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4A96E2010545E9A0091ECB4 /* Carbon.framework */; };
 		E2E2F60B280CFEC900C783F6 /* UnzipKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2A3B83C265EA8B800A6C0A3 /* UnzipKit.framework */; };
-		E2E2F60C280CFEC900C783F6 /* UserNotifications.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2A3B847265F267900A6C0A3 /* UserNotifications.framework */; };
 		E2E2F60E280CFEC900C783F6 /* DockProgress.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = E2A3B844265F1AA800A6C0A3 /* DockProgress.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		E2E2F60F280CFEC900C783F6 /* UnrarKit.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = E2A3B83B265EA8B800A6C0A3 /* UnrarKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		E2E2F611280CFEC900C783F6 /* UnzipKit.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = E2A3B83C265EA8B800A6C0A3 /* UnzipKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -91,14 +85,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
-		13E42FB307B3F0F600E4EEF1 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = /System/Library/Frameworks/CoreData.framework; sourceTree = "<absolute>"; };
 		256AC3D80F4B6AC300CF3369 /* QuietUnrarAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuietUnrarAppDelegate.h; sourceTree = "<group>"; };
 		256AC3D90F4B6AC300CF3369 /* QuietUnrarAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuietUnrarAppDelegate.m; sourceTree = "<group>"; };
-		256AC3F00F4B6AF500CF3369 /* QuietUnrar_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuietUnrar_Prefix.pch; sourceTree = "<group>"; };
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		29B97324FDCFA39411CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
-		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
 		8D1107310486CEB800E47090 /* QuietUnrar-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "QuietUnrar-Info.plist"; sourceTree = "<group>"; };
 		8D1107320486CEB800E47090 /* QuietUnrar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QuietUnrar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D488BC6710AF437B00B3451C /* libunrar.so */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libunrar.so; path = libunrar/libunrar.so; sourceTree = "<group>"; };
@@ -209,14 +198,12 @@
 		D4A495E31054177300BE38AE /* volume.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = volume.hpp; path = libunrar/volume.hpp; sourceTree = "<group>"; };
 		D4A495E41054177300BE38AE /* win32acl.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = win32acl.cpp; path = libunrar/win32acl.cpp; sourceTree = "<group>"; };
 		D4A495E51054177300BE38AE /* win32stm.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = win32stm.cpp; path = libunrar/win32stm.cpp; sourceTree = "<group>"; };
-		D4A96E2010545E9A0091ECB4 /* Carbon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carbon.framework; path = System/Library/Frameworks/Carbon.framework; sourceTree = SDKROOT; };
 		E296811D24BE4BCD00974229 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		E296811E24BE4BCD00974229 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		E2A3B83B265EA8B800A6C0A3 /* UnrarKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UnrarKit.framework; path = Carthage/Build/Mac/UnrarKit.framework; sourceTree = "<group>"; };
 		E2A3B83C265EA8B800A6C0A3 /* UnzipKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UnzipKit.framework; path = Carthage/Build/Mac/UnzipKit.framework; sourceTree = "<group>"; };
 		E2A3B842265F199A00A6C0A3 /* Cartfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Cartfile; sourceTree = "<group>"; };
 		E2A3B844265F1AA800A6C0A3 /* DockProgress.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DockProgress.framework; path = Carthage/Build/Mac/DockProgress.framework; sourceTree = "<group>"; };
-		E2A3B847265F267900A6C0A3 /* UserNotifications.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotifications.framework; path = System/Library/Frameworks/UserNotifications.framework; sourceTree = SDKROOT; };
 		E2A3B849266009B000A6C0A3 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		E2A3B8852663C1FB00A6C0A3 /* PreferencesWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = PreferencesWindow.xib; path = Resources/PreferencesWindow.xib; sourceTree = "<group>"; };
 		E2A3B8872663C60200A6C0A3 /* TDNPreferencesWindowController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TDNPreferencesWindowController.h; sourceTree = "<group>"; };
@@ -238,12 +225,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				D488BC6810AF437B00B3451C /* libunrar.so in Frameworks */,
-				8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */,
 				E2A3B845265F1AA900A6C0A3 /* DockProgress.framework in Frameworks */,
 				E2A3B83D265EA8B900A6C0A3 /* UnrarKit.framework in Frameworks */,
-				D4A96E2110545E9A0091ECB4 /* Carbon.framework in Frameworks */,
 				E2A3B83F265EA8B900A6C0A3 /* UnzipKit.framework in Frameworks */,
-				E2A3B848265F267900A6C0A3 /* UserNotifications.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -251,12 +235,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E2E2F607280CFEC900C783F6 /* Cocoa.framework in Frameworks */,
 				E2E2F608280CFEC900C783F6 /* DockProgress.framework in Frameworks */,
 				E2E2F609280CFEC900C783F6 /* UnrarKit.framework in Frameworks */,
-				E2E2F60A280CFEC900C783F6 /* Carbon.framework in Frameworks */,
 				E2E2F60B280CFEC900C783F6 /* UnzipKit.framework in Frameworks */,
-				E2E2F60C280CFEC900C783F6 /* UserNotifications.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -277,25 +258,6 @@
 				E2A3B8992665225A00A6C0A3 /* TDNUserDefaults.m */,
 			);
 			name = Classes;
-			sourceTree = "<group>";
-		};
-		1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				D4A96E2010545E9A0091ECB4 /* Carbon.framework */,
-				1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */,
-			);
-			name = "Linked Frameworks";
-			sourceTree = "<group>";
-		};
-		1058C7A2FEA54F0111CA2CBB /* Other Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				29B97324FDCFA39411CA2CEA /* AppKit.framework */,
-				13E42FB307B3F0F600E4EEF1 /* CoreData.framework */,
-				29B97325FDCFA39411CA2CEA /* Foundation.framework */,
-			);
-			name = "Other Frameworks";
 			sourceTree = "<group>";
 		};
 		19C28FACFE9D520D11CA2CBB /* Products */ = {
@@ -324,7 +286,6 @@
 			isa = PBXGroup;
 			children = (
 				D4A494191054167B00BE38AE /* libunrar */,
-				256AC3F00F4B6AF500CF3369 /* QuietUnrar_Prefix.pch */,
 				29B97316FDCFA39411CA2CEA /* main.m */,
 			);
 			name = "Other Sources";
@@ -347,13 +308,10 @@
 		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				E2A3B847265F267900A6C0A3 /* UserNotifications.framework */,
 				E2A3B844265F1AA800A6C0A3 /* DockProgress.framework */,
 				E2A3B83B265EA8B800A6C0A3 /* UnrarKit.framework */,
 				E2A3B83C265EA8B800A6C0A3 /* UnzipKit.framework */,
 				D488BC6710AF437B00B3451C /* libunrar.so */,
-				1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */,
-				1058C7A2FEA54F0111CA2CBB /* Other Frameworks */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -780,6 +738,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
@@ -821,6 +780,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
@@ -884,6 +844,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_ENABLE_OBJC_WEAK = YES;
 				CODE_SIGN_IDENTITY = "-";
@@ -899,7 +860,6 @@
 				GCC_MODEL_TUNING = G5;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = QuietUnrar_Prefix.pch;
 				GCC_PREPROCESSOR_DEFINITIONS = _UNIX;
 				INFOPLIST_FILE = "QuietUnrar copy-Info.plist";
 				INSTALL_PATH = "$(HOME)/Applications";
@@ -915,6 +875,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_ENABLE_OBJC_WEAK = YES;
 				CODE_SIGN_IDENTITY = "-";
@@ -928,7 +889,6 @@
 				);
 				GCC_MODEL_TUNING = G5;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = QuietUnrar_Prefix.pch;
 				GCC_PREPROCESSOR_DEFINITIONS = _UNIX;
 				INFOPLIST_FILE = "QuietUnrar copy-Info.plist";
 				INSTALL_PATH = "$(HOME)/Applications";

@@ -8,6 +8,8 @@
 #ifndef Unarchiver_h
 #define Unarchiver_h
 
+#import "QuietUnrarAppDelegate.h"
+
 @interface TDNUnarchiver : NSObject
 
 @property QuietUnrarAppDelegate * quietUnrar;

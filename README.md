@@ -57,3 +57,15 @@ A new mac project doesn't report these warnings.
     * PlzmaSDK - https://github.com/OlehKulykov/PLzmaSDK
 * DockProgress - https://github.com/sindresorhus/DockProgress (need to check out the whole Swift / Objective-C briding thing, don't remember any of that now)
 * FSUserDefaults - https://github.com/cfloisand/FSUserDefaults (gist at https://gist.github.com/cfloisand/ba9eb5b661a7dda494bb45f28cdb7e0a and https://christianfloisand.wordpress.com/2018/03/25/improving-userdefaults-in-swift-with-key-value-observing/)
+
+## Other things
+
+In the off chance I forget how to readd / redo a pre-compiled header (I shouldn't but 🤷‍♂️) https://stackoverflow.com/questions/24158648/why-isnt-projectname-prefix-pch-created-automatically-in-xcode-6
+
+```
+1) Add new PCH file to the project: New file > Other > PCH file.
+2) At the Target's Build Settings option, set the value of Prefix Header to your PCH file name, with the project name as prefix (i.e. for project named TestProject and PCH file named MyPrefixHeaderFile, add the value TestProject/MyPrefixHeaderFile.pch to the plist).
+TIP: You can use things like $(SRCROOT) or $(PROJECT_DIR) to get to the path of where you put the .pch in the project.
+
+3) At the Target's Build Settings option, set the value of Precompile Prefix Header to YES
+```

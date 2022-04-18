@@ -6,7 +6,7 @@
 //  Copyright 2009 Tarasis. All rights reserved.
 //
 
-#import <Cocoa/Cocoa.h>
+@import Cocoa;
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {

@@ -8,7 +8,8 @@
 #ifndef TDNPreferencesWindowController_h
 #define TDNPreferencesWindowController_h
 
-#import <Cocoa/Cocoa.h>
+@import Cocoa;
+#import "QuietUnrarAppDelegate.h"
 
 NS_ASSUME_NONNULL_BEGIN
 

@@ -5,19 +5,18 @@
 //  Created by Robert McGovern on 2021/05/31.
 //
 
-#import <Foundation/Foundation.h>
+@import Foundation;
+#import <wchar.h>
 #import "TDNUnarchiver.h"
 #import "QuietUnrarAppDelegate.h"
 
-#import <UnrarKit/UnrarKit.h>
+@import UnrarKit;
+//#import <UnrarKit/UnrarKit.h>
 #import "libunrar/dll.hpp"
 #import "libunrar/rardefs.hpp"
 
-#import <wchar.h>
-
-//@interface TDNUnarchiver ()
-//
-//@end
+@interface TDNUnarchiver ()
+@end;
 
 @implementation TDNUnarchiver
 
