@@ -216,7 +216,7 @@
 		E2A3B8982665225A00A6C0A3 /* TDNUserDefaults.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TDNUserDefaults.h; sourceTree = "<group>"; };
 		E2A3B8992665225A00A6C0A3 /* TDNUserDefaults.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TDNUserDefaults.m; sourceTree = "<group>"; };
 		E2E2F61E280CFEC900C783F6 /* QuietUnarchiver.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QuietUnarchiver.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		E2E2F61F280CFEC900C783F6 /* QuietUnrar copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "QuietUnrar copy-Info.plist"; path = "/Users/tarasis/Programming/Projects/QuietUnrar/QuietUnrar copy-Info.plist"; sourceTree = "<absolute>"; };
+		E2E2F61F280CFEC900C783F6 /* QuietUnarchiver-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "QuietUnarchiver-Info.plist"; path = "/Users/tarasis/Programming/Projects/QuietUnrar/QuietUnarchiver-Info.plist"; sourceTree = "<absolute>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -277,7 +277,6 @@
 				29B97317FDCFA39411CA2CEA /* Resources */,
 				29B97323FDCFA39411CA2CEA /* Frameworks */,
 				19C28FACFE9D520D11CA2CBB /* Products */,
-				E2E2F61F280CFEC900C783F6 /* QuietUnrar copy-Info.plist */,
 			);
 			name = QuietUnrar;
 			sourceTree = "<group>";
@@ -294,6 +293,7 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				E2E2F61F280CFEC900C783F6 /* QuietUnarchiver-Info.plist */,
 				E2A3B842265F199A00A6C0A3 /* Cartfile */,
 				D488BE5410B05F3800B3451C /* PasswordView.xib */,
 				8D1107310486CEB800E47090 /* QuietUnrar-Info.plist */,
@@ -508,6 +508,12 @@
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 1330;
+				TargetAttributes = {
+					E2E2F5FB280CFEC900C783F6 = {
+						DevelopmentTeam = VE7YM5VVJB;
+						ProvisioningStyle = Automatic;
+					};
+				};
 			};
 			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "QuietUnrar" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -847,8 +853,11 @@
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_ENABLE_OBJC_WEAK = YES;
-				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
 				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 0.2;
+				DEVELOPMENT_TEAM = VE7YM5VVJB;
 				EXCLUDED_ARCHS = arm64;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -861,13 +870,15 @@
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREPROCESSOR_DEFINITIONS = _UNIX;
-				INFOPLIST_FILE = "QuietUnrar copy-Info.plist";
+				INFOPLIST_FILE = "QuietUnarchiver-Info.plist";
 				INSTALL_PATH = "$(HOME)/Applications";
 				LD_DYLIB_INSTALL_NAME = "";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MARKETING_VERSION = 2.0;
 				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = net.tarasis.mac.QuietUnarchiver;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
 			name = Debug;
 		};
@@ -878,8 +889,11 @@
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_ENABLE_OBJC_WEAK = YES;
-				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 0.2;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = VE7YM5VVJB;
 				EXCLUDED_ARCHS = arm64;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -890,12 +904,14 @@
 				GCC_MODEL_TUNING = G5;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREPROCESSOR_DEFINITIONS = _UNIX;
-				INFOPLIST_FILE = "QuietUnrar copy-Info.plist";
+				INFOPLIST_FILE = "QuietUnarchiver-Info.plist";
 				INSTALL_PATH = "$(HOME)/Applications";
 				LD_DYLIB_INSTALL_NAME = "";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MARKETING_VERSION = 2.0;
 				PRODUCT_BUNDLE_IDENTIFIER = net.tarasis.mac.QuietUnarchiver;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
 			name = Release;
 		};
