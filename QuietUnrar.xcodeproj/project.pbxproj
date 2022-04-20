@@ -44,6 +44,7 @@
 		E2E2F615280CFEC900C783F6 /* PreferencesWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = E2A3B8852663C1FB00A6C0A3 /* PreferencesWindow.xib */; };
 		E2E2F616280CFEC900C783F6 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165CFE840E0CC02AAC07 /* InfoPlist.strings */; };
 		E2E2F618280CFEC900C783F6 /* PasswordView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D488BE5410B05F3800B3451C /* PasswordView.xib */; };
+		E2E2F64128102BB100C783F6 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E2E2F64028102BB100C783F6 /* Images.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -217,6 +218,7 @@
 		E2A3B8992665225A00A6C0A3 /* TDNUserDefaults.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TDNUserDefaults.m; sourceTree = "<group>"; };
 		E2E2F61E280CFEC900C783F6 /* QuietUnarchiver.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QuietUnarchiver.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2E2F61F280CFEC900C783F6 /* QuietUnarchiver-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "QuietUnarchiver-Info.plist"; path = "/Users/tarasis/Programming/Projects/QuietUnrar/QuietUnarchiver-Info.plist"; sourceTree = "<absolute>"; };
+		E2E2F64028102BB100C783F6 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = QuietUnarchiver/Images.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -293,6 +295,7 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				E2E2F64028102BB100C783F6 /* Images.xcassets */,
 				E2E2F61F280CFEC900C783F6 /* QuietUnarchiver-Info.plist */,
 				E2A3B842265F199A00A6C0A3 /* Cartfile */,
 				D488BE5410B05F3800B3451C /* PasswordView.xib */,
@@ -555,6 +558,7 @@
 				E2E2F613280CFEC900C783F6 /* LICENSE.txt in Resources */,
 				E2E2F614280CFEC900C783F6 /* MainMenu.xib in Resources */,
 				E2E2F615280CFEC900C783F6 /* PreferencesWindow.xib in Resources */,
+				E2E2F64128102BB100C783F6 /* Images.xcassets in Resources */,
 				E2E2F616280CFEC900C783F6 /* InfoPlist.strings in Resources */,
 				E2E2F618280CFEC900C783F6 /* PasswordView.xib in Resources */,
 			);
@@ -850,6 +854,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_ENABLE_OBJC_WEAK = YES;
@@ -886,6 +892,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_ENABLE_OBJC_WEAK = YES;
